@@ -97,6 +97,146 @@ Rules:
 
 ---
 
+## Architecture (Data Structures & Flow)
+
+Core structures:
+- Pool: bounded SortedRing of candidate contig paths (caps alternative exploration)
+- ContigsPath: sequence of contigs + cumulative score
+- Overlap: local alignment stats (matches, length, offsets)
+- Events: structured log objects (DetermininedOverlap, CombinedContigs, Covered, GiveUp)
+
+Processing flow:
+```mermaid
+flowchart LR
+  R[Read Contigs] --> S[Seed Paths]
+  S --> O[Evaluate Overlaps]
+  O --> P{High Score?}
+  P -- Yes --> U[Update Pool]
+  P -- No --> A[Abstain]
+  U --> X{More Safe Joins?}
+  X -- Yes --> O
+  X -- No --> G[Greedy O2 Merge]
+  G --> Out[Output Contigs]
+```
+
+Design choices:
+- Bounded pool prevents combinatorial path explosion
+- Sentinels (SCORE_EPSILON) simplify coverage detection & safe discard
+- Final O2 greedy pass opportunistically merges remaining trivial joins
+
+<!-- Keep slide concise; deeper math on next slides. -->
+
+---
+
+## Constants & Thresholds (Why These Numbers)
+
+Core constants:
+- MIN_MATCHES = 99  → require ~99 effective matches to trust an overlap merge.
+- MAX_ALTERNATIVES = 999  → upper bound on explored path variants.
+- SCORE_EPSILON = 1  → sentinel score signifying coverage/no additional information.
+
+Overlap scoring sketch:
+```
+raw = overlap_matches / overlap_length
+scaled = (raw * 999)^2
+```
+Reasons:
+- Amplify separation between high-quality overlaps (square magnifies differences near 1.0).
+- Keep any genuine overlap score far from SCORE_EPSILON sentinel.
+
+Adaptive alternatives cap:
+```
+cap = clamp( 999 / max(1, n_candidates - 2), 1, 999 )
+```
+Implication: more candidate contigs → tighter cap → earlier pruning.
+
+Coverage detection:
+- Additional_score == SCORE_EPSILON ⇒ contig fully covered; safe to discard.
+
+<!-- Detailed pool mechanics next. -->
+
+---
+
+## Path Pruning & Pool Mechanics
+
+Goals: retain only promising assembly hypotheses; prevent combinatorial blow-up.
+
+Pool behavior:
+- Fixed capacity (cap computed from n_candidates) using a SortedRing.
+- Each new candidate path scored; if pool full & new score > worst → replace & raise minimum.
+- Duplicate / dominated paths (same contig set, lower score) rejected quickly.
+
+Effect:
+- Early elimination of low-scoring partial merges.
+- Runtime roughly proportional to (cap * avg overlaps evaluated).
+- Encourages exploitation of strongest overlaps first (greedy tendency with safety net of limited exploration).
+
+Give-up condition:
+- When best path remains a singleton and no overlaps exceed threshold → abort further stitching (avoid futile search).
+
+Why not exhaustive search?
+- Exponential explosion with branching overlaps.
+- Diminishing returns: lower-score alternatives rarely surpass high-quality early merges.
+
+<!-- Edge cases & coverage logic next. -->
+
+---
+
+## Coverage & Edge Cases
+
+Full coverage discard:
+```
+Contig A: ACGT...TTGA
+Contig B:   CGT...TTG   (entirely aligned within A)
+Score(additional) = SCORE_EPSILON ⇒ B removed
+```
+
+Slight insertion tolerated:
+```
+A: ACGTGG---TCA
+B: ACGTGGACTTCA   (ACT insertion)
+Local alignment keeps high match ratio; above MIN_MATCHES threshold ⇒ merge via Rule 2.
+```
+
+Large covered gap split (>21 nt):
+```
+ACGT... [ 27 nt low-confidence gap ] ...TGCA
+→ Split into two contigs (Rule 3) to avoid speculative fill.
+```
+
+Give-up scenario:
+- Only singleton high-score path remains; all prospective overlaps below threshold → stop (avoid overfitting noise).
+
+Failure safety:
+- Worst case: no merges pass confidence → original FASTA returned unchanged.
+
+<!-- Limitations & risks next. -->
+
+---
+
+## Limitations & Risks
+
+Conservative by design:
+- May under-merge in regions with real variation (divergence lowers match count below 99).
+- Repeats / paralogs: ambiguity omission skips plausible merges (prefer false negatives over chimeras).
+
+Parameter sensitivity:
+- Fixed MIN_MATCHES not length-normalized; very short contigs (<150 bp) rarely merge → acceptable trade (low information anyway).
+- MAX_ALTERNATIVES heuristic may still prune a rare but correct late path (observed low probability).
+
+Biases:
+- Length prioritization favors longer consensus paths; minority low-frequency variants may be masked (separate variant analysis later handles diversity).
+
+Operational risks:
+- Mis-set constant could either flood merges (chimeras) or stall benefit (no improvement). Mitigated by logging + metrics review.
+
+Mitigations:
+- Event log audit, validation dataset diff, future adaptive thresholds (Appendix E).
+
+<!-- Back to outcomes / metrics next. -->
+
+---
+
 ## Outcomes (Metrics to Collect)
 
 User experience: unchanged (transparent)
