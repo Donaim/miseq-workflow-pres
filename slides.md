@@ -142,8 +142,13 @@ Success = higher usable-yield, stable quality, minimal runtime cost.
 Fallback = disable flag; no external deps added.
 
 ---
+dragPos:
+  landscapes: 661,29,212,508
+---
 
 ## Appendix A – Rule Flow (Conceptual)
+
+<v-drag pos="landscapes">
 
 ```mermaid
 flowchart TD
@@ -161,6 +166,8 @@ flowchart TD
   I --> J["Most Probable Path Selection"]
   J --> K["Output Contigs"]
 ```
+
+</v-drag>
 
 ---
 
