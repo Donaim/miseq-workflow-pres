@@ -22,7 +22,7 @@ hideInToc: true
 
 ---
 
-## 1. Title & One‑Liner
+## Title & One‑Liner
 
 Referenceless Contig Stitcher: increase usable assemblies in denovo mode with zero workflow changes.
 
@@ -32,7 +32,7 @@ Sub: Reference-free overlap stitching that abstains unless confident.
 
 ---
 
-## 2. Current State (The Pain)
+## Current State (The Pain)
 
 - Denovo samples fragment into multiple contigs.
 - Fragmented cases lacking a single near-full-length contig are often discarded or deferred.
@@ -45,7 +45,7 @@ Sub: Reference-free overlap stitching that abstains unless confident.
 
 ---
 
-## 3. What It Does (Input → Process → Output)
+## What It Does (Input → Process → Output)
 
 Input (denovo mode): assembler FASTA (IVA, etc.)
 
@@ -62,7 +62,7 @@ Output:
 
 ---
 
-## 4. Where It Fits (Integration in MiCall)
+## Where It Fits (Integration in MiCall)
 
 - Invoked inside MiCall `sample.py` (Kive) only in denovo mode
 - No user action; not exposed as separate tool
@@ -73,7 +73,7 @@ Output:
 
 ---
 
-## 5. Why It’s Safe (Guardrails)
+## Why It’s Safe (Guardrails)
 
 - Conservative threshold (~99 matches) for merges
 - Fully covered fragments discarded (prevents duplication)
@@ -85,7 +85,7 @@ Output:
 
 ---
 
-## 6. How It Works (Condensed Rules)
+## How It Works (Condensed Rules)
 
 Principles: Scale-Dependent Credibility | Length Prioritization | Ambiguity Omission
 
@@ -97,7 +97,7 @@ Rules:
 
 ---
 
-## 7. Outcomes (Metrics to Collect)
+## Outcomes (Metrics to Collect)
 
 User experience: unchanged (transparent)
 
@@ -110,7 +110,7 @@ Validation metrics (denovo set):
 
 ---
 
-## 8. Validation & Rollout Plan
+## Validation & Rollout Plan
 
 Phase 0 (now): finalize metric definitions & golden dataset
 Phase 1 (wks 1–2): run on validation denovo set, capture metrics
@@ -124,7 +124,7 @@ Success (draft):
 
 ---
 
-## 9. FAQ (Selected)
+## FAQ (Selected)
 
 Q: Affect non-denovo?  A: No
 Q: Replace existing stitchers?  A: Complements later reference-aware step
@@ -134,7 +134,7 @@ Q: Logging?  A: Detailed event log for reproducibility
 
 ---
 
-## 10. Decision
+## Decision
 
 Approve inclusion in next MiCall release (denovo mode only)?
 
