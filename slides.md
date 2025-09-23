@@ -31,6 +31,7 @@ Sub: Reference-free overlap stitching that abstains unless confident.
 <!-- Keep concise; pipeline-internal framing. -->
 
 ---
+
 ## 2. Current State (The Pain)
 
 - Denovo samples fragment into multiple contigs.
@@ -43,6 +44,7 @@ Sub: Reference-free overlap stitching that abstains unless confident.
 <!-- Focus on usable-yield loss; avoid manual merge claims. -->
 
 ---
+
 ## 3. What It Does (Input → Process → Output)
 
 Input (denovo mode): assembler FASTA (IVA, etc.)
@@ -59,6 +61,7 @@ Output:
 <!-- Safety via abstention, not aggressive merging. -->
 
 ---
+
 ## 4. Where It Fits (Integration in MiCall)
 
 - Invoked inside MiCall `sample.py` (Kive) only in denovo mode
@@ -69,6 +72,7 @@ Output:
 <img src="./assets/miseq.webp" alt="integration" class="w-70" />
 
 ---
+
 ## 5. Why It’s Safe (Guardrails)
 
 - Conservative threshold (~99 matches) for merges
@@ -80,6 +84,7 @@ Output:
 <img src="./assets/pipelines.webp" alt="guardrails" class="w-70" />
 
 ---
+
 ## 6. How It Works (Condensed Rules)
 
 Principles: Scale-Dependent Credibility | Length Prioritization | Ambiguity Omission
@@ -91,6 +96,7 @@ Rules:
 4. Discard contigs fully covered by others
 
 ---
+
 ## 7. Outcomes (Metrics to Collect)
 
 User experience: unchanged (transparent)
@@ -103,6 +109,7 @@ Validation metrics (denovo set):
 - Runtime overhead (target < Y%)
 
 ---
+
 ## 8. Validation & Rollout Plan
 
 Phase 0 (now): finalize metric definitions & golden dataset
@@ -116,6 +123,7 @@ Success (draft):
 - Runtime overhead < Y%
 
 ---
+
 ## 9. FAQ (Selected)
 
 Q: Affect non-denovo?  A: No
@@ -125,6 +133,7 @@ Q: Performance?  A: Vectorized scoring; bounded alternatives
 Q: Logging?  A: Detailed event log for reproducibility
 
 ---
+
 ## 10. Decision
 
 Approve inclusion in next MiCall release (denovo mode only)?
@@ -133,6 +142,7 @@ Success = higher usable-yield, stable quality, minimal runtime cost.
 Fallback = disable flag; no external deps added.
 
 ---
+
 ## Appendix A – Rule Flow (Conceptual)
 
 ```mermaid
@@ -153,6 +163,7 @@ flowchart TD
 ```
 
 ---
+
 ## Appendix B – Core Stitch Entry (Excerpt)
 
 ```python
@@ -175,6 +186,7 @@ Notes:
 - Logging emits structured events (see next slide) for reproducibility.
 
 ---
+
 ## Appendix C – Sample Log Events
 
 ```text
@@ -192,6 +204,7 @@ Outputting 2 contigs.
 ```
 
 ---
+
 ## Appendix D – Metrics Template (Fill Later)
 
 | Metric | Baseline | After | Target | Status |
@@ -208,6 +221,7 @@ Definition notes:
 - Abstention rate outside bounds triggers review of MIN_MATCHES threshold.
 
 ---
+
 ## Appendix E – Future Enhancements (Optional)
 
 - Adaptive thresholding (dynamic based on length / entropy)
