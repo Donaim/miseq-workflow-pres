@@ -238,6 +238,4 @@ hideInToc: true
 
 # Thank you
 
-<small>Questions / metrics you’d like to see before rollout?</small>
-
 <!-- End of deck -->
