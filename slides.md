@@ -64,7 +64,7 @@ Output:
 
 ## Where It Fits (Integration in MiCall)
 
-- Invoked inside MiCall `sample.py` (Kive) only in denovo mode
+- Invoked inside MiCall `sample.py` (via Kive)
 - No user action; not exposed as separate tool
 - Reference-aware stitchers still run later (complementary)
 - Non-denovo / clinical flows unaffected
