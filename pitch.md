@@ -213,3 +213,110 @@ We’re collecting feedback in [#channel]. First 10 adopters get [recognition].
 - Use the deck outline above; paste the elevator pitch, ROI, and demo screenshots.
 - Put numbers in bold and green arrows (↓ time, ↓ errors, ↑ velocity).
 - End with a single decision slide: Approve pilot? Yes / No.
+
+
+---
+
+# Corrections to the above (important)
+
+What to correct in the narrative
+- Not a library: present it as a pipeline-internal step (called from sample.py via Kive). Avoid “pip install/import” in slides.
+- No manual false-merge reduction claim: the business outcome is improved usable-yield (rescuing samples that otherwise fail to produce 1-NFL contig), not replacing manual merges.
+- Coexistence with existing stitchers: this runs in denovo only; reference-aware stitchers still run later and can make further, reference-informed improvements. Non-denovo mode remains unaffected.
+- Rollout style: describe standard MiCall release replacement with validation gates; lower risk because denovo is research-only.
+
+Slide deck you can actually give (10–12 slides)
+1) Title & one-liner
+- “Referenceless Contig Stitcher: Increase usable assemblies in denovo mode, with zero workflow changes”
+- Sub: “Reference-free overlap stitching to salvage fragmented assemblies”
+
+2) Current state (the pain, factual)
+- Denovo samples sometimes fragment; we currently discard those that don’t assemble to a single NFL contig
+- Lost downstream analyses, re-runs, and delayed insights
+- No reference available (by design), so reference-aware fixes can’t help at this stage
+
+3) What this module does (input → process → output)
+- Input: contig FASTA from assembler (IVA, etc.)
+- Process: reference-free overlap scoring + safe stitching
+  - Conservative threshold (≈99 effective matches)
+  - Event-logged decisions; abstains if uncertain
+- Output: stitched FASTA or original contigs if no safe join
+
+4) Where it fits in MiCall (integration)
+- Invoked inside MiCall pipeline from sample.py under denovo mode (executed by Kive)
+- No CLI or external calls; no user action needed; no change to non-denovo mode
+- Reference-aware stitchers still run later and can further improve assemblies
+
+5) Why it’s safe (guardrails)
+- Scoring tuned to abstain unless high-confidence (MIN_MATCHES≈99)
+- “Covered” detection prevents double counting; uses SCORE_EPSILON sentinel
+- Keeps best-N path candidates only (SortedRing, ≤999 alts) to avoid combinatorial blowup
+- Logs: CalculatedCutoffs, DeterminedOverlap, CombinedContings, Covered
+
+6) How it works (for technical curiosity, not the main story)
+- Overlap detection: numpy convolution over encoded sequences; mappy local mapping for cutoffs
+- Path building: pool of best candidates; combine only when score ≥ threshold
+- Final pass: O2 greedy pairwise merge for any remaining obvious joins
+
+7) What changes for users? (answer: nothing)
+- Pipeline step, not a library
+- Same inputs/outputs (FASTA in/out)
+- No config required; deterministic; no external network
+
+8) What changes for outcomes? (focus on usable-yield)
+- Higher usable-yield in denovo: more samples produce a single or fewer higher-quality contigs
+- Downstream reference-aware steps receive better starting material
+- No impact on non-denovo or clinical flows
+
+9) Validation and rollout (how you release everything else)
+- Standard MiCall release process: replace current production
+- Validation gates:
+  - Golden datasets comparison (denovo only)
+  - Metrics: rescued sample rate, N50/L50, contigs/sample, total assembled length, event log counts
+  - Runtime overhead on representative batch
+- Risk note: denovo is non-clinical; module abstains on low-confidence overlaps
+
+10) Demo (zero-risk)
+- Show a denovo run (Kive job): before/after for a small set
+- Screenshots of:
+  - Input contigs (fragmented) → output (stitched or abstained)
+  - Event logs: DeterminedOverlap, CombinedContings, Covered
+  - Metrics summary: rescued rate, contigs/sample, N50
+- Close: “No workflow change; higher usable yield; ready to include in next release”
+
+11) FAQs (tailored)
+- Does it affect non-denovo? No
+- Does it replace existing stitchers? No—complements them (they still add reference-informed improvements later)
+- Can it create bad joins? It’s tuned to abstain unless high-confidence; decisions logged
+- Performance? Alternatives bounded (≤999); vectorized scoring; small runtime impact expected
+
+12) Decision slide (your rollout style)
+- Approve inclusion in next MiCall release (denovo only)
+- Success = higher usable-yield on validation set, no regressions, acceptable runtime overhead
+
+Reframed one-liners you can paste
+- Elevator pitch (management): “MiCall’s referenceless stitcher increases usable assemblies in denovo mode by safely joining only high-confidence overlaps—no user changes, standard release process.”
+- Elevator pitch (users): “More of your denovo samples complete cleanly; if the stitcher isn’t confident, it abstains and you get the originals.”
+
+Positioning vs other MiCall stitchers (curiosity slide/appendix)
+- Referenceless (this): runs earlier, no reference, rescues fragmented assemblies; abstains if uncertain
+- Reference-aware stitchers: run later, leverage genome knowledge for polishing, gap-filling, and further improvements
+- Combined effect: better starting contigs → fewer corrections needed later; still keep reference-aware refinements
+
+Metrics to collect for the validation report
+- Usable-yield: % samples that achieve single-contig (or target threshold) before vs after
+- Contigs per sample: median/percentiles
+- N50/L50 and total assembled length
+- Event logs: merges/covered/abstentions per sample
+- Runtime overhead per sample/batch
+- Sanity: no increase in chimeras on known controls
+
+Talking points to avoid incorrect claims
+- Do not claim reduced manual merges
+- Focus on “increased usable-yield in denovo” and “abstain when uncertain”
+- Emphasize unchanged clinical/non-denovo flows
+
+Optional slide swaps if time is tight
+- Merge 6+7 into “How it works + integration”
+- Keep 10 (demo) minimal; show one example and one log snippet
+- Always keep 12 (decision) slide
