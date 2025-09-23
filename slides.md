@@ -147,19 +147,19 @@ Fallback = disable flag; no external deps added.
 
 ```mermaid
 flowchart TD
-  A[Input Contigs] --> B{Overlap?}
-  B -- No --> C[Rule 1: Concatenate (strip ambiguous ends)]
-  B -- Yes --> D[Rule 2: Concordance Cut]
-  D --> E{Big Gap?}
+  A[Input Contigs] --> B{"Overlap?"}
+  B -- No --> C["Rule 1: Concatenate (strip ambiguous ends)"]
+  B -- Yes --> D["Rule 2: Concordance Cut"]
+  D --> E{"Big Gap?"}
   C --> E
-  E -- Yes --> F[Rule 3: Split @ midpoint (>21 nt covered)]
-  E -- No --> G{Fully Covered?}
+  E -- Yes --> F["Rule 3: Split @ midpoint (>21 nt covered)"]
+  E -- No --> G{"Fully Covered?"}
   F --> G
-  G -- Yes --> H[Rule 4: Discard covered]
-  G -- No --> I[Candidate Path]
+  G -- Yes --> H["Rule 4: Discard covered"]
+  G -- No --> I["Candidate Path"]
   H --> I
-  I --> J[Most Probable Path Selection]
-  J --> K[Output Contigs]
+  I --> J["Most Probable Path Selection"]
+  J --> K["Output Contigs"]
 ```
 
 ---
