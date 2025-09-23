@@ -143,7 +143,7 @@ Fallback = disable flag; no external deps added.
 
 ---
 dragPos:
-  landscapes: 661,29,212,508
+  landscapes: 23,107,931,234
 ---
 
 ## Appendix A – Rule Flow (Conceptual)
@@ -151,7 +151,7 @@ dragPos:
 <v-drag pos="landscapes">
 
 ```mermaid
-flowchart TD
+flowchart LR
   A[Input Contigs] --> B{"Overlap?"}
   B -- No --> C["Rule 1: Concatenate (strip ambiguous ends)"]
   B -- Yes --> D["Rule 2: Concordance Cut"]
