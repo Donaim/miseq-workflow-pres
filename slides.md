@@ -85,7 +85,7 @@ Output:
 
 ---
 
-## How It Works (Condensed – Referenceless)
+## How It Works (Condensed)
 
 Guiding principles:
 1. Scale-Dependent Credibility (longer, high‑match overlaps dominate)
