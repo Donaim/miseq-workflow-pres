@@ -73,7 +73,7 @@ Output:
 
 ---
 
-## Why It’s Safe (Guardrails)
+## Why It’s Safe
 
 - Conservative threshold (~99 matches) for merges
 - Fully covered fragments discarded (prevents duplication)
@@ -85,7 +85,7 @@ Output:
 
 ---
 
-## How It Works (Condensed)
+## How It Works
 
 Guiding principles:
 1. Scale-Dependent Credibility (longer, high‑match overlaps dominate)
