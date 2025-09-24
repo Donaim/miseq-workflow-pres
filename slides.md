@@ -85,15 +85,24 @@ Output:
 
 ---
 
-## How It Works (Condensed Rules)
+## How It Works (Condensed – Referenceless)
 
-Principles: Scale-Dependent Credibility | Length Prioritization | Ambiguity Omission
+Guiding principles:
+1. Scale-Dependent Credibility (longer, high‑match overlaps dominate)
+2. Length Prioritization (seed with longest contigs first)
+3. Ambiguity Omission (skip uncertain joins rather than risk chimera)
 
-Rules:
-1. Merge non-overlapping contigs (strip ambiguous ends)
-2. Merge overlapping contigs at concordance-optimal cut point (local alignment + sliding concordance)
-3. Split contigs at large covered gaps (>21 nt)
-4. Discard contigs fully covered by others
+Operational steps:
+1. Seed: Create singleton paths (longest-first ordering)
+2. Path Expansion: For each path, attempt overlaps with remaining contigs (cached alignment & cutoff logic)
+3. Scoring: Transform overlap quality → amplified score; coverage yields SCORE_EPSILON
+4. Coverage Handling: If candidate is fully covered (SCORE_EPSILON), mark as contained (do NOT duplicate)
+5. Pool Pruning: Keep only top-scoring alternative paths (capacity derived from n_candidates)
+6. Selection: Emit most probable path; remove all its constituent (and covered) contigs
+7. Termination (GiveUp): If selected path is a singleton (no safe joins), output all remaining unchanged
+8. O2 Pass: Lightweight greedy pairwise merge sweep for any trivial remaining overlaps
+
+Note: No gap-splitting rule in referenceless mode (that belonged to reference-based logic). Removed here to avoid confusion.
 
 ---
 
@@ -195,14 +204,10 @@ Slight insertion tolerated:
 ```
 A: ACGTGG---TCA
 B: ACGTGGACTTCA   (ACT insertion)
-Local alignment keeps high match ratio; above MIN_MATCHES threshold ⇒ merge via Rule 2.
+High match ratio remains >= MIN_MATCHES region ⇒ merged (overlap consensus).
 ```
 
-Large covered gap split (>21 nt):
-```
-ACGT... [ 27 nt low-confidence gap ] ...TGCA
-→ Split into two contigs (Rule 3) to avoid speculative fill.
-```
+Note: No internal rule to split large gaps in referenceless mode (that behavior belongs to reference-guided logic). We simply abstain if overlap evidence is insufficient.
 
 Give-up scenario:
 - Only singleton high-score path remains; all prospective overlaps below threshold → stop (avoid overfitting noise).
@@ -292,19 +297,22 @@ dragPos:
 
 ```mermaid
 flowchart LR
-  A[Input Contigs] --> B{"Overlap?"}
-  B -- No --> C["Rule 1: Concatenate (strip ambiguous ends)"]
-  B -- Yes --> D["Rule 2: Concordance Cut"]
-  D --> E{"Big Gap?"}
-  C --> E
-  E -- Yes --> F["Rule 3: Split @ midpoint (>21 nt covered)"]
-  E -- No --> G{"Fully Covered?"}
-  F --> G
-  G -- Yes --> H["Rule 4: Discard covered"]
-  G -- No --> I["Candidate Path"]
-  H --> I
-  I --> J["Most Probable Path Selection"]
-  J --> K["Output Contigs"]
+  A[Input Contigs] --> S[Seed Singleton Paths]
+  S --> X[Expand via Overlaps]
+  X --> P{Valid Overlap?}
+  P -- No --> X
+  P -- Yes --> C{Covered?}
+  C -- Yes --> M[Mark Contig Contained]
+  C -- No --> M2[Merge & Score]
+  M --> R[Pool Pruning]
+  M2 --> R
+  R --> Sel[Select Most Probable Path]
+  Sel --> G{Singleton Selected?}
+  G -- Yes --> U[GiveUp → Emit Remaining]
+  G -- No --> X
+  U --> O2[Greedy O2 Pass]
+  X -->|All Contigs Used| O2
+  O2 --> OUT[Output Contigs]
 ```
 
 </v-drag>
