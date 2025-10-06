@@ -16,7 +16,7 @@ file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/
 
 We see that the best result is actually with Haploflow.
 The referenceless stitcher iva version looks the worst.
-The reason for this is that 
+The reason for this is that a good contig got covered by an anomaly contig.
 
 
 ---
