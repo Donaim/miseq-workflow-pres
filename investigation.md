@@ -84,10 +84,15 @@ Sample `73098A-HCV_S42`.
 
 main iva:
 
-
+file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/242171/stitcher_plot.svg
 
 referenceless stitcher iva:
 
 file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/240900/stitcher_plot.svg
+
+This is a weird example.
+The concordance score is identical value.
+But alignment score is worse for referenceless stitcher iva.
+
 
 ---
