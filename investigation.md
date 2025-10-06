@@ -62,7 +62,7 @@ I don't know why, but I cannot find runs that produced anything here.
 
 ---
 
-Sample ``.
+Sample `POSITION15-HIV-AD_S31`.
 
 main iva:
 
@@ -72,7 +72,8 @@ referenceless stitcher iva:
 
 file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/241024/stitcher_plot.svg
 
-
+The no-stitcher version aligns much better to the reference.
+Notice how the subtype is different.
 
 
 ---
