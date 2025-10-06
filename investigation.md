@@ -20,4 +20,10 @@ The referenceless stitcher iva version looks the worst.
 The reason for this is that a good contig got covered by an anomaly contig.
 But the anomaly contig is recognized by BLAST, and bot recognized by mappy.
 
+Investigation results at 
+
+---
+
+
+
 ---
