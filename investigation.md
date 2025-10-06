@@ -94,5 +94,10 @@ This is a weird example.
 The concordance score is identical value.
 But alignment score is worse for referenceless stitcher iva.
 
+Conclusion: this is just a comparison error.
+
+---
+
+
 
 ---
