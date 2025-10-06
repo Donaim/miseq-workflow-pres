@@ -15,6 +15,7 @@ referenceless stitcher haploflow:
 file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/240082/stitcher_plot.svg
 
 We see that the best result is actually with Haploflow.
+
 The referenceless stitcher iva version looks the worst.
 The reason for this is that a good contig got covered by an anomaly contig.
 But the anomaly contig is recognized by BLAST, and bot recognized by mappy.
