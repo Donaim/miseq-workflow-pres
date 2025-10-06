@@ -76,4 +76,6 @@ The no-stitcher version aligns much better to the reference.
 Notice how the subtype is different.
 But the blast match is much, much better!
 
+The underlying problem seems to be in the fact that the referenceless stitcher could not split a bad contig.
+
 ---
