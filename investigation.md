@@ -114,4 +114,6 @@ This error is not reproducible on `v7.17.0-1264-g7de1a5421`.
 
 Sample `57368A-1-HLA-B-63455A-V3-1-V3LOOP_S1`.
 
+Same deal as with `57368A-11-HLA-B-63594A-V3-2-V3LOOP_S11`.
+
 ---
