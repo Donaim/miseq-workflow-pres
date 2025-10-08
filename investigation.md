@@ -108,7 +108,7 @@ referenceless stitcher iva:
 
 file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/240669/stitcher_plot.svg
 
-This error is not reproducible on `v7.17.0-1264-ged552c8b7`.
+This error is not reproducible on `v7.17.0-1264-g00e6d0ce8`.
 
 ---
 
