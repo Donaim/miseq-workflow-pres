@@ -98,6 +98,15 @@ Conclusion: this is just a comparison error.
 
 ---
 
+Sample `57368A-11-HLA-B-63594A-V3-2-V3LOOP_S11`.
+
+main iva:
+
+file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/241940/stitcher_plot.svg
+
+referenceless stitcher iva:
+
+file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/240669/stitcher_plot.svg
 
 
 ---
