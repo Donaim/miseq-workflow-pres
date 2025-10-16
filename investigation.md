@@ -123,3 +123,10 @@ Sample `57368A-7-HLA-B-63529A-V3-1-V3LOOP_S7`
 Same deal as with `57368A-11-HLA-B-63594A-V3-2-V3LOOP_S11`.
 
 ---
+
+Sample `E102398-V3-1-V3LOOP_S55`.
+
+The single contig is just missing.
+This is some kind of bug not related to the stitcher.
+
+---
