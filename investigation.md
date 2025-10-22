@@ -45,23 +45,6 @@ The reason for it is very similar to that of sample `HIV0913NFL-PLT14H24-NFLHIVD
 
 ---
 
-Sample `D62201-HCV_S3`.
-
-
-Stitcher plots:
-
-main iva:
-
-file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/242120/stitcher_plot.svg
-
-referenceless stitcher iva:
-
-file:///media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/uoept29crvyclcar/wd/home/my/project/other/haploflow-evaluation-2/megacompare/runs/240849/stitcher_plot.svg
-
-I don't know why, but I cannot find runs that produced anything here.
-
----
-
 Sample `POSITION15-HIV-AD_S31`.
 
 main iva:
