@@ -1,0 +1,7 @@
+/usr/local/bin/iva --fr /media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/rgg1mz68actgnyxd/wd/home/my/project/proviral-pres1/investigation/63902A-V3-3-V3LOOP_S39/results/scratch/assembly_97favaq7/joined.fastq -t 2 --contigs /media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/rgg1mz68actgnyxd/wd/home/my/project/proviral-pres1/investigation/63902A-V3-3-V3LOOP_S39/results/scratch/assembly_97favaq7/seeds.fasta --make_new_seeds /media/mybtrfs/home-submodule/my-link-files/root/home/user1/.local/share/miyka/root/repositories/rgg1mz68actgnyxd/wd/home/my/project/proviral-pres1/investigation/63902A-V3-3-V3LOOP_S39/results/scratch/assembly_97favaq7/iva_out
+IVA version 1.0.8
+Using kmc version 2.1.1
+Using kmc_dump version 2.1.1
+Using nucmer version 3.1
+Using samtools version 1.3.1
+Using smalt version 0.7.6
