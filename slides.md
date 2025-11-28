@@ -24,7 +24,7 @@ hideInToc: true
 
 ## MiSeq Workflow
 
-Solutions and challenges of the denovo pipeline.
+Solutions and challenges in the modern pipeline.
 
 ---
 
