@@ -37,7 +37,7 @@ To support these tasks:
 - Transforming a V3 requisition into a resistance report.
 - Transforming a research requisition into consensus sequence + intactness analysis.
 - Preservation of history in each.
-- Feedback mechanism for each.
+- Continuous improvement for each.
 </DRAFT>
 
 ---
