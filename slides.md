@@ -33,6 +33,9 @@ To provide understanding of how the pipeline works and why it works the way it d
 ## The goal
 
 <DRAFT>
+To support two tasks:
+Transforming a V3 requisition into a resistance report.
+Transforming a 
 To transform a requisition into a resistance report and/or www.
 </DRAFT>
 
