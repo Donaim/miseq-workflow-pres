@@ -46,6 +46,7 @@ To support two tasks:
 - How we get a requistion? Why we get it?
 - Omit interface descriptions: that's available in SOP's (TODO: provide SOP references/numbers).
 - What are challenges here?
+  - Mundane, I think? Mostly, I think, things like typos in the sample names.
 </DRAFT>
 
 ---
