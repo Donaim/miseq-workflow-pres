@@ -47,6 +47,7 @@ To support two tasks:
 - Omit interface descriptions: that's available in SOP's (TODO: provide SOP references/numbers).
 - What are challenges here?
   - Physical-informatics accounting coordination.
+  - Preservation and archival of traces.
   - Mundane, I think? Mostly, I think, things like typos in the sample names.
   - But QAI has come a long way to be in this position, I guess.
 </DRAFT>
