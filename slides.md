@@ -40,7 +40,13 @@ To support two tasks:
 
 ---
 
-## hello
+## Requisition
+
+<DRAFT>
+- How we get a requistion? Why we get it?
+- Omit interface descriptions: that's available in SOP's (TODO: provide SOP references/numbers).
+- What are challenges here?
+</DRAFT>
 
 ---
 
