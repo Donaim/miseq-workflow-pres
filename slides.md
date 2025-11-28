@@ -30,6 +30,12 @@ To provide understanding of how the pipeline works and why it works the way it d
 
 ---
 
+## The goal
+
+
+
+---
+
 ## Current State (The Pain)
 
 - Denovo samples fragment into multiple contigs.
