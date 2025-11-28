@@ -22,6 +22,12 @@ hideInToc: true
 
 ---
 
+## Motivation
+
+
+
+---
+
 ## Current State (The Pain)
 
 - Denovo samples fragment into multiple contigs.
