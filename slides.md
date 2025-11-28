@@ -36,7 +36,7 @@ To provide understanding of how the pipeline works and why it works the way it d
 To support these tasks:
 - Transforming a V3 requisition into a resistance report.
 - Transforming a research requisition into consensus sequence + intactness analysis.
-- Preservation of history.
+- Preservation of history in each.
 </DRAFT>
 
 ---
