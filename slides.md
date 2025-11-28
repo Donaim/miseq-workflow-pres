@@ -3,8 +3,8 @@ title: MiSeq workflow
 theme: seriph
 background: https://raw.githubusercontent.com/Donaim/proviral-pres1/refs/heads/master/assets/forest.webp
 info: |
-  ## MiCall Referenceless Contig Stitcher
-  Increasing usable assemblies in denovo mode
+  ## MiSeq Workflow
+  Solutions and challenges of the modern pipeline
 class: text-center
 drawings:
   persist: true
