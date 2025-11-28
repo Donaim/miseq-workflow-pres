@@ -16,7 +16,7 @@ hideInToc: true
 <h1 style='color:#20241f;opacity:85%;text-shadow:2px 2px 14px white'><b>MiSeq workflow</b></h1>
 <h3 style='color:white;opacity:80%;text-shadow:1px 1px 0px black,-1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black'>Solutions and challenges of the modern pipeline</h3>
 <div class="absolute bottom-5 left-3" style='opacity:85%;text-shadow:1px 1px 0px black,-1px -1px 0px black'>
-  <b>23 Sep 2025 · Internal Tech Update</b>
+  <b>11 Dec 2025 · Lab Update</b>
 </div>
 <!-- Notes: Internal module; goal = increase usable-yield in denovo mode. -->
 
