@@ -24,7 +24,9 @@ hideInToc: true
 
 ## Motivation
 
-
+<DRAFT>
+To provide understanding of how the pipeline works and why it works the way it does.
+</DRAFT>
 
 ---
 
