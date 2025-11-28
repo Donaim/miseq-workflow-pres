@@ -22,13 +22,9 @@ hideInToc: true
 
 ---
 
-## Title & One‑Liner
+## MiSeq Workflow
 
-Referenceless Contig Stitcher: increase usable assemblies in denovo mode with zero workflow changes.
-
-Sub: Reference-free overlap stitching that abstains unless confident.
-
-<!-- Keep concise; pipeline-internal framing. -->
+Solutions and challenges of the denovo pipeline.
 
 ---
 
