@@ -1,5 +1,5 @@
 ---
-title: Referenceless Contig Stitcher (MiCall)
+title: MiSeq workflow
 theme: seriph
 background: https://raw.githubusercontent.com/Donaim/proviral-pres1/refs/heads/master/assets/forest.webp
 info: |
