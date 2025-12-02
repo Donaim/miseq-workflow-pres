@@ -106,7 +106,13 @@ Note that going from sample to consensus is what we call "sequencing".
 
 ## Many (2) ways to do sequencing
 
+<DRAFT>
+Note that for sequencing there has been a lot of effort and standardization.
 
+Explain two main choices that we have:
+- Sanger sequencing.
+- 
+</DRAFT>
 
 ---
 layout: cover
