@@ -43,7 +43,7 @@ In such a way that we have:
 
 
 Need a diagram here.
-The diagram is a graph. Four nodes: two for requisitions, and two for the goals.
+The diagram is a graph. Four nodes: two for requisitions, and two for the goals. Connected in the obvious way.
 </DRAFT>
 
 ---
