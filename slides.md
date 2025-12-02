@@ -94,7 +94,9 @@ The obvious first state
 
 ---
 
-## Subgoal 2: 
+## Subgoal 2: produce consensus
+
+
 
 ---
 layout: cover
