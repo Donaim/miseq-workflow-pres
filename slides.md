@@ -176,10 +176,21 @@ First nobels provide the absolute basic: "what and where to look for".
 - 2008 Physiology or Medicine – Barré-Sinoussi & Montagnier (plus zur Hausen for HPV) “for their discovery of human immunodeficiency virus”  That’s the step where “some immune-destroying thing” becomes this specific retrovirus with this specific genome that you are now sequencing on MiSeq.
 - 1993 Chemistry – Mullis & Smith. One half to Kary Mullis “for his invention of the polymerase chain reaction (PCR) method”; the other to Michael Smith for oligo-based site-directed mutagenesis.
 - 1980 Chemistry – Berg, Gilbert, Sanger. Half to Walter Gilbert and Frederick Sanger “for their contributions concerning the determination of base sequences in nucleic acids.” MiSeq is based on Sanger.
-- The fluorescence revolution (2008 & 2014 Chemistry Nobels).
+- 
 
 (More on this: https://chatgpt.com/share/692f7564-8780-800e-88e8-f7d33366fc3c )
 </NOTE>
+
+<DRAFT>
+"What’s inside this MiSeq run?"
+
+– Enzymes first isolated in work that won the 1959 Nobel
+– A reverse-transcription concept that won the 1975 Nobel
+– A sequencing concept that won the 1980 Nobel
+– An amplification concept that won the 1993 Nobel
+– A virus discovered in work that won the 2008 Nobel
+– Plus Illumina’s own chemistry, optics, microfluidics and control software to make all of the above behave like a push-button black box.
+</DRAFT>
 
 ---
 layout: cover
