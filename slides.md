@@ -171,6 +171,9 @@ Ie in 1ml of blood sample we have:
 My strategy here is to list Nobel-level discoveries that were necessary to do this work:
 
 - The PCR method, straight up Nobel prize for it specifically.
+- 1975 Physiology or Medicine – Dulbecco, Temin, Baltimore
+   Awarded for discoveries on how tumour viruses interact with cellular genetic material, including the discovery of reverse transcriptase and the provirus concept.
+- 2008 Physiology or Medicine – Barré-Sinoussi & Montagnier (plus zur Hausen for HPV) “for their discovery of human immunodeficiency virus”  That’s the step where “some immune-destroying thing” becomes this specific retrovirus with this specific genome that you are now sequencing on MiSeq.
 
 (More on this: https://chatgpt.com/share/692f7564-8780-800e-88e8-f7d33366fc3c )
 </NOTE>
