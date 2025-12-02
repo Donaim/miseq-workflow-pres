@@ -156,7 +156,7 @@ Give a perspective of sizes.
 Ie in 1ml of blood we have:
 - 5-6×10⁹ number of cell-like particles.
 - 7.5×10⁶ of them are white-blood cells.
-- 
+- ~100 infected cells.
 - ~1 copy of HIV RNA.
 
 </NOTE>
