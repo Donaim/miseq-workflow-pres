@@ -160,7 +160,7 @@ Ie in 1ml of blood sample we have:
 - ~1 copy of HIV RNA.
 
 (This is in a ART-supressed person)
-(More on this: https://chatgpt.com/share/692f7528-ba64-800e-9340-113d71ef2534)
+(More on this: https://chatgpt.com/share/692f7528-ba64-800e-9340-113d71ef2534 )
 </NOTE>
 
 ---
