@@ -103,6 +103,12 @@ Note that going from sample to consensus is what we call "sequencing".
 </DRAFT>
 
 ---
+
+## Many (2) ways to do sequencing
+
+
+
+---
 layout: cover
 background: https://cover.sli.dev
 zoom: 2.0
