@@ -158,6 +158,8 @@ Ie in 1ml of blood sample we have:
 - 7.5×10⁶ of them are white-blood cells.
 - ~100 of them are infected cells.
 - ~1 copy of HIV RNA.
+
+(This is in a ART-supressed person)
 </NOTE>
 
 ---
