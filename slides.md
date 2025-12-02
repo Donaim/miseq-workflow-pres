@@ -145,7 +145,25 @@ I still want to give appreciation to them.
 
 ---
 
-## 
+## Needle in a haystack
+
+
+And I want to highlight one challange that is understandible to me as programmer.
+Namely the "needle in a haystack" kind of problem with DNA.
+We try to find something really tiny.
+For comparison 
+
+---
+
+## Other challenges
+
+<NOTE>
+My strategy here is to list Nobel-level discoveries that were necessary to do this work:
+
+- The PCR method, straight up Nobel prize for it specifically.
+
+</NOTE>
+
 
 ---
 layout: cover
