@@ -40,11 +40,12 @@ To support these tasks:
 In such a way that we have:
 - Preservation of history in each. (keeping records and ability to recall important info)
 - Continuous improvement for each. (things like feedback options and ease of software development)
+</DRAFT>
 
-
+<NOTE>
 Need a diagram here.
 The diagram is a graph. Four nodes: two for requisitions, and two for the goals. Connected in the obvious way.
-</DRAFT>
+</NOTE>
 
 ---
 
@@ -66,7 +67,7 @@ Show how they look like.
 
 ## The first split
 
-<DRAFT>
+<NOTE>
 Draw a diagram.
 It's based on the previous diagram.
 Instead of two parallel lines from requisitions to goals we have two joins and one vertical line.
@@ -75,15 +76,15 @@ Then "blood sample" connects to "DNA sequence".
 This "DNA sequence" is a node that similarly joins the two goals.
 
 The interpretation is that in order to go from requisitions to goals we will get a hold of a sample and we will produce a DNA sequence.
-</DRAFT>
+</NOTE>
 
 ---
 
 ## Subgoal 1: get blood
 
-<DRAFT>
+<NOTE>
 The obvious first state
-</DRAFT>
+</NOTE>
 
 <!-- - Omit interface descriptions: that's available in SOP's (TODO: provide SOP references/numbers). -->
 <!-- - What are challenges here? -->
@@ -96,17 +97,18 @@ The obvious first state
 
 ## Subgoal 2: produce consensus
 
-<DRAFT>
+<NOTE>
 Rationalize why an actual string of ACTG is so useful.
 
 Note that going from sample to consensus is what we call "sequencing".
-</DRAFT>
+</NOTE>
 
 ---
 
 ## Counterfactual pondering
 
-
+<NOTE>
+</NOTE>
 
 ---
 
