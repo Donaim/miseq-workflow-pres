@@ -181,7 +181,6 @@ First nobels provide the absolute basic: "what and where to look for".
 (More on this: https://chatgpt.com/share/692f7564-8780-800e-88e8-f7d33366fc3c )
 </NOTE>
 
-
 ---
 layout: cover
 background: https://cover.sli.dev
