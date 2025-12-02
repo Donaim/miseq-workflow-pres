@@ -73,6 +73,8 @@ Instead of two parallel lines from requisitions to goals we have two joins and o
 The requisitions are joined by a node called "blood sample".
 Then "blood sample" connects to "DNA sequence".
 This "DNA sequence" is a node that similarly joins the two goals.
+
+The reading is that in order to go from requisitions to goals we will get a hold of a sample and we will produce a DNA sequence.
 </DRAFT>
 
 --
