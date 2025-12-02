@@ -104,6 +104,12 @@ Note that going from sample to consensus is what we call "sequencing".
 
 ---
 
+## Counterfactual pondering
+
+
+
+---
+
 ## Many (2) ways to do sequencing
 
 <DRAFT>
