@@ -40,6 +40,10 @@ To support these tasks:
 In such a way that we have:
 - Preservation of history in each. (keeping records and ability to recall important info)
 - Continuous improvement for each. (things like feedback options and ease of software development)
+
+
+Need a diagram here.
+The diagram goes from requisition to the two goals.
 </DRAFT>
 
 ---
@@ -51,6 +55,15 @@ In such a way that we have:
 </DRAFT>
 
 ---
+
+## The first split
+
+<DRAFT>
+Draw a diagram.
+Two 
+</DRAFT>
+
+--
 
 ## Subgoal 1: get blood
 
