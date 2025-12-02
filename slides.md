@@ -160,7 +160,6 @@ Ie in 1ml of blood sample we have:
 - ~1 copy of HIV RNA.
 </NOTE>
 
-
 ---
 
 ## Other challenges
