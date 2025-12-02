@@ -68,7 +68,11 @@ Show how they look like.
 
 <DRAFT>
 Draw a diagram.
-Two 
+It's based on the previous diagram.
+Instead of two parallel lines from requisitions to goals we have two joins and one vertical line.
+The requisitions are joined by a node called "blood sample".
+Then "blood sample" connects to "DNA sequence".
+This "DNA sequence" is a node that similarly joins the two goals.
 </DRAFT>
 
 --
