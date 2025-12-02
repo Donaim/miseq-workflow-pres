@@ -168,7 +168,9 @@ Ie in 1ml of blood sample we have:
 ## Other challenges
 
 <NOTE>
-My strategy here is to list Nobel-level discoveries that were necessary to do this work:
+My strategy here is to list Nobel-level discoveries that were necessary to do this work.
+
+First nobels provide the absolute basic: "what and where to look for".
 
 - 1975 Physiology or Medicine – Dulbecco, Temin, Baltimore. Awarded for discoveries on how tumour viruses interact with cellular genetic material, including the discovery of reverse transcriptase and the provirus concept.
 - 2008 Physiology or Medicine – Barré-Sinoussi & Montagnier (plus zur Hausen for HPV) “for their discovery of human immunodeficiency virus”  That’s the step where “some immune-destroying thing” becomes this specific retrovirus with this specific genome that you are now sequencing on MiSeq.
