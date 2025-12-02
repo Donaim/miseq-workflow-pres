@@ -43,7 +43,7 @@ In such a way that we have:
 
 
 Need a diagram here.
-The diagram goes from requisition to the two goals.
+The diagram is a graph. Three nodes: requisition, and the goals.
 </DRAFT>
 
 ---
