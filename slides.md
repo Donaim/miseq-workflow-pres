@@ -98,6 +98,8 @@ The obvious first state
 
 <DRAFT>
 Rationalize why an actual string of ACTG is so useful.
+
+Note that going from sample to consensus is what we call "sequencing".
 </DRAFT>
 
 ---
