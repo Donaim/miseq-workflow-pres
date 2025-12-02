@@ -111,7 +111,9 @@ Note that for sequencing there has been a lot of effort and standardization.
 
 Explain two main choices that we have:
 - Sanger sequencing.
-- 
+- Next generation sequencing.
+
+
 </DRAFT>
 
 ---
