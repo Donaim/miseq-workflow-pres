@@ -54,7 +54,7 @@ The diagram is a graph. Four nodes: two for requisitions, and two for the goals.
 - How we get a requistion? Why we get it?
 </DRAFT>
 
---
+---
 
 ## Final reports
 
@@ -77,7 +77,7 @@ This "DNA sequence" is a node that similarly joins the two goals.
 The interpretation is that in order to go from requisitions to goals we will get a hold of a sample and we will produce a DNA sequence.
 </DRAFT>
 
---
+---
 
 ## Subgoal 1: get blood
 
@@ -91,6 +91,10 @@ The obvious first state
 <!--   - Preservation and archival of traces (ORACLE DB). -->
 <!--   - Mundane, I think? Mostly, I think, things like typos in the sample names. -->
 <!--   - But QAI has come a long way to be in this position, I guess. -->
+
+---
+
+## Subgoal 2: 
 
 ---
 layout: cover
