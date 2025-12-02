@@ -96,7 +96,9 @@ The obvious first state
 
 ## Subgoal 2: produce consensus
 
-
+<DRAFT>
+Rationalize why an actual string of ACTG is so useful.
+</DRAFT>
 
 ---
 layout: cover
