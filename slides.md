@@ -148,7 +148,7 @@ I still want to give appreciation to them.
 ## Needle in a haystack
 
 <NOTE>
-I want to highlight one challange that is understandible to me as programmer.
+I want to highlight the basic challange that is understandible to me as programmer.
 Namely the "needle in a haystack" kind of problem with DNA.
 We try to find something really tiny.
 
