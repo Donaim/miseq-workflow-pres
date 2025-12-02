@@ -173,7 +173,7 @@ Ie in 1ml of blood sample we have:
 
 ---
 
-## Solutions
+## Sequencing solutions
 
 <NOTE>
 My strategy here is to list Nobel-level discoveries that were necessary to do this work.
