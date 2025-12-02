@@ -54,6 +54,14 @@ The diagram is a graph. Four nodes: two for requisitions, and two for the goals.
 - How we get a requistion? Why we get it?
 </DRAFT>
 
+--
+
+## Final reports
+
+<DRAFT>
+Show how they look like.
+</DRAFT>
+
 ---
 
 ## The first split
