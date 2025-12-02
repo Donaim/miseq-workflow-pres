@@ -172,6 +172,7 @@ My strategy here is to list Nobel-level discoveries that were necessary to do th
 
 - The PCR method, straight up Nobel prize for it specifically.
 
+(More on this: https://chatgpt.com/share/692f7564-8780-800e-88e8-f7d33366fc3c )
 </NOTE>
 
 
