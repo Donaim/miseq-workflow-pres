@@ -122,7 +122,16 @@ They include:
 
 ---
 
-## 
+## NGS output
+
+<DRAFT>
+The choice of NGS immediately gives us another intermediate state:
+one when we get millions of short reads.
+
+Draw a diagram here.
+Should be a "zoomed in" picture: bounded by "sample -> DNA sequence" limit states.
+
+</DRAFT>
 
 ---
 layout: cover
