@@ -147,11 +147,18 @@ I still want to give appreciation to them.
 
 ## Needle in a haystack
 
-
-And I want to highlight one challange that is understandible to me as programmer.
+<NOTE>
+I want to highlight one challange that is understandible to me as programmer.
 Namely the "needle in a haystack" kind of problem with DNA.
 We try to find something really tiny.
-For comparison 
+
+Give a perspective of sizes.
+Ie in 1ml of blood we have:
+- 5-6 × 10⁹ number of cell-like particles.
+- 
+
+</NOTE>
+
 
 ---
 
