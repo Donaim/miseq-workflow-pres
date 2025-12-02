@@ -138,7 +138,13 @@ Three nodes: "sample", "DNA sequence", and "millions of reads" inbetween them.
 ## From sample to millions of reads
 
 <NOTE>
-I want to 
+I don't want to explain the challenges here because they are out of my competency as a programmer.
+
+I still want to give appreciation to them.
+
+My strategy is to list Nobel-level discoveries that were necessary to do this work:
+
+- 
 </NOTE>
 
 ---
