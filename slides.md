@@ -85,16 +85,8 @@ The interpretation is that in order to go from requisitions to goals we will get
 <NOTE>
 The obvious first state.
 
-Challenges:
-- Physical-informatics accounting coordination.
-- Preservation and archival of traces (ORACLE DB).
-- Input validation. Issues such as handling of typos in the sample names.
-  
-Solutions:
-Our house-baked LIMS system called QAI.
-Omit interface/procedure descriptions here and further: it's available in SOP's (TODO: provide SOP references/numbers).
+Don't know what else to say here, frankly. TODO.
 </NOTE>
-
 
 ---
 
@@ -125,6 +117,21 @@ More of a stretch, but in principle we can even learn something relevant about t
 <NOTE>
 
 (More on this: https://chatgpt.com/share/692f7e0d-e8d8-800e-80bc-30cc076cbec6 )
+</NOTE>
+
+---
+
+## From requisition to blood sample
+
+<NOTE>
+Challenges:
+- Physical-informatics accounting coordination.
+- Preservation and archival of traces (ORACLE DB).
+- Input validation. Issues such as handling of typos in the sample names.
+  
+Solutions:
+Our house-baked LIMS system called QAI.
+Omit interface/procedure descriptions here and further: it's available in SOP's (TODO: provide SOP references/numbers).
 </NOTE>
 
 ---
