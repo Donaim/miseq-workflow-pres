@@ -215,7 +215,13 @@ First nobels provide the absolute basic: "what and where to look for".
 
 ---
 
-## 
+## From millions of reads to consensus
+
+<NOTE>
+This is the main part, basically.
+
+Need like an introduction.
+</NOTE>
 
 ---
 layout: cover
