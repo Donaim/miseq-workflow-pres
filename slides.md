@@ -240,7 +240,8 @@ Need like an introduction.
 <NOTE>
 Challenge: actually getting hold of the files with millions of reads.
 
-Need to be automatic and reliable.
+Want this to be automatic (ie not a user clickling and moving files on a flash drive or something).
+Need to be reliable beyond just automatization.
 
 Solution:
 Basically, it's done via MiSeq itself.
