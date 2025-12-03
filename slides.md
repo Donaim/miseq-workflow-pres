@@ -248,7 +248,10 @@ Challenge: how do we know when data is ready?
 
 MiSeq itself doesn't notify us in a scripted way (no any kind of API).
 
-Solution: 
+Solution:
+We have an hourly task that runs in ScriptBunny.
+It monitors `RAW_DATA` drive for new files and folders.
+
 </NOTE>
 
 ---
