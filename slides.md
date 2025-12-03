@@ -89,7 +89,6 @@ Challenges:
 - Physical-informatics accounting coordination.
 - Preservation and archival of traces (ORACLE DB).
 - Input validation. Issues such as handling of typos in the sample names.
-- But QAI has come a long way to be in this position, I guess.
   
 Solutions:
 Our house-baked QAI system.
