@@ -230,7 +230,11 @@ Need like an introduction.
 <NOTE>
 About the need to transfer data from the MiSeq machine.
 
-Meant
+Basically, it's done via MiSeq itself.
+
+MiSeq has a computer that runs Windows.
+This computer has a little daemon script, put there by Illumina people.
+We configured the script to copy data from the machine to our network connected `RAW_DATA` drive.
 </NOTE>
 
 ---
