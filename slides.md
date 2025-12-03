@@ -232,8 +232,8 @@ Challenge: actually getting hold of the files with millions of reads.
 
 Need to be automatic and reliable.
 
+Solution:
 Basically, it's done via MiSeq itself.
-
 MiSeq has a computer that runs Windows.
 This computer has a little daemon script, put there by Illumina people.
 We configured the script to copy data from the machine to our network connected `RAW_DATA` drive.
@@ -248,7 +248,7 @@ Challenge: how do we know when data is ready?
 
 MiSeq itself doesn't notify us in a scripted way (no any kind of API).
 
-
+Solution: 
 </NOTE>
 
 ---
