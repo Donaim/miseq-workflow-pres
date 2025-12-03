@@ -239,6 +239,12 @@ We configured the script to copy data from the machine to our network connected 
 
 ---
 
+## Discovery
+
+
+
+---
+
 ## From consensus to reports
 
 <NOTE>
