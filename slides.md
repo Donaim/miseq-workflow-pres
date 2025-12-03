@@ -225,6 +225,16 @@ Need like an introduction.
 
 ---
 
+## Transport
+
+<NOTE>
+About the need to transfer data from the MiSeq machine.
+
+Meant
+</NOTE>
+
+---
+
 ## From consensus to reports
 
 <NOTE>
