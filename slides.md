@@ -107,9 +107,11 @@ Note that going from sample to consensus is what we call "sequencing".
 
 ## Counterfactual pondering
 
-<NOTE>
+<DRAFT>
 What partial goals we could still achive without Subgoal 1 and Subgoal 2?
+</DRAFT>
 
+<NOTE>
 (More on this: https://chatgpt.com/share/692f7e0d-e8d8-800e-80bc-30cc076cbec6 )
 </NOTE>
 
