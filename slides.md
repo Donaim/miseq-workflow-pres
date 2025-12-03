@@ -110,9 +110,11 @@ Note that going from sample to consensus is what we call "sequencing".
 <DRAFT>
 What partial goals we could still achive without Subgoal 1 and Subgoal 2?
 
+<SAY>
 There are ways to quantify intactness without ever seeing a DNA sequence. Assays like IPDA use droplet digital PCR with a couple of probes to count how many proviruses look “intact enough” at those sites, and they never produce an ACTG string.
 
 More of a stretch, but in principle we can even learn something relevant about the host’s DNA without ever receiving a sample from that person. You know how, in simple Mendelian genetics, blood type can sometimes be deduced from the parents’ blood types? The same logic applies to the HLA allele that carries abacavir risk: if neither parent has that problematic allele, then their children can’t inherit it either.
+</SAY>
 </DRAFT>
 
 <NOTE>
