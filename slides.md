@@ -262,7 +262,7 @@ MiSeq itself doesn't notify us in a scripted way (no any kind of API).
 Solution:
 We have an periodic task that runs in ScriptBunny (every 15mins).
 It monitors `RAW_DATA` drive for new files and folders.
-It looks if those files "look done", and then puts a "flag file" called `needsprocessing`.
+It looks if those files "look done copying", and then puts a "flag file" called `needsprocessing`.
 
 Then we have a periodic tasks in MiCall watcher (every 10mins) and in miseqqc (every 10 mins).
 They look for `needsprocessing` file to do anything.
