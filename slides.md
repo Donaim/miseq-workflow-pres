@@ -228,7 +228,9 @@ Need like an introduction.
 ## Transport
 
 <NOTE>
-About the need to transfer data from the MiSeq machine.
+Challenge: actually getting hold of the files with millions of reads.
+
+Need to be automatic and reliable.
 
 Basically, it's done via MiSeq itself.
 
@@ -241,7 +243,13 @@ We configured the script to copy data from the machine to our network connected 
 
 ## Discovery
 
+<NOTE>
+Challenge: how do we know when data is ready?
 
+MiSeq itself doesn't notify us in a scripted way (no any kind of API).
+
+
+</NOTE>
 
 ---
 
