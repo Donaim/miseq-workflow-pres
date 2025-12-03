@@ -94,8 +94,6 @@ Don't know what else to say here, frankly. TODO.
 
 <NOTE>
 Rationalize why an actual string of ACTG is so useful.
-
-Note that going from sample to consensus is what we call "sequencing".
 </NOTE>
 
 ---
@@ -139,6 +137,7 @@ Omit interface/procedure descriptions here and further: it's available in SOP's 
 ## Many (2) ways to do sequencing
 
 <NOTE>
+Note that going from sample to consensus is what we call "sequencing".
 Note that for sequencing there has been a lot of effort and standardization.
 
 Explain two main choices that we have:
