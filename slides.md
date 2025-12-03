@@ -108,6 +108,7 @@ Note that going from sample to consensus is what we call "sequencing".
 ## Counterfactual pondering
 
 <NOTE>
+What partial goals we could still achive without Subgoal 1 and Subgoal 2?
 </NOTE>
 
 ---
