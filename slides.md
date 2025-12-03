@@ -196,12 +196,12 @@ First nobels provide the absolute basic: "what and where to look for".
 <DRAFT>
 "What’s inside this MiSeq run?"
 
-– Enzymes first isolated in work that won the 1959 Nobel
-– A reverse-transcription concept that won the 1975 Nobel
-– A sequencing concept that won the 1980 Nobel
-– An amplification concept that won the 1993 Nobel
-– A virus discovered in work that won the 2008 Nobel
-– Plus Illumina’s own chemistry, optics, microfluidics and control software to make all of the above behave like a push-button black box.
+- Enzymes first isolated in work that won the 1959 Nobel
+- A reverse-transcription concept that won the 1975 Nobel
+- A sequencing concept that won the 1980 Nobel
+- An amplification concept that won the 1993 Nobel
+- A virus discovered in work that won the 2008 Nobel
+- Plus Illumina’s own chemistry, optics, microfluidics and control software to make all of the above behave like a push-button black box.
 </DRAFT>
 
 ---
