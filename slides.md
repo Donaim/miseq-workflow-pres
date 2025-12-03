@@ -131,7 +131,7 @@ They include:
 
 ---
 
-## NGS output
+## Subgoal 3: NGS output
 
 <NOTE>
 The choice of NGS immediately gives us another intermediate state:
