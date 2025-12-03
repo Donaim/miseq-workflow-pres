@@ -138,6 +138,7 @@ Omit interface/procedure descriptions here and further: it's available in SOP's 
 
 <NOTE>
 Note that going from sample to consensus is what we call "sequencing".
+
 Note that for sequencing there has been a lot of effort and standardization.
 
 Explain two main choices that we have:
