@@ -278,6 +278,7 @@ They look for `needsprocessing` file to do anything.
 </DRAFT>
 
 <NOTE>
+Why these two? What are other alternatives?
 </NOTE>
 
 ---
