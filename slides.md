@@ -272,6 +272,11 @@ They look for `needsprocessing` file to do anything.
 
 ## Many (2) ways to build consensus
 
+<DRAFT>
+- Denovo assembly
+- Remapping approach
+</DRAFT>
+
 <NOTE>
 </NOTE>
 
