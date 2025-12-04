@@ -273,13 +273,16 @@ They look for `needsprocessing` file to do anything.
 ## Many (2) ways to build consensus
 
 <NOTE>
-Challenges:
-- Overlap finding is very computationally hard.
 </NOTE>
 
 ---
 
-## 
+## Denovo assembly
+
+<NOTE>
+Challenges:
+- Overlap finding is very computationally hard.
+</NOTE>
 
 ---
 
