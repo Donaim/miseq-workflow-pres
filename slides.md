@@ -274,7 +274,7 @@ They look for `needsprocessing` file to do anything.
 
 <NOTE>
 Challenges:
-- Overlap-based algorithms must be optimized.
+- Overlap finding is very hard.
 </NOTE>
 
 ---
