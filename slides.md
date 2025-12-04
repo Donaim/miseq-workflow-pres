@@ -272,8 +272,6 @@ They look for `needsprocessing` file to do anything.
 
 ## Many (2) ways to build consensus
 
-
-
 <NOTE>
 Challenges:
 - Overlap-based algorithms don't work well.
