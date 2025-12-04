@@ -287,11 +287,13 @@ Why these two? What are other alternatives?
 
 <NOTE>
 In this mode we take the millions of reads and map them to a reference (HXB2-like) genome.
+We employ `bowtie2` for this.
 
 Challenges:
 - ???
 
 Solutions:
+- ???
 </NOTE>
 
 ---
