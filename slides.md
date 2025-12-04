@@ -123,7 +123,7 @@ More of a stretch, but in principle we can even learn something relevant about t
 
 <NOTE>
 Challenges:
-- Physical-informatics accounting coordination.
+- IRL<->informatics accounting coordination.
 - Preservation and archival of traces (ORACLE DB).
 - Input validation. Issues such as handling of typos in the sample names.
 
