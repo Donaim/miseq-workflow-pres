@@ -270,7 +270,7 @@ They look for `needsprocessing` file to do anything.
 
 ---
 
-## Many (2) ways to build consensus
+## Many (2) ways to build contigs
 
 <NOTE>
 Challenges:
