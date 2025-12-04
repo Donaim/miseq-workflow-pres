@@ -190,7 +190,7 @@ Ie in 1ml of blood sample we have:
 - 7.5×10⁶ of them are white-blood cells.
 - ~100 of them are infected cells.
 - ~1 copy of HIV RNA.
-- 9000bp in a sea of 4 billion nucleotides.
+- <10Kbp in a sea of 4 billion nucleotides.
 
 (This is in a ART-supressed person)
 (More on this: https://chatgpt.com/share/692f7528-ba64-800e-9340-113d71ef2534 )
