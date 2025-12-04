@@ -189,7 +189,7 @@ Ie in 1ml of blood sample we have:
 - 5-6×10⁹ number of cell-like particles.
 - 7.5×10⁶ of them are white-blood cells.
 - ~100 of them are infected cells.
-- <10Kbp in a sea of 4Mbp of DNA.
+- <10Kbp in a sea of 4Gbp of DNA.
 - ~1 copy of HIV RNA.
 
 (This is in a ART-supressed person)
