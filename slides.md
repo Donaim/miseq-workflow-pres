@@ -283,6 +283,17 @@ Why these two? What are other alternatives?
 
 ---
 
+## Remapping
+
+<NOTE>
+Challenges:
+- ???
+
+In this mode we take the millions of reads and map them to reference (wildtype, HXB2-like) genome.
+</NOTE>
+
+---
+
 ## Denovo assembly
 
 <NOTE>
@@ -292,12 +303,6 @@ Challenges:
 Solutions:
 - Hash-table (k-mer) based overlap counting.
 </NOTE>
-
----
-
-## Remapping
-
-
 
 ---
 
