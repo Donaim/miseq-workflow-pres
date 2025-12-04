@@ -290,7 +290,7 @@ Challenges:
 - Overlap finding is very computationally hard.
 
 Solutions:
-- Employ various heuristics
+- Hash-table/k-mer based overlap counting.
 </NOTE>
 
 ---
