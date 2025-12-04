@@ -286,10 +286,12 @@ Why these two? What are other alternatives?
 ## Remapping
 
 <NOTE>
+In this mode we take the millions of reads and map them to a reference (HXB2-like) genome.
+
 Challenges:
 - ???
 
-In this mode we take the millions of reads and map them to a reference (HXB2-like) genome.
+Solutions:
 </NOTE>
 
 ---
