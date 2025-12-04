@@ -289,7 +289,7 @@ Why these two? What are other alternatives?
 Challenges:
 - ???
 
-In this mode we take the millions of reads and map them to a reference (wildtype, HXB2-like) genome.
+In this mode we take the millions of reads and map them to a reference (HXB2-like) genome.
 </NOTE>
 
 ---
