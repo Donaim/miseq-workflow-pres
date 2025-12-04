@@ -282,6 +282,9 @@ They look for `needsprocessing` file to do anything.
 <NOTE>
 Challenges:
 - Overlap finding is very computationally hard.
+
+Solutions:
+- 
 </NOTE>
 
 ---
