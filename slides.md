@@ -202,7 +202,7 @@ Why a consensus sequence is such a useful state
 
 - A representation that is **easy to store, compare, and interpret**.
 - It is the **standard interface** to everything downstream: HIVdb, intactness tools, alignments, and reporting.
-- It collapses a very complicated experiment into a simple string of A, C, T, and G that humans can reason about.
+- It collapses a very complicated experiment into a simple string of A, C, T, and G that we can reason about.
 - It lets us **re-interpret** the same data later as rules, tools, and guidelines change.
 
 <!--
