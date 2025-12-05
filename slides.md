@@ -332,7 +332,7 @@ It allows us to work on MiCall independently of the sequencing chemistry. It's a
 
 ---
 
-## From sample to millions of reads
+## From sample to FASTQ
 
 ### The wet lab's job
 
@@ -415,7 +415,7 @@ Illumina as well, took all this fundamental science and turned it into a machine
 
 ---
 
-## From millions of reads to consensus
+## From FASTQ to consensus
 
 <NOTE>
 This is the main part, basically.
@@ -428,7 +428,7 @@ Need like an introduction.
 ## Transport
 
 <NOTE>
-Challenge: actually getting hold of the files with millions of reads.
+Challenge: actually getting hold of the FASTQ files.
 
 Want this to be automatic (ie not a user clickling and moving files on a flash drive or something).
 Need to be reliable beyond just automatization.
