@@ -182,24 +182,36 @@ It is its own goal
 <!--
 The first subgoal sounds almost too obvious: we need to get a physical sample.
 
-But conceptually this is a big moment in the workflow. Up until now we only had a requisition, which is essentially a promise on paper: someone is asking us to do something for a particular person or project. The system has no biological reality to work with.
+But conceptually this is a big moment in the workflow. Up until now we only had a requisition, which is essentially a promise on paper: someone is asking us to do something for a particular person or project.
 
-The “physical sample” state is where that promise turns into something we can actually measure. There is a tube in our lab, with a label we can read, that we can tie back to a requisition and to a person or a coded ID.
-
-This state carries a lot of hidden assumptions. The type of sample determines what biology we can and cannot see. Plasma, whole blood, or PBMCs will all give us different windows into the virus and the host. The timing of the draw matters as well, especially for people who are on therapy.
+This state carries hidden assumptions. The type of sample determines what biology we can and cannot see. Plasma, whole blood, or PBMCs will all give us different windows into the virus and the host.
 
 And identity is crucial. A beautifully sequenced sample from the wrong person is worse than no sequence at all. So at this point in the workflow we care a lot about matching the tube in the rack to the digital record in our systems.
-
-In the later slides I’ll talk about QAI and how we coordinate the physical and digital sides. For now, the key idea is that “getting a physical sample” is not just a logistical chore. It is a deliberate state in the pipeline where we lock in who this is, what was collected, and when — and everything downstream assumes that this is correct.
 -->
 
 ---
 
 ## Subgoal 2: produce consensus
 
-<NOTE>
-Rationalize why an actual string of ACTG is so useful.
-</NOTE>
+What this state means
+
+- We have an complete, digital representation of the virus from that sample.
+- An actual string of ACTG letters.
+
+Why a consensus sequence is such a useful state
+
+- A representation that is **easy to store, compare, and interpret**.
+- It is the **standard interface** to everything downstream: HIVdb, intactness tools, alignments, and reporting.
+- It collapses a very complicated experiment into a simple string of A, C, T, and G that humans can reason about.
+- It lets us **re-interpret** the same data later as rules, tools, and guidelines change.
+
+<!--
+The second subgoal is to produce a consensus DNA sequence.
+
+This consensus becomes the standard interface to the rest of the pipeline. It is what we align to reference, what we feed into HIVdb for resistance interpretation, and what we send into the intactness pipeline for defect classification.
+
+The reason we treat "consensus sequence" as its own goal is that it separates two worlds. Upstream we worry about chemistry, instruments, and file transfers. Downstream we worry about biological interpretation. The consensus sequence is the bridge between the two, and because it is such a powerful bridge we invest a lot of effort in getting it right and in keeping the raw data available behind it.
+-->
 
 ---
 
