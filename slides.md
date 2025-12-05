@@ -393,7 +393,7 @@ Challenge:
 
 Solution:
 - `CFEIntact`
-- `BBLabs`
+- `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/`
 </NOTE>
 
 ---
