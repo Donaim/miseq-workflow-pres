@@ -25,7 +25,7 @@ Hello everyone.
 
 In this talk I want to walk through the MiSeq-based workflow that takes us from a requisition to a resistance report and an intactness analysis.
 
-I am not going to give a step-by-step SOP or a MiSeq troubleshooting course. Instead, I want to focus on why the pipeline is shaped the way it is, and why we chose the particular intermediate states that we did.
+I am not going to give a step-by-step SOP or a MiSeq troubleshooting guide. Instead, I want to focus on why the pipeline is shaped the way it is, and why we chose the particular intermediate states that we did.
 
 Think of this as a map of the territory. After this talk, my goal is that when you hear “MiSeq run” or “consensus” or “intactness”, you have a clear sense of where that sits in the bigger picture and why we bother doing it in the first place.
 -->
