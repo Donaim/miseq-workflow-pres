@@ -392,8 +392,9 @@ Challenge:
 - given a consensus sequence, determine reproduction intactness of the virus and categorize various types of defects.
 
 Solution:
+- `proviral`
 - `CFEIntact`
-- `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/`
+- `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/`. This is a tool where users manually upload outputs of 
 </NOTE>
 
 ---
