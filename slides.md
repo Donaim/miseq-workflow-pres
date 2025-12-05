@@ -326,7 +326,7 @@ Solutions:
 ## Denovo assembly [2]
 
 <NOTE>
-Show graphically the remapping steps.
+Show graphically the steps.
 </NOTE>
 
 ---
