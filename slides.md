@@ -387,8 +387,11 @@ Reminder, we produce two kinds of reports:
 
 <NOTE>
 Challenge:
+- given a consensus sequence, determine reproduction intactness of the virus and categorize various types of defects.
 
-
+Solution:
+- CFEIntact
+- BBLabs
 </NOTE>
 
 ---
