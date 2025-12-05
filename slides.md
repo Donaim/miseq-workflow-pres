@@ -401,7 +401,6 @@ Solution:
 <NOTE>
 Challenge:
 - given a consensus sequence, determine if the original virus is resistant to given drugs
-- present it on a PDF
 
 Solution:
 - alignment combined with HIVdb scoring
