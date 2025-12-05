@@ -334,32 +334,43 @@ It allows us to work on MiCall independently of the sequencing chemistry. It's a
 
 ## From sample to millions of reads
 
-<NOTE>
-I don't want to explain the challenges here because they are out of my competency as a programmer.
+### The wet lab's job
 
-I still want to give appreciation to them.
-</NOTE>
+This happens in the lab with molecular biology and chemistry:
+
+- Extract DNA from the blood sample
+- Use PCR to amplify viral regions
+- Prepare sequencing libraries
+- Run the MiSeq sequencer
+
+**The needle-in-a-haystack problem:**  
+Finding ~10kb of viral DNA in 4Gb of human DNA, from maybe 100 infected cells.
+
+<!--
+This is where the lab team does their work. I won't dive into the chemistry details since that's not my expertise. But I do want to acknowledge challenges that are solved: 
+-->
 
 ---
 
 ## Needle in a haystack
 
-<NOTE>
-I want to highlight the basic challange that is understandible to me as programmer.
-Namely the "needle in a haystack" kind of problem with DNA.
-We try to find something really tiny.
+### Just how small are we talking?
 
-Give a perspective of sizes.
-Ie in 1ml of blood sample we have:
-- 5-6×10⁹ number of cell-like particles.
-- 7.5×10⁶ of them are white-blood cells.
-- ~100 of them are infected cells.
-- <10Kbp in a sea of 4Gbp of DNA.
-- ~1 copy of HIV RNA.
+In 1mL of blood from someone on ART:
 
-(This is in a ART-supressed person)
-(More on this: https://chatgpt.com/share/692f7528-ba64-800e-9340-113d71ef2534 )
-</NOTE>
+- **5-6 billion** total particles
+- **7.5 million** white blood cells
+- **~100** infected cells
+- Viral genome is **<10 Kbp** hiding in **4 Gbp** of human DNA
+- **~1 copy** of HIV RNA
+
+Without PCR amplification, we'd never find it.
+
+<!--
+Finding tiny amounts of viral DNA in a huge sea of human DNA is one challenge that is particularly clear to me. PCR amplification is what makes this possible - it multiplies just the viral sequences so we can actually sequence them.
+
+The numbers show why it so impressive. Infected cells are one in 75,000. The viral genome is thousands of times smaller than the human genome. That's why PCR is essential - it takes those rare viral sequences and amplifies them millions of times over, making them abundant enough to sequence.
+-->
 
 ---
 
