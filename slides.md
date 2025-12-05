@@ -403,7 +403,8 @@ Challenge:
 - given a consensus sequence, determine if the original virus is resistant to given drugs
 
 Solution:
-- alignment combined with HIVdb scoring
+- aligne consensus to reference genome
+- then use HIVdb to score resistance
 </NOTE>
 
 ---
