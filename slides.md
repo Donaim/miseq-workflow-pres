@@ -455,19 +455,20 @@ Illumina provides a daemon that can copy to network shares - we pointed it at ou
 
 ## Discovery
 
-<NOTE>
 Challenge: how do we know when data is ready?
 
 MiSeq itself doesn't notify us in a scripted way (no any kind of API).
 
 Solution:
-We have an periodic task that runs in ScriptBunny (every 15mins).
-It monitors `RAW_DATA` drive for new files and folders.
-It looks if those files "look done copying", and then puts a "flag file" called `needsprocessing`.
+- We have an periodic task that runs in ScriptBunny (every 15mins).
+- It monitors `RAW_DATA` drive for new files and folders.
+- It looks if those files "look done copying", and then puts a "flag file" called `needsprocessing`.
+- We have a periodic tasks in MiCall watcher (every 10mins) and in miseqqc (every 10 mins).
+- They look for `needsprocessing` as a signal to start processing.
 
-Then we have a periodic tasks in MiCall watcher (every 10mins) and in miseqqc (every 10 mins).
-They look for `needsprocessing` file to do anything.
-</NOTE>
+<!--
+The MiSeq doesn't tell us when its done. So we check ourselves. A script checks the RAW_DATA drive every 15 minutes looking for new run folders. When it sees files that look complete, it drops a flag file. Then MiCall's watcher and miseqqc pick that up and start processing.
+-->
 
 ---
 
