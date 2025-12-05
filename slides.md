@@ -20,8 +20,6 @@ hideInToc: true
   <b>11 Dec 2025 · Lab Update</b>
 </div>
 
----
-
 <!--
 Hello everyone.
 
@@ -58,12 +56,9 @@ By focusing on the key intermediate “states” of the pipeline, rather than ev
 
 <!--
 TODO:
-- add a diagram. the diagram should have four nodes:
-  - V3 requisition
-  - research requisition
-  - resistance report
-  - intactness results
-  
+- add a diagram. the diagram should have four nodes and two edges:
+  - V3 requisition -> resistance report
+  - research requisition -> intactness results
 -->
 
 Two main transformations:
@@ -128,7 +123,8 @@ Show how they look like.
 
 ## The first split
 
-<NOTE>
+<!--
+TODO:
 Draw a diagram.
 It's based on the previous diagram.
 Instead of two parallel lines from requisitions to goals we have two joins and one vertical line.
@@ -137,7 +133,9 @@ Then "blood sample" connects to "DNA sequence".
 This "DNA sequence" is a node that similarly joins the two goals.
 
 The interpretation is that in order to go from requisitions to goals we will get a hold of a sample and we will produce a DNA sequence.
-</NOTE>
+-->
+
+<div></div>
 
 ---
 
