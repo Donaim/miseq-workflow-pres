@@ -399,6 +399,23 @@ Solution:
 
 ---
 
+## CFEIntact
+
+<NOTE>
+How to find open reading frames (ORF)?
+- Align consensus to reference genome.
+- Look for start codon (ATG).
+- Look for stop codons (TAA, TAG, TGA).
+- Find the longest ORF between start and stop codons.
+
+How to know when a gene is defective?
+- Look for premature stop codons.
+- Look for frameshifts.
+- Look for deletions beyond a threshold.
+</NOTE>
+
+---
+
 ## Resistance interpretation
 
 <NOTE>
