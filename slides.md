@@ -41,7 +41,7 @@ Provide understanding of **how** the MiSeq pipeline works and **why** it is buil
 - Understanding the key “states” of the pipeline helps us trust the output, debug problems, and argue for or against changes.
 
 <!--
-The starting question for this talk is very simple: why bother thinking about the MiSeq workflow at all?
+The starting question for this talk is very simple: why think about the MiSeq workflow at all?
 
 Every resistance report or intactness analysis that we produce has travelled through a long chain of invisible steps. If we only ever see one piece of that chain, it is hard to judge how robust the final answer really is.
 
