@@ -362,6 +362,7 @@ These plots display how well reads mapped to the contigs.
 Explain how MiseqQCReport perl script daemon goes through and uploads the Phred scores to Oracle database.
 
 Explain how then MiseqQC produces a PDF report and uploads it to http://192.168.69.223/MiSeq_QC/01-Aug-2025.M01841/
+
 </NOTE>
 
 ---
