@@ -22,38 +22,89 @@ hideInToc: true
 
 ---
 
+<!--
+Hello everyone.
+
+In this talk I want to walk through the MiSeq-based workflow that takes us from a requisition to a resistance report and an intactness analysis.
+
+I am not going to give a step-by-step SOP or a MiSeq troubleshooting course. Instead, I want to focus on why the pipeline is shaped the way it is, and why we chose the particular intermediate states that we did.
+
+Think of this as a map of the territory. After this talk, my goal is that when you hear “MiSeq run” or “consensus” or “intactness”, you have a clear sense of where that sits in the bigger picture and why we bother doing it in the first place.
+-->
+
+---
+
 ## Motivation
 
-<DRAFT>
-To provide understanding of how the pipeline works and why it works the way it does.
-</DRAFT>
+Why bother thinking about the MiSeq workflow at all?
+
+- Every report we sign off on passes through many invisible steps.
+- Each step encodes assumptions and constraints that affect what the result means.
+- Understanding the key “states” of the pipeline helps us trust the output, debug problems, and argue for or against changes.
+
+<!--
+The starting question for this talk is very simple: why bother thinking about the MiSeq workflow at all?
+
+Every resistance report or intactness analysis that we produce has travelled through a long chain of invisible steps. If we only ever see one piece of that chain, it is hard to judge how robust the final answer really is.
+
+Each stage of the pipeline encodes assumptions and constraints. For example, what kind of sample we accept, what region of the genome we target, what we do when coverage is low, all of that quietly shapes the interpretation.
+
+By focusing on the key intermediate “states” of the pipeline, rather than every technical detail, we can reason about the behaviour of the whole system. That helps us trust the output when everything works, spot when something feels off, and have more grounded discussions about changing or extending the workflow.
+-->
 
 ---
 
 ## The goal
 
-<DRAFT>
-To support these tasks:
-- Transforming a V3 requisition into a resistance report.
-- Transforming a research requisition into consensus sequence + intactness analysis.
+Two main transformations:
 
-In such a way that we have:
-- Preservation of history in each. (keeping records and ability to recall important info)
-- Continuous improvement for each. (things like feedback options and ease of software development)
-</DRAFT>
+- Turn a **V3 requisition** into a **resistance report**.
+- Turn a **research requisition** into a **consensus sequence plus intactness analysis**.
 
-<NOTE>
-Need a diagram here.
-The diagram is a graph. Four nodes: two for requisitions, and two for the goals. Connected in the obvious way.
-</NOTE>
+And do this in a way that:
+
+- Keeps the **history** of each sample and run reconstructable.
+- Keeps the system open to **continuous improvement** instead of freezing it in place.
+
+<!--
+If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
+
+First, for clinical V3 testing, we start from a V3 requisition and we owe the clinician a resistance report that they can use in real decisions about therapy.
+
+Second, for research work, we start from a research requisition and we owe our collaborators consensus sequences and intactness analyses that they can trust in their projects.
+
+Around those two transformations we have two design principles. The first is history: we want to be able to reconstruct what happened to a sample or a run months or years later. That means we care about preserving inputs, intermediate artefacts, and outputs, rather than just the final PDF.
+
+The second is continuous improvement: we know methods, software, and standards change. We do not want a pipeline that collapses every time we touch it. So we aim for a structure where we can add QC, replace tools, or change thresholds, without losing track of what we did before.
+-->
 
 ---
 
 ## Requisition
 
-<NOTE>
-- How we get a requistion? Why we get it?
-</NOTE>
+### Why start with a requisition?
+
+- It expresses **why** we are doing any work at all for this sample.
+- It ties a **person or project** to a **specific promise**: resistance, consensus, intactness, or some combination.
+- It defines the **obligations** downstream: how carefully we must track, interpret, and report.
+
+### What it carries conceptually
+
+- The clinical or research question we are answering.
+- The type of sample that will be sent.
+- The type of pipeline and report that the MiSeq workflow should produce.
+
+<!--
+The first state in the workflow is the requisition.
+
+We start here because the requisition is where the “why” of the whole process is written down. Someone is asking us to do something specific for a person or for a project, and the requisition is the formal record of that request.
+
+Conceptually, the requisition ties three things together. It ties a person or a coded participant ID, it ties the kind of sample that will arrive in the lab, and it ties the type of answer we promise to return, like a resistance interpretation or an intactness analysis.
+
+The way we handle the sample downstream depends on what is written here. A clinical V3 requisition implies different obligations, timelines, and reporting expectations than a purely research requisition, even if the MiSeq run in the middle looks similar.
+
+So in the state diagram that we will use later, the requisition is the starting node. From that starting point, the very first subgoal is to turn this abstract request into an actual tube of blood we can work with, and eventually into a DNA sequence and a report that honours the original question.
+-->
 
 ---
 
