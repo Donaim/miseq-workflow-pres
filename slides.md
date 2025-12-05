@@ -366,7 +366,7 @@ Solutions:
 
 <NOTE>
 We upload quality control data to QAI for easy display.
-Users can see how well reads mapped to the contigs.
+Users can see the a summary of individual reads quality scores and how well reads mapped to the contigs.
 </NOTE>
 
 ---
