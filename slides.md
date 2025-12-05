@@ -434,18 +434,22 @@ From here on it's all software. The MiSeq gave us FASTQ files - now MiCall takes
 
 ## Transport
 
-<NOTE>
 Challenge: actually getting hold of the FASTQ files.
+We need automatic, reliable file transfer from MiSeq to somewhere MiCall can see them.
 
-Want this to be automatic (ie not a user clickling and moving files on a flash drive or something).
-Need to be reliable beyond just automatization.
+**The solution:**
+- MiSeq runs Windows.
+- There is a daemon script provided by Illumina.
+- We configured it to copy finished runs to our network `RAW_DATA` drive.
+- Happens automatically when sequencing finishes.
 
-Solution:
-Basically, it's done via MiSeq itself.
-MiSeq has a computer that runs Windows.
-This computer has a little daemon script, put there by Illumina people.
-We configured the script to copy data from the machine to our network connected `RAW_DATA` drive.
-</NOTE>
+<!--
+The basic problem is that we cannot just run MiCall on the MiSeq machine.
+The MiSeq does have a computer inside. It is actually a Windows computer.
+When sequencing finishes, the FASTQ files are sitting on that machine.
+We need them on our network where MiCall can process them.
+Illumina provides a daemon that can copy to network shares - we pointed it at our RAW_DATA drive.
+-->
 
 ---
 
