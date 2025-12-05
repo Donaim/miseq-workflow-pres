@@ -395,6 +395,12 @@ Solution:
 </NOTE>
 
 ---
+
+## Resistance interpretation
+
+
+
+---
 layout: cover
 background: https://cover.sli.dev
 zoom: 2.0
