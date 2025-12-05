@@ -150,15 +150,11 @@ Both clinical and research work follow the same backbone:
 <!--
 Up to now I’ve shown you the overall goals: starting from a requisition and ending with either a resistance report or an intactness analysis.
 
-In between those endpoints there are a lot of individual steps: lab work, sequencing chemistry, file transfers, bioinformatics, quality control, data upload. Taken all at once, it’s hard to keep the whole thing in your head.
+In between those endpoints there are a lot of individual steps: lab work, sequencing chemistry, file transfers, bioinformatics, quality control, data upload.
 
-To make this manageable, I want to introduce the first split in the workflow: we reduce everything down to two shared subgoals that sit between all requisitions and all reports.
-
-The first subgoal is to get a physical sample into our lab that we can trust and track. The second subgoal is to turn that sample into a consensus DNA sequence that we can interpret and re-use.
+The first ovious subgoal is to get a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
 
 Once you accept those two states as the backbone, both the V3 clinical pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
-
-The rest of the talk will keep returning to this picture. When I say “the sample state” or “the consensus state”, I mean these two points in the workflow where we pause, check ourselves, and then move on.
 -->
 
 <div></div>
