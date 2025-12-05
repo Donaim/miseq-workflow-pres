@@ -516,28 +516,35 @@ Remapping is the simpler strategy. We have a good HIV reference sequence. We ali
 ## Remapping [2]
 
 <NOTE>
-Show graphically the algorithm.
+TODO: Show graphically the algorithm.
 </NOTE>
 
 ---
 
 ## Denovo assembly
 
-<NOTE>
-Challenges:
-- Overlap finding is very computationally hard. TODO: estimate run time of a naive algorithm.
+<!--
+TODO: estimate run time of naive overlap finding algorithm.
+-->
 
-Solutions:
-- Hash-table (k-mer) based overlap counting.
-- Stitching (both reference-free and reference-based stitching is performed in MiCall)
-</NOTE>
+**The challenge:**
+- Finding which reads overlap is computationally hard, naive approach would take forever
+
+**The solution:**
+- Use hashing and k-mers for fast overlap detection
+- Assemble reads into contigs
+- Stitch contigs together when they overlap
+
+<!--
+De novo assembly is trickier. You're trying to figure out which reads overlap without knowing the answer ahead of time. The key trick is k-mers - short sequences that let you quickly find overlaps using hash tables instead of doing all pairwise comparisons. MiCall assembles contigs this way and then stitches them together. Stitching ensures we only get a single consensus sequence when possible.
+-->
 
 ---
 
 ## Denovo assembly [2]
 
 <NOTE>
-Show graphically the algorithms.
+TODO: Show graphically the algorithms.
 </NOTE>
 
 ---
