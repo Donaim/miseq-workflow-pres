@@ -398,7 +398,9 @@ Solution:
 
 ## Resistance interpretation
 
+<NOTE>
 
+</NOTE>
 
 ---
 layout: cover
