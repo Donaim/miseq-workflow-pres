@@ -317,6 +317,9 @@ Solutions:
 <NOTE>
 Challenge:
 - Want to preserve all inputs and outputs for historical and debugging reasons.
+
+Solutions:
+- Run all important steps through Kive.
 </NOTE>
 
 ---
