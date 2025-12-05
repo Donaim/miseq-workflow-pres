@@ -282,21 +282,17 @@ Going from sample to DNA sequence is what we call **sequencing**.
 - Handles high-variability regions (indels, hypervariable loops)
 
 <!--
-The term "sequencing" refers to the entire transformation from a physical blood sample into a digital string of nucleotides. But there are many ways to do that transformation, and the choice of method has profound implications for what we can learn.
+The term "sequencing" refers to the entire transformation from a physical blood sample into a digital string of nucleotides. But there are many ways to do that transformation.
 
-For decades, our lab used Sanger sequencing, consumed by our ReCall software. Sanger gives us a population-level consensus: you take all the virus particles in a sample, amplify them together, and get one averaged signal. This works beautifully for clinical resistance testing when you just need to know the dominant genotype.
+For decades, our lab used Sanger sequencing, consumed by ReCall. It works beautifully for most of our clinical resistance testing.
 
-But Sanger has fundamental limitations. First, read length: you can sequence up to about 700 base pairs in one read. If you want a whole HIV genome - nearly 10,000 base pairs - you need to do many separate Sanger reactions and stitch them together manually.
+But Sanger has fundamental limitations. First, read length: we can only sequence up to about 700 base pairs in one experiment.
 
-Second, Sanger struggles with heterogeneous populations. If you have a mixture of variants, especially with insertions or deletions, the chromatograph signals interfere with each other and become unreadable. This is particularly problematic in highly variable regions like the HIV V3 loop.
+Second, Sanger struggles with heterogeneous populations. If you have a mixture of variants, especially with insertions or deletions, the chromatograph signals interfere with each other and become unreadable. This is particularly problematic in highly variable regions like the V3 loop.
 
-Third, Sanger doesn't give you good quantitative information about minority variants. If 10% of your viral population has a resistance mutation, Sanger might detect a weak signal, or might miss it entirely.
+Next-generation sequencing is what MiSeq uses. It addresses was pretty much designed to solves our two problems.
 
-Next-generation sequencing - specifically Illumina MiSeq in our lab - addresses all three problems. Instead of one read per region, you get millions of short reads that tile across the entire genome. Each read is an independent measurement with its own quality score. This means you can detect minority variants at 1% frequency, you can handle indels cleanly because they only affect individual reads rather than the whole chromatograph, and you can assemble whole genomes from the overlapping short reads.
-
-The tradeoff is complexity. Sanger gives you one sequence per reaction. MiSeq gives you millions of reads that must be assembled, aligned, quality-filtered, and turned into a consensus. That complexity is why we need MiCall.
-
-For our goals - whole genome sequencing, proviral defect analysis, resistance testing on heterogeneous samples - NGS via MiSeq is the right choice. We still use ReCall for some clinical workflows, but for the V3 and research requisitions we described earlier, MiCall processing of MiSeq data is essential.
+But the tradeoff is complexity.
 -->
 
 ---
