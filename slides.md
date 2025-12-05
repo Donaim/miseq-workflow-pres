@@ -115,6 +115,10 @@ So in the state diagram that we will use later, the requisition is the starting 
 
 ## Final reports
 
+<!--
+TODO: Say something general about these reports. Ie what they contain, why they are useful.
+-->
+
 TODO: Show how they look like.
 
 ---
