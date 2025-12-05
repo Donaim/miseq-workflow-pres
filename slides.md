@@ -56,6 +56,16 @@ By focusing on the key intermediate “states” of the pipeline, rather than ev
 
 ## The goal
 
+<!--
+TODO:
+- add a diagram. the diagram should have four nodes:
+  - V3 requisition
+  - research requisition
+  - resistance report
+  - intactness results
+  
+-->
+
 Two main transformations:
 
 - Turn a **V3 requisition** into a **resistance report**.
@@ -64,7 +74,7 @@ Two main transformations:
 And do this in a way that:
 
 - Keeps the **history** of each sample and run reconstructable.
-- Keeps the system open to **continuous improvement** instead of freezing it in place.
+- Makes it easy of use and maintain.
 
 <!--
 If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
