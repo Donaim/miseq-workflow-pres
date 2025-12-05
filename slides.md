@@ -350,7 +350,7 @@ Solutions:
 Explain how Phred scores are calculated in MiSeq.
 Then explain how MiCall is filtering out bad reads.
 
-Then mention coverage and concordance plots.
+Then explain generation of coverage and concordance plots.
 </NOTE>
 
 ---
