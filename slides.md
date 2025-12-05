@@ -280,6 +280,14 @@ Then explain how MiCall is filtering out bad reads.
 
 ---
 
+## MiseqQC upload
+
+<NOTE>
+Explain hwo MiseqQC daemon goes through and uploads the Phred scores to Oracle database.
+</NOTE>
+
+---
+
 ## Many (2) ways to build consensus
 
 <DRAFT>
@@ -351,10 +359,6 @@ Solutions:
 - Poll Kive to see when results are available.
 - Download results to `RAW_DATA`.
 </NOTE>
-
----
-
-## MiseqQC upload
 
 ---
 
