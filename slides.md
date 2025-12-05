@@ -133,10 +133,32 @@ Instead of two parallel lines from requisitions to goals we have two joins and o
 The requisitions are joined by a node called "physical sample".
 Then "physical sample" connects to "DNA sequence".
 This "DNA sequence" is a node that similarly joins the two goals.
+-->
 
-The interpretation is that in order to go from requisitions to goals we will get a hold of a sample and we will produce a DNA sequence.
+We can describe the whole workflow as passing through two shared internal states:
 
-Should somehow introduce and rationalize this split initially, before going into details in the subsequent slides.
+- A **physical sample** that has actually arrived in our lab.
+- A **consensus DNA sequence** that represents the virus in that sample.
+
+Both clinical and research work follow the same backbone:
+
+> V3 / research requisition → **physical sample** → **DNA sequence** → resistance / intactness report
+
+- The details differ at the edges, but almost everything we care about happens around these two states.
+- So the rest of the talk will treat “sample” and “consensus” as the main anchors of the MiSeq pipeline.
+
+<!--
+Up to now I’ve shown you the overall goals: starting from a requisition and ending with either a resistance report or an intactness analysis.
+
+In between those endpoints there are a lot of individual steps: lab work, sequencing chemistry, file transfers, bioinformatics, quality control, data upload. Taken all at once, it’s hard to keep the whole thing in your head.
+
+To make this manageable, I want to introduce the first split in the workflow: we reduce everything down to two shared subgoals that sit between all requisitions and all reports.
+
+The first subgoal is to get a physical sample into our lab that we can trust and track. The second subgoal is to turn that sample into a consensus DNA sequence that we can interpret and re-use.
+
+Once you accept those two states as the backbone, both the V3 clinical pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
+
+The rest of the talk will keep returning to this picture. When I say “the sample state” or “the consensus state”, I mean these two points in the workflow where we pause, check ourselves, and then move on.
 -->
 
 <div></div>
