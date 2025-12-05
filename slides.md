@@ -490,10 +490,11 @@ Solution:
 
 <NOTE>
 Other challenges:
-- Determine if virus is hypermutated.
+- Detect hypermutation.
 - Determine if packaging signal is intact.
 - Determine if major splice donor site is intact.
-- Determine if large deletions are present.
+- Detect out-of-order genes.
+- Detect large deletions.
 </NOTE>
 
 ---
