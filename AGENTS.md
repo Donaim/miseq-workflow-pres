@@ -1,6 +1,4 @@
 
-# FAQ
-
 ---
 
 The main file is `slides.md`.
