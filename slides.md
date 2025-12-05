@@ -287,7 +287,7 @@ They include:
 
 <NOTE>
 The choice of NGS immediately gives us another intermediate state:
-one when we get millions of short reads.
+one when we get millions of short reads, represented as a "FASTQ" file.
 
 Draw a diagram here.
 Should be a "zoomed in" picture: bounded by "sample -> DNA sequence" limit states.
