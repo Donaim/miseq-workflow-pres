@@ -186,7 +186,7 @@ Challenges:
 - Input validation. Issues such as handling of typos in the sample names.
 
 Solutions:
-Our house-baked LIMS system called QAI.
+- Our house-baked LIMS system called `QAI`.
 Omit interface/procedure descriptions here and further: it's available in SOP's (TODO: provide SOP references/numbers).
 </NOTE>
 
