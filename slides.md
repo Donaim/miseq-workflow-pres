@@ -418,5 +418,3 @@ hideInToc: true
 ---
 
 # Thank you
-
-<!-- End of deck -->
