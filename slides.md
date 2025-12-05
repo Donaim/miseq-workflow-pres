@@ -204,7 +204,7 @@ Second, it handles historical preservation. QAI stores everything in an Oracle d
 
 Third, it provides input validation. Before a sample ever reaches the sequencer, QAI checks that sample IDs are formatted correctly, that the requisition exists, that the sample type matches what was requested. This catches problems early, before they waste expensive sequencing runs.
 
-The concrete artifact that QAI produces is the sample sheet - an XML file that defines which samples are in a MiSeq run and how they should be processed. MiCall's automated watcher polls a specific network location where QAI deposits these sample sheets, and uses them to orchestrate the entire pipeline.
+The concrete artifact that QAI produces is the sample sheet - a CSV file that defines which samples are in a MiSeq run and how they should be processed. Both MiSeq software and MiCall's automated watcher will later read those sample sheets.
 
 The procedure details - how lab staff use QAI's interface, what fields they fill in - those are documented in our SOPs. What matters here is understanding QAI's architectural role: it's the authoritative source of truth that connects requisitions to samples to sequencing runs.
 -->
