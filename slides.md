@@ -271,6 +271,15 @@ They look for `needsprocessing` file to do anything.
 
 ---
 
+## Quality control
+
+<NOTE>
+Explain how Phred scores are calculated in MiSeq.
+Then explain how MiCall is filtering out bad reads.
+</NOTE>
+
+---
+
 ## Many (2) ways to build consensus
 
 <DRAFT>
