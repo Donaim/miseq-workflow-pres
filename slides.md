@@ -305,16 +305,13 @@ Should be a "zoomed in" picture: bounded by "sample -> DNA sequence" limit state
 Three nodes: "sample", "DNA sequence", and "millions of reads" inbetween them.
 -->
 
-### A critical intermediate state
-
-Choosing NGS creates a new intermediate goal: **millions of short reads in FASTQ format**
+Choosing NGS creates a new intermediate goal: **millions of short reads**, also known as FASTQ file.
 
 **What is this state?**
 
 - Raw output from the MiSeq sequencer
 - Each read: ~250 nucleotides + quality scores
-- Millions of reads per sample, covering random positions across the genome
-- Stored in FASTQ format (text-based, structured)
+- Millions of reads per sample, normally at random positions across the genome
 
 **Why does this matter?**
 
@@ -324,23 +321,13 @@ Choosing NGS creates a new intermediate goal: **millions of short reads in FASTQ
 - These FASTQ files are the raw data we preserve for reproducibility
 
 <!--
-Once we commit to next-generation sequencing, we immediately create a new subgoal: obtaining the millions of short reads that the MiSeq produces.
+Once we commit to next-generation sequencing, we immediately create a new milestone: obtaining the millions of short reads that the MiSeq produces.
 
-This is a crucial intermediate state in the workflow, because it represents the handoff between the physical sequencing process and the computational analysis pipeline.
+We have a clean separation:
+- MiSeq produces FASTQ
+- MiCall consumes FASTQ
 
-What exactly are we getting at this stage? The MiSeq sequencer outputs FASTQ files. FASTQ is a text-based format where each read has four lines: an identifier, the nucleotide sequence (around 250 bases for our MiSeq runs), a separator, and a string of quality scores - one per nucleotide - encoded as ASCII characters. The quality score, based on Phred scoring, tells us how confident the sequencer is that it called the correct base.
-
-For a typical run, we get millions of these reads. Each read comes from a random position in the viral genome, or sometimes from contamination or the human host genome. The reads are paired-end, meaning we sequence both ends of a DNA fragment, which helps with assembly and error correction.
-
-Why does this deserve to be called a subgoal? Because this is the boundary between two completely different domains of expertise. Upstream of FASTQ files, we're dealing with molecular biology, chemistry, and optics - how to extract DNA, amplify specific regions, attach fluorescent labels, and image clusters of DNA on a flow cell. That's the MiSeq hardware's job.
-
-Downstream of FASTQ files, we're dealing with computational biology - quality filtering, alignment, assembly, variant calling, and consensus generation. That's MiCall's job.
-
-The FASTQ files are also what we preserve for historical reasons. We archive the raw reads so that if our alignment algorithm improves, or if we discover a new reference sequence, or if someone questions a result years later, we can go back and re-process from this checkpoint.
-
-This clean separation - MiSeq produces FASTQ, MiCall consumes FASTQ - is what allows us to version-control and improve the computational pipeline independently of the sequencing chemistry. It's also what allows MiCall to work with data from other sequencing platforms or from collaborators, as long as they provide standard FASTQ files.
-
-So when we say "Subgoal 3 is millions of NGS reads", we're really saying: this is the checkpoint where biology becomes data, and where reproducible bioinformatics begins.
+It allows us to work on MiCall independently of the sequencing chemistry. It's also what allows MiCall to work with data from other sequencing platforms or from collaborators, as long as they provide standard FASTQ files.
 -->
 
 ---
