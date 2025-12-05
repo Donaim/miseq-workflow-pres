@@ -285,14 +285,17 @@ They include:
 
 ## Subgoal 3: NGS output
 
-<NOTE>
-The choice of NGS immediately gives us another intermediate state:
-one when we get millions of short reads, represented as a "FASTQ" file.
-
+<!--
+TODO:
 Draw a diagram here.
 Should be a "zoomed in" picture: bounded by "sample -> DNA sequence" limit states.
 Three nodes: "sample", "DNA sequence", and "millions of reads" inbetween them.
-</NOTE>
+ -->
+
+<DRAFT>
+The choice of NGS immediately gives us another intermediate state:
+one when we get millions of short reads, represented as a "FASTQ" file.
+</DRAFT>
 
 ---
 
