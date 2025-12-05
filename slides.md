@@ -305,7 +305,7 @@ Solutions:
 ## Remapping [2]
 
 <NOTE>
-Show graphically the remapping steps.
+Show graphically the algorithm.
 </NOTE>
 
 ---
@@ -326,7 +326,7 @@ Solutions:
 ## Denovo assembly [2]
 
 <NOTE>
-Show graphically the steps.
+Show graphically the algorithm.
 </NOTE>
 
 ---
