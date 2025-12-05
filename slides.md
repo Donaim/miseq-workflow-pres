@@ -474,17 +474,25 @@ The MiSeq doesn't tell us when its done. So we check ourselves. A script checks 
 
 ## Many (2) ways to build consensus
 
-<DRAFT>
-- Denovo assembly
-- Remapping approach
-</DRAFT>
-
-<NOTE>
+<!--
+TODO:
 Show a graphic of millions of reads.
 It should show depict that these reads are short and they come from random places in the virus' genome.
+-->
 
-Why these two ways for consensus? What are other alternatives?
-</NOTE>
+**Remapping approach:**
+- Map reads to known reference genomes (like HXB2)
+- Build consensus from the aligned reads
+- Used for clinical V3 work
+
+**De novo assembly:**
+- Assemble reads into contigs without a reference
+- Then align contigs to references to figure out what they are
+- Used for research/proviral work
+
+<!--
+MiCall can work two ways. Remapping is faster and works great when you know what you're looking for - like V3 loop sequencing for clinical resistance testing. De novo assembly is for when you want whole genomes or when the sample might have weird variants that don't map well to references. Both strategies end up giving you consensus sequences, just different paths to get there.
+-->
 
 ---
 
