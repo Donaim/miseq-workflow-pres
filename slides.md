@@ -551,7 +551,8 @@ TODO: Show graphically the algorithms.
 
 ## Pipeline orchestration
 
-<NOTE>
+<!-- TODO: improve this slide. -->
+
 Challenge:
 - Want to preserve all inputs and outputs for historical and debugging reasons.
 
@@ -559,53 +560,54 @@ Solutions:
 - Run all important steps through Kive.
 - Poll Kive to see when results are available.
 - Download results to `RAW_DATA`.
-</NOTE>
+
 ---
 
 ## Quality control
 
-<NOTE>
+TODO:
+
 Explain how Phred scores are calculated in MiSeq.
 Then explain how MiCall is filtering out bad reads.
 
 Then explain generation of coverage and concordance plots.
 These plots display how well reads mapped to the contigs.
-</NOTE>
 
 ---
 
 ## MiseqQC processing
 
-<NOTE>
+TODO:
+
 Explain how `MiseqQCReport` perl script daemon goes through and uploads the Phred scores to Oracle database.
 
 Explain how then `MiseqQC` produces a PDF report and uploads it to http://192.168.69.223/MiSeq_QC/01-Aug-2025.M01841/
-</NOTE>
 
 ---
 
 ## QAI upload
 
-<NOTE>
+<!-- TODO: expand this slide. -->
+
 We upload quality control data to QAI for easy display.
 Users can see the a summary of individual reads quality scores and coverage plots.
-</NOTE>
 
 ---
 
 ## From consensus to reports
 
-<NOTE>
+<!-- TODO: improve this slide. -->
+
 Reminder, we produce two kinds of reports:
 - V3 resistance interpretation
 - intactness analysis
-</NOTE>
 
 ---
 
 ## Proviral pipeline
 
-<NOTE>
+<!-- TODO: improve this slide. -->
+
 Challenge:
 - given a consensus sequence, determine reproduction intactness of the virus and categorize various types of defects.
 
@@ -613,13 +615,13 @@ Solution:
 - `CFEIntact` - defects detector.
 - `proviral` - a pipeline with its own QC and prep steps. calls `CFEIntact` as part of its workflow.
 - `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/` - a tool where users manually upload outputs of `proviral` to visualize defects distribution.
-</NOTE>
 
 ---
 
 ## CFEIntact
 
-<NOTE>
+<!-- TODO: improve this slide. -->
+
 Challenge: find open reading frames.
 
 Solution:
@@ -628,46 +630,50 @@ Solution:
 - Look for stop codons (TAA, TAG, TGA).
 - Find the longest ORF between start and stop codons.
 
-</NOTE>
-
 ---
 
 ## CFEIntact [2]
 
-<NOTE>
+<!-- TODO: improve this slide. -->
+
 Challenge: determine if an ORF is intact.
 
 Solution:
 - Look for premature stop codons.
 - Look for frameshifts.
 - Look for deletions beyond a threshold.
-</NOTE>
 
 ---
 
 ## CFEIntact [3]
 
-<NOTE>
+<!-- TODO: improve this slide. -->
+
 Other challenges:
 - Detect hypermutation.
 - Determine if packaging signal is intact.
 - Determine if major splice donor site is intact.
 - Detect out-of-order genes.
 - Detect large deletions.
-</NOTE>
 
 ---
 
 ## Resistance interpretation
 
-<NOTE>
+<!-- TODO: improve this slide. -->
+
 Challenge:
 - given a consensus sequence, determine if the original virus is resistant to given drugs
 
 Solution:
 - align consensus to reference genome
 - then use HIVdb to score resistance
-</NOTE>
+
+---
+
+## Resistance interpretation [2]
+
+TODO: show example report.
 
 ---
 layout: cover
