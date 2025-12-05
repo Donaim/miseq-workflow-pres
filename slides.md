@@ -241,7 +241,7 @@ A requisition arrives → lab receives a sample → information must flow to bio
 
 **Our solution: QAI**
 
-Our in-house Laboratory Information Management System (LIMS) that bridges the physical and digital worlds.
+Our in-house Laboratory Information Management System that bridges the physical and digital worlds.
 
 <!--
 This is the first critical handoff in our workflow - moving from an abstract request to a concrete physical sample that both the lab and our automated systems can track.
