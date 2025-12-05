@@ -376,7 +376,7 @@ The numbers show why it so impressive. Infected cells are one in 75,000. The vir
 
 ## Sequencing solutions
 
-<NOTE>
+<!--
 My strategy here is to list Nobel-level discoveries that were necessary to do this work.
 
 First nobels provide the absolute basic: "what and where to look for".
@@ -387,18 +387,31 @@ First nobels provide the absolute basic: "what and where to look for".
 - 1980 Chemistry – Berg, Gilbert, Sanger. Half to Walter Gilbert and Frederick Sanger “for their contributions concerning the determination of base sequences in nucleic acids.” MiSeq is based on Sanger.
 
 (More on this: https://chatgpt.com/share/692f7564-8780-800e-88e8-f7d33366fc3c )
-</NOTE>
+-->
 
-<DRAFT>
 "What’s inside this MiSeq run?"
 
-- Enzymes first isolated in work that won the 1959 Nobel
-- A reverse-transcription concept that won the 1975 Nobel
-- A sequencing concept that won the 1980 Nobel
-- An amplification concept that won the 1993 Nobel
-- A virus discovered in work that won the 2008 Nobel
-- Plus Illumina’s own chemistry, optics, microfluidics and control software to make all of the above behave like a push-button black box.
-</DRAFT>
+**1980 Chemistry** – Sanger
+How to read DNA sequences
+
+**1993 Chemistry** – Mullis
+PCR: copying specific DNA millions of times
+
+**1975 Medicine** – Dulbecco, Temin, Baltimore
+How retroviruses work (reverse transcriptase, proviruses)
+
+**2008 Medicine** – Barré-Sinoussi & Montagnier
+Discovering HIV itself
+
+Plus Illumina's engineering to automate it all.
+
+<!--
+Other than just finding the DNA, there are a series of Nobel-level challenges that had to be solved.
+
+Even the basic question of "what are we looking for?" required a very non-obvious concept of retroviruses, reverse transcription, and the provirus concept.
+
+Illumina as well, took all this fundamental science and turned it into a machine we can buy and run our lab.
+-->
 
 ---
 
