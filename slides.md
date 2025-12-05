@@ -367,7 +367,7 @@ In 1mL of blood from someone on ART:
 Without PCR amplification, we'd never find it.
 
 <!--
-Finding tiny amounts of viral DNA in a huge sea of human DNA is one challenge that is particularly clear to me. PCR amplification is what makes this possible - it multiplies just the viral sequences so we can actually sequence them.
+Finding tiny amounts of viral DNA is one challenge that is particularly clear to me. PCR amplification is what makes this possible - it multiplies just the viral sequences so we can actually notice them.
 
 The numbers show why it so impressive. Infected cells are one in 75,000. The viral genome is thousands of times smaller than the human genome. That's why PCR is essential - it takes those rare viral sequences and amplifies them millions of times over, making them abundant enough to sequence.
 -->
