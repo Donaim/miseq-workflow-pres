@@ -312,7 +312,12 @@ Solutions:
 
 ---
 
-## Hello
+## Pipeline orchestration
+
+<NOTE>
+Challenge:
+- Want to preserve all inputs and outputs for historical and debugging reasons.
+</NOTE>
 
 ---
 
