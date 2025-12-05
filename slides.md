@@ -167,11 +167,31 @@ The rest of the talk will keep returning to this picture. When I say “the samp
 
 ## Subgoal 1: get a physical sample
 
-<NOTE>
-The obvious first state.
+What this state means
 
-Don't know what else to say here, frankly. TODO.
-</NOTE>
+- An actual **tube in our lab**, labelled and received under a known requisition.
+- Enough **material of the right type** (plasma, whole blood, PBMCs, etc.) to run the planned assays.
+- A sample whose **identity and timing** we trust.
+
+It is its own goal
+
+- Without a sample, the rest of the pipeline is purely hypothetical.
+- This is where the real world and our digital systems first have to agree on **who**, **what**, and **when**.
+- Mistakes here — wrong person, wrong tube, wrong date — are worse than having no sample at all.
+
+<!--
+The first subgoal sounds almost too obvious: we need to get a physical sample.
+
+But conceptually this is a big moment in the workflow. Up until now we only had a requisition, which is essentially a promise on paper: someone is asking us to do something for a particular person or project. The system has no biological reality to work with.
+
+The “physical sample” state is where that promise turns into something we can actually measure. There is a tube in our lab, with a label we can read, that we can tie back to a requisition and to a person or a coded ID.
+
+This state carries a lot of hidden assumptions. The type of sample determines what biology we can and cannot see. Plasma, whole blood, or PBMCs will all give us different windows into the virus and the host. The timing of the draw matters as well, especially for people who are on therapy.
+
+And identity is crucial. A beautifully sequenced sample from the wrong person is worse than no sequence at all. So at this point in the workflow we care a lot about matching the tube in the rack to the digital record in our systems.
+
+In the later slides I’ll talk about QAI and how we coordinate the physical and digital sides. For now, the key idea is that “getting a physical sample” is not just a logistical chore. It is a deliberate state in the pipeline where we lock in who this is, what was collected, and when — and everything downstream assumes that this is correct.
+-->
 
 ---
 
