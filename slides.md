@@ -108,7 +108,7 @@ Conceptually, the requisition ties three things together. It ties a person or a 
 
 The way we handle the sample downstream depends on what is written here. A clinical V3 requisition implies different obligations, timelines, and reporting expectations than a purely research requisition, even if the MiSeq run in the middle looks similar.
 
-So in the state diagram that we will use later, the requisition is the starting node. From that starting point, the very first subgoal is to turn this abstract request into an actual tube of blood we can work with, and eventually into a DNA sequence and a report that honours the original question.
+So in the state diagram that we will use later, the requisition is the starting node. From that starting point, the very first subgoal is to turn this abstract request into an actual sample tube we can work with, and eventually into a DNA sequence and a report that honours the original question.
 -->
 
 ---
@@ -128,8 +128,8 @@ TODO:
 Draw a diagram.
 It's based on the previous diagram.
 Instead of two parallel lines from requisitions to goals we have two joins and one vertical line.
-The requisitions are joined by a node called "blood sample".
-Then "blood sample" connects to "DNA sequence".
+The requisitions are joined by a node called "physical sample".
+Then "physical sample" connects to "DNA sequence".
 This "DNA sequence" is a node that similarly joins the two goals.
 
 The interpretation is that in order to go from requisitions to goals we will get a hold of a sample and we will produce a DNA sequence.
@@ -141,7 +141,7 @@ Should somehow introduce and rationalize this split initially, before going into
 
 ---
 
-## Subgoal 1: get blood
+## Subgoal 1: get a physical sample
 
 <NOTE>
 The obvious first state.
