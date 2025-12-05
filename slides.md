@@ -265,37 +265,87 @@ The procedure details - how lab staff use QAI's interface, what fields they fill
 
 ## Many (2) ways to do sequencing
 
-<NOTE>
-Note that going from sample to consensus is what we call "sequencing".
+Going from sample to DNA sequence is what we call **sequencing**.
 
-Note that for sequencing there has been a lot of effort and standardization.
+### Two mature technologies
 
-Explain two main choices that we have:
-- Sanger sequencing (later consumed by ReCall).
-- Next generation sequencing (later consumed by MiCall).
+**Sanger sequencing** → used with **ReCall**
+- Population-level consensus
+- Maximum read length ~700bp
+- Clean signal for homogeneous samples
+- Used for clinical HIV genotyping
 
-Explain tradeoffs and why for the goals we have, NGS is the better choice.
-They include:
-- need to sequence whole genomes, when Sanger can only give us up to ~700bp.
-- high variability regions. especially indels make Sanger chromatographs interfere.
-- NGS provides better quality scoring.
-</NOTE>
+**Next-generation sequencing (NGS)** → used with **MiCall**  
+- Deep sequencing of viral populations
+- Millions of short reads (~250bp each)
+- Captures whole genomes and minority variants
+- Handles high-variability regions (indels, hypervariable loops)
+
+<!--
+The term "sequencing" refers to the entire transformation from a physical blood sample into a digital string of nucleotides. But there are many ways to do that transformation, and the choice of method has profound implications for what we can learn.
+
+For decades, our lab used Sanger sequencing, consumed by our ReCall software. Sanger gives us a population-level consensus: you take all the virus particles in a sample, amplify them together, and get one averaged signal. This works beautifully for clinical resistance testing when you just need to know the dominant genotype.
+
+But Sanger has fundamental limitations. First, read length: you can sequence up to about 700 base pairs in one read. If you want a whole HIV genome - nearly 10,000 base pairs - you need to do many separate Sanger reactions and stitch them together manually.
+
+Second, Sanger struggles with heterogeneous populations. If you have a mixture of variants, especially with insertions or deletions, the chromatograph signals interfere with each other and become unreadable. This is particularly problematic in highly variable regions like the HIV V3 loop.
+
+Third, Sanger doesn't give you good quantitative information about minority variants. If 10% of your viral population has a resistance mutation, Sanger might detect a weak signal, or might miss it entirely.
+
+Next-generation sequencing - specifically Illumina MiSeq in our lab - addresses all three problems. Instead of one read per region, you get millions of short reads that tile across the entire genome. Each read is an independent measurement with its own quality score. This means you can detect minority variants at 1% frequency, you can handle indels cleanly because they only affect individual reads rather than the whole chromatograph, and you can assemble whole genomes from the overlapping short reads.
+
+The tradeoff is complexity. Sanger gives you one sequence per reaction. MiSeq gives you millions of reads that must be assembled, aligned, quality-filtered, and turned into a consensus. That complexity is why we need MiCall.
+
+For our goals - whole genome sequencing, proviral defect analysis, resistance testing on heterogeneous samples - NGS via MiSeq is the right choice. We still use ReCall for some clinical workflows, but for the V3 and research requisitions we described earlier, MiCall processing of MiSeq data is essential.
+-->
 
 ---
 
 ## Subgoal 3: NGS output
 
 <!--
-TODO:
-Draw a diagram here.
+TODO: Draw a diagram here.
 Should be a "zoomed in" picture: bounded by "sample -> DNA sequence" limit states.
 Three nodes: "sample", "DNA sequence", and "millions of reads" inbetween them.
- -->
+-->
 
-<DRAFT>
-The choice of NGS immediately gives us another intermediate state:
-one when we get millions of short reads, represented as a "FASTQ" file.
-</DRAFT>
+### A critical intermediate state
+
+Choosing NGS creates a new intermediate goal: **millions of short reads in FASTQ format**
+
+**What is this state?**
+
+- Raw output from the MiSeq sequencer
+- Each read: ~250 nucleotides + quality scores
+- Millions of reads per sample, covering random positions across the genome
+- Stored in FASTQ format (text-based, structured)
+
+**Why does this matter?**
+
+- This is the **boundary between chemistry and computation**
+- Everything upstream is hardware, optics, and biochemistry (MiSeq's job)
+- Everything downstream is software, alignment, and statistics (MiCall's job)
+- These FASTQ files are the raw data we preserve for reproducibility
+
+<!--
+Once we commit to next-generation sequencing, we immediately create a new subgoal: obtaining the millions of short reads that the MiSeq produces.
+
+This is a crucial intermediate state in the workflow, because it represents the handoff between the physical sequencing process and the computational analysis pipeline.
+
+What exactly are we getting at this stage? The MiSeq sequencer outputs FASTQ files. FASTQ is a text-based format where each read has four lines: an identifier, the nucleotide sequence (around 250 bases for our MiSeq runs), a separator, and a string of quality scores - one per nucleotide - encoded as ASCII characters. The quality score, based on Phred scoring, tells us how confident the sequencer is that it called the correct base.
+
+For a typical run, we get millions of these reads. Each read comes from a random position in the viral genome, or sometimes from contamination or the human host genome. The reads are paired-end, meaning we sequence both ends of a DNA fragment, which helps with assembly and error correction.
+
+Why does this deserve to be called a subgoal? Because this is the boundary between two completely different domains of expertise. Upstream of FASTQ files, we're dealing with molecular biology, chemistry, and optics - how to extract DNA, amplify specific regions, attach fluorescent labels, and image clusters of DNA on a flow cell. That's the MiSeq hardware's job.
+
+Downstream of FASTQ files, we're dealing with computational biology - quality filtering, alignment, assembly, variant calling, and consensus generation. That's MiCall's job.
+
+The FASTQ files are also what we preserve for historical reasons. We archive the raw reads so that if our alignment algorithm improves, or if we discover a new reference sequence, or if someone questions a result years later, we can go back and re-process from this checkpoint.
+
+This clean separation - MiSeq produces FASTQ, MiCall consumes FASTQ - is what allows us to version-control and improve the computational pipeline independently of the sequencing chemistry. It's also what allows MiCall to work with data from other sequencing platforms or from collaborators, as long as they provide standard FASTQ files.
+
+So when we say "Subgoal 3 is millions of NGS reads", we're really saying: this is the checkpoint where biology becomes data, and where reproducible bioinformatics begins.
+-->
 
 ---
 
