@@ -365,7 +365,8 @@ Solutions:
 ## QAI upload
 
 <NOTE>
-
+We upload quality control data to QAI for easy display.
+Users can see how well reads mapped to the contigs.
 </NOTE>
 
 ---
