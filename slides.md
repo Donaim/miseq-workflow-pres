@@ -348,6 +348,8 @@ Challenge:
 
 Solutions:
 - Run all important steps through Kive.
+- Poll Kive to see when results are available.
+- Download results to `RAW_DATA`.
 </NOTE>
 
 ---
