@@ -133,6 +133,8 @@ Then "blood sample" connects to "DNA sequence".
 This "DNA sequence" is a node that similarly joins the two goals.
 
 The interpretation is that in order to go from requisitions to goals we will get a hold of a sample and we will produce a DNA sequence.
+
+Should somehow introduce and rationalize this split initially, before going into details in the subsequent slides.
 -->
 
 <div></div>
