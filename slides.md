@@ -74,9 +74,9 @@ And do this in a way that:
 <!--
 If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
 
-First, for clinical V3 testing, we start from a V3 requisition and we owe the clinician a resistance report that they can use in real decisions about therapy.
+First, for clinical V3 testing, we start from a V3 requisition and we owe the clinician a resistance report that they can use.
 
-Second, for research work, we start from a research requisition and we owe our collaborators consensus sequences and intactness analyses that they can trust in their projects.
+Second, for research work, we start from a research requisition and we owe our collaborators intactness analyses that they can trust in their projects.
 
 Around those two transformations we have two design principles. The first is history: we want to be able to reconstruct what happened to a sample or a run months or years later. That means we care about preserving inputs, intermediate artefacts, and outputs, rather than just the final PDF.
 
