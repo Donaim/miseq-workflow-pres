@@ -307,6 +307,7 @@ Challenges:
 
 Solutions:
 - Hash-table (k-mer) based overlap counting.
+- Stitching
 </NOTE>
 
 ---
