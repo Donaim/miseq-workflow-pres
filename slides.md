@@ -402,16 +402,39 @@ Solution:
 ## CFEIntact
 
 <NOTE>
-How to find open reading frames (ORF)?
+Challenge: find open reading frames.
+
+Solution:
 - Align consensus to reference genome.
 - Look for start codon (ATG).
 - Look for stop codons (TAA, TAG, TGA).
 - Find the longest ORF between start and stop codons.
 
-How to know when a gene is defective?
+</NOTE>
+
+---
+
+## CFEIntact [2]
+
+<NOTE>
+Challenge: determine if an ORF is intact.
+
+Solution:
 - Look for premature stop codons.
 - Look for frameshifts.
 - Look for deletions beyond a threshold.
+</NOTE>
+
+---
+
+## CFEIntact [3]
+
+<NOTE>
+Other challenges:
+- Determine if virus is hypermutated.
+- Determine if packaging signal is intact.
+- Determine if major splice donor site is intact.
+- Determine if large deletions are present.
 </NOTE>
 
 ---
