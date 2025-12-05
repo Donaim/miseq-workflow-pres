@@ -395,6 +395,8 @@ Solution:
 - `CFEIntact` - defects detector.
 - `proviral` - a pipeline with its own QC and prep steps. calls `CFEIntact` as part of its workflow.
 - `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/` - a tool where users manually upload outputs of `proviral` to visualize defects distribution.
+
+
 </NOTE>
 
 ---
