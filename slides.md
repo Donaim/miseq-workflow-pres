@@ -282,7 +282,7 @@ They look for `needsprocessing` file to do anything.
 Show a graphic of millions of reads.
 It should show depict that these reads are short and they come from random places in the virus' genome.
 
-Why these two? What are other alternatives?
+Why these two ways for consensus? What are other alternatives?
 </NOTE>
 
 ---
