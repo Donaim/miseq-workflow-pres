@@ -115,9 +115,7 @@ So in the state diagram that we will use later, the requisition is the starting 
 
 ## Final reports
 
-<NOTE>
-Show how they look like.
-</NOTE>
+TODO: Show how they look like.
 
 ---
 
