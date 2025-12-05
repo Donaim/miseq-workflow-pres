@@ -371,10 +371,6 @@ Users can see the a summary of individual reads quality scores and plots of how 
 
 ---
 
-## hello
-
----
-
 ## From consensus to reports
 
 <NOTE>
