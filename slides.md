@@ -373,15 +373,22 @@ Users can see the a summary of individual reads quality scores and coverage plot
 
 ---
 
-## Proviral pipeline
-
-
-
----
-
 ## From consensus to reports
 
 <NOTE>
+Reminder, we produce two kinds of reports:
+- V3 resistance interpretation
+- intactness analysis
+</NOTE>
+
+---
+
+## Proviral pipeline
+
+<NOTE>
+Challenge:
+
+
 </NOTE>
 
 ---
