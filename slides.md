@@ -351,6 +351,7 @@ Explain how Phred scores are calculated in MiSeq.
 Then explain how MiCall is filtering out bad reads.
 
 Then explain generation of coverage and concordance plots.
+These plots display how well reads mapped to the contigs.
 </NOTE>
 
 ---
@@ -367,7 +368,7 @@ Explain how MiseqQC daemon goes through and uploads the Phred scores to Oracle d
 
 <NOTE>
 We upload quality control data to QAI for easy display.
-Users can see the a summary of individual reads quality scores and plots of how well reads mapped to the contigs.
+Users can see the a summary of individual reads quality scores and coverage plots.
 </NOTE>
 
 ---
