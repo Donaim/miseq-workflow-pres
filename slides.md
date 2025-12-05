@@ -354,7 +354,13 @@ Solutions:
 
 ---
 
-## 
+## MiseqQC upload
+
+
+---
+
+## QAI upload
+
 
 
 ---
