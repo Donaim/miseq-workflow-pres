@@ -403,7 +403,7 @@ Challenge:
 - given a consensus sequence, determine if the original virus is resistant to given drugs
 
 Solution:
-- aligne consensus to reference genome
+- align consensus to reference genome
 - then use HIVdb to score resistance
 </NOTE>
 
