@@ -248,11 +248,11 @@ This is the first critical handoff in our workflow - moving from an abstract req
 
 The challenge here is coordination. Someone in the lab is handling a physical tube with a label. Meanwhile, our bioinformatics pipeline needs to know exactly which sample that tube represents, what project it belongs to, and what kind of analysis we promised to deliver.
 
-QAI is our custom-built LIMS - Laboratory Information Management System. It solves three core problems:
+QAI is our custom-built LIMS - Laboratory Information Management System. Here, it solves three core problems:
 
-First, it provides the coordination layer between the physical lab and our automated informatics systems. When lab staff register a sample in QAI's interface, that information becomes available to MiCall and other downstream tools via QAI's API.
+First, it provides the coordination layer between the physical lab and our automated informatics systems.
 
-Second, it handles historical preservation. QAI stores everything in an Oracle database - requisition details, sample metadata, run configurations, quality control results. This means months later, if someone asks "what happened with this sample?", we can reconstruct the full story.
+Second, it handles historical preservation. QAI stores everything in an Oracle database. This means years later, if someone asks "what happened with this sample?", we can reconstruct many details.
 
 Third, it provides input validation. Before a sample ever reaches the sequencer, QAI checks that sample IDs are formatted correctly, that the requisition exists, that the sample type matches what was requested. This catches problems early, before they waste expensive sequencing runs.
 
