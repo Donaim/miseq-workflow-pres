@@ -271,23 +271,6 @@ They look for `needsprocessing` file to do anything.
 
 ---
 
-## Quality control
-
-<NOTE>
-Explain how Phred scores are calculated in MiSeq.
-Then explain how MiCall is filtering out bad reads.
-</NOTE>
-
----
-
-## MiseqQC upload
-
-<NOTE>
-Explain how MiseqQC daemon goes through and uploads the Phred scores to Oracle database.
-</NOTE>
-
----
-
 ## Many (2) ways to build consensus
 
 <DRAFT>
@@ -358,6 +341,22 @@ Solutions:
 - Run all important steps through Kive.
 - Poll Kive to see when results are available.
 - Download results to `RAW_DATA`.
+</NOTE>
+---
+
+## Quality control
+
+<NOTE>
+Explain how Phred scores are calculated in MiSeq.
+Then explain how MiCall is filtering out bad reads.
+</NOTE>
+
+---
+
+## MiseqQC upload
+
+<NOTE>
+Explain how MiseqQC daemon goes through and uploads the Phred scores to Oracle database.
 </NOTE>
 
 ---
