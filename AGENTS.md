@@ -3,6 +3,10 @@
 
 ---
 
+The main file is `slides.md`.
+
+---
+
 Directory `deps.local` contains repositories should be studied if any context or background is needed.
 It includes projects like `MiCall` with its watcher code.
 
