@@ -307,7 +307,7 @@ Challenges:
 
 Solutions:
 - Hash-table (k-mer) based overlap counting.
-- Stitching
+- Stitching (both reference-free and reference-based stitching is performed in MiCall)
 </NOTE>
 
 ---
