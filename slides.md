@@ -36,7 +36,7 @@ Think of this as a map of the territory. After this talk, my goal is that when y
 
 ## Motivation
 
-Why bother thinking about the MiSeq workflow at all?
+Provide understanding of **how** the MiSeq pipeline works and **why** it is built the way it is.
 
 - Every report we sign off on passes through many invisible steps.
 - Each step encodes assumptions and constraints that affect what the result means.
