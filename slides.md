@@ -1,21 +1,21 @@
 ---
-title: MiSeq workflow
+title: MiSeq Workflow
 theme: seriph
 background: https://raw.githubusercontent.com/Donaim/proviral-pres1/refs/heads/master/assets/forest.webp
 info: |
   ## MiSeq Workflow
-  Solutions and challenges of a modern pipeline
+  Solutions and challenges in the modern pipeline
 class: text-center
 drawings:
   persist: true
 mdc: true
-zoom: 0.85
+zoom: 1.2
 hideInToc: true
 ---
 
-<br><br>
-<h1 style='color:#20241f;opacity:85%;text-shadow:2px 2px 14px white'><b>MiSeq workflow</b></h1>
-<h3 style='color:white;opacity:80%;text-shadow:1px 1px 0px black,-1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black'>Solutions and challenges of a modern pipeline</h3>
+<br>
+<h1 style='color:white;opacity:90%;text-shadow:0px 0px 24px white'><b>MiSeq Workflow</b></h1>
+<h3 style='color:white;opacity:80%;text-shadow:1px 1px 0px black,-1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black'>Solutions and challenges in the modern pipeline</h3>
 <div class="absolute bottom-5 left-3" style='opacity:85%;text-shadow:1px 1px 0px black,-1px -1px 0px black'>
   <b>11 Dec 2025 · Lab Update</b>
 </div>
