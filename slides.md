@@ -302,6 +302,14 @@ Solutions:
 
 ---
 
+## Remapping [2]
+
+<NOTE>
+Show graphically the remapping steps.
+</NOTE>
+
+---
+
 ## Denovo assembly
 
 <NOTE>
@@ -311,6 +319,14 @@ Challenges:
 Solutions:
 - Hash-table (k-mer) based overlap counting.
 - Stitching (both reference-free and reference-based stitching is performed in MiCall)
+</NOTE>
+
+---
+
+## Denovo assembly [2]
+
+<NOTE>
+Show graphically the remapping steps.
 </NOTE>
 
 ---
