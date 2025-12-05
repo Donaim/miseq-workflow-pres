@@ -303,7 +303,7 @@ Solutions:
 
 <NOTE>
 Challenges:
-- Overlap finding is very computationally hard.
+- Overlap finding is very computationally hard. TODO: estimate run time of a naive algorithm.
 
 Solutions:
 - Hash-table (k-mer) based overlap counting.
