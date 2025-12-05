@@ -356,7 +356,7 @@ These plots display how well reads mapped to the contigs.
 
 ---
 
-## MiseqQC upload
+## MiseqQC processing
 
 <NOTE>
 Explain how `MiseqQCReport` perl script daemon goes through and uploads the Phred scores to Oracle database.
