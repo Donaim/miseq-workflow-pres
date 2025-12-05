@@ -326,7 +326,7 @@ Solutions:
 ## Denovo assembly [2]
 
 <NOTE>
-Show graphically the algorithm.
+Show graphically the algorithms.
 </NOTE>
 
 ---
