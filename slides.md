@@ -392,8 +392,8 @@ Challenge:
 - given a consensus sequence, determine reproduction intactness of the virus and categorize various types of defects.
 
 Solution:
-- CFEIntact
-- BBLabs
+- `CFEIntact`
+- `BBLabs`
 </NOTE>
 
 ---
