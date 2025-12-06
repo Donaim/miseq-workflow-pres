@@ -565,6 +565,11 @@ Solutions:
 
 ## Quality control
 
+<!--
+I should say that Phred scores are the basic quality quantifiers that MiSeq produces for us.
+I should say that later I will show other quality metrics that MiCall uses.
+-->
+
 TODO:
 
 Explain how Phred scores are calculated in MiSeq.
