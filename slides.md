@@ -391,17 +391,17 @@ First nobels provide the absolute basic: "what and where to look for".
 
 "What’s inside this MiSeq run?"
 
-**1980 Chemistry** – Sanger
-How to read DNA sequences
-
-**1993 Chemistry** – Mullis
-PCR: copying specific DNA millions of times
-
 **1975 Medicine** – Dulbecco, Temin, Baltimore
 How retroviruses work (reverse transcriptase, proviruses)
 
 **2008 Medicine** – Barré-Sinoussi & Montagnier
 Discovering HIV itself
+
+**1980 Chemistry** – Sanger
+How to read DNA sequences
+
+**1993 Chemistry** – Mullis
+PCR: copying specific DNA millions of times
 
 Plus Illumina's engineering to automate it all.
 
