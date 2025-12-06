@@ -277,7 +277,7 @@ Going from sample to DNA sequence is what we call **sequencing**.
 
 **Next-generation sequencing (NGS)** → used with **MiCall**  
 - Deep sequencing of viral populations
-- Millions of short reads (~250bp each)
+- Thousands of short reads (~250bp each)
 - Captures whole genomes and minority variants
 - Handles high-variability regions (indels, hypervariable loops)
 
@@ -302,16 +302,16 @@ But the tradeoff is complexity.
 <!--
 TODO: Draw a diagram here.
 Should be a "zoomed in" picture: bounded by "sample -> DNA sequence" limit states.
-Three nodes: "sample", "DNA sequence", and "millions of reads" inbetween them.
+Three nodes: "sample", "DNA sequence", and "thousands of reads" inbetween them.
 -->
 
-Choosing NGS creates a new intermediate goal: **millions of short reads**, also known as FASTQ file.
+Choosing NGS creates a new intermediate goal: **thousands of short reads**, also known as FASTQ file.
 
 **What is this state?**
 
 - Raw output from the MiSeq sequencer
 - Each read: ~250 nucleotides + quality scores
-- Millions of reads per sample, normally at random positions across the genome
+- Thousands of reads per sample, normally at random positions across the genome
 
 **Why does this matter?**
 
@@ -321,7 +321,7 @@ Choosing NGS creates a new intermediate goal: **millions of short reads**, also 
 - These FASTQ files are the raw data we preserve for reproducibility
 
 <!--
-Once we commit to next-generation sequencing, we immediately create a new milestone: obtaining the millions of short reads that the MiSeq produces.
+Once we commit to next-generation sequencing, we immediately create a new milestone: obtaining the thousands of short reads that the MiSeq produces.
 
 We have a clean separation:
 - MiSeq produces FASTQ
@@ -417,7 +417,7 @@ Illumina as well, took all this fundamental science and turned it into a machine
 
 ## From FASTQ to consensus
 
-Now we have FASTQ files full of millions of short reads. Next job: turn those into consensus sequences.
+Now we have FASTQ files full of thousands of short reads. Next job: turn those into consensus sequences.
 
 **MiCall handles this automatically:**
 - File transport and discovery
@@ -476,7 +476,7 @@ The MiSeq doesn't tell us when its done. So we check ourselves. A script checks 
 
 <!--
 TODO:
-Show a graphic of millions of reads.
+Show a graphic of thousands of reads.
 It should show depict that these reads are short and they come from random places in the virus' genome.
 -->
 
