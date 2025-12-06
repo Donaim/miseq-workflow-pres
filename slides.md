@@ -572,6 +572,8 @@ I should say that later I will show other quality metrics that MiCall uses.
 
 TODO:
 
+Phred = Phil’s Read Editor.
+
 Explain how Phred scores are calculated in MiSeq.
 Then explain how MiCall is filtering out bad reads.
 
