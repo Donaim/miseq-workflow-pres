@@ -23,11 +23,11 @@ hideInToc: true
 <!--
 Hello everyone.
 
-In this talk I want to walk through the MiSeq-based workflow that takes us from a requisition to a resistance report and an intactness analysis.
+In this talk I want to walk through the MiSeq-based workflow that takes us from a requisition to either a tropism report or an intactness analysis.
 
 I am not going to give a step-by-step SOP or a MiSeq troubleshooting guide. Instead, I want to focus on why the pipeline is shaped the way it is, and why we chose the particular intermediate states that we did.
 
-Think of this as a map of the territory. After this talk, my goal is that when you hear “MiSeq run” or “consensus” or “intactness”, you have a clear sense of where that sits in the bigger picture and why we bother doing it in the first place.
+Think of this as a map of the territory. After this talk, my goal is that when you hear "MiSeq run" or "consensus" or "intactness", you have a clear sense of where that sits in the bigger picture and why we bother doing it in the first place.
 -->
 
 ---
@@ -57,13 +57,13 @@ By focusing on the key intermediate “states” of the pipeline, rather than ev
 <!--
 TODO:
 - add a diagram. the diagram should have four nodes and two edges:
-  - V3 requisition -> resistance report
+  - V3 requisition -> tropism report
   - research requisition -> intactness results
 -->
 
 Two main transformations:
 
-- Turn a **V3 requisition** into a **resistance report**.
+- Turn a **V3 requisition** into a **tropism report** (coreceptor usage).
 - Turn a **research requisition** into a **consensus sequence plus intactness analysis**.
 
 And do this in a way that:
@@ -74,7 +74,7 @@ And do this in a way that:
 <!--
 If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
 
-First, for clinical V3 testing, we start from a V3 requisition and we owe the clinician a resistance report that they can use.
+First, for clinical V3 testing, we start from a V3 requisition and we owe the clinician a tropism report.
 
 Second, for research work, we start from a research requisition and we owe our collaborators intactness analyses that they can trust in their projects.
 
@@ -142,10 +142,10 @@ We can describe the whole workflow as passing through two shared internal states
 
 Both clinical and research work follow the same backbone:
 
-> V3 / research requisition → **physical sample** → **DNA sequence** → resistance / intactness report
+> V3 / research requisition → **physical sample** → **DNA sequence** → tropism / intactness report
 
 - The details differ at the edges, but almost everything we care about happens around these two states.
-- So the rest of the talk will treat “sample” and “consensus” as the main anchors of the MiSeq pipeline.
+- So the rest of the talk will treat "sample" and "consensus" as the main anchors of the MiSeq pipeline.
 
 <!--
 Up to now I’ve shown you the overall goals: starting from a requisition and ending with either a resistance report or an intactness analysis.
@@ -290,7 +290,7 @@ But Sanger has fundamental limitations. First, read length: we can only sequence
 
 Second, Sanger struggles with heterogeneous populations. If you have a mixture of variants, especially with insertions or deletions, the chromatograph signals interfere with each other and become unreadable. This is particularly problematic in highly variable regions like the V3 loop.
 
-Next-generation sequencing is what MiSeq uses. It addresses was pretty much designed to solves our two problems.
+Next-generation sequencing is what MiSeq uses. It can sequence whole genomes and detect minority variants that Sanger would miss.
 
 But the tradeoff is complexity.
 -->
@@ -491,7 +491,7 @@ It should show depict that these reads are short and they come from random place
 - Used for research/proviral work
 
 <!--
-MiCall can work two ways. Remapping is faster and works great when you know what you're looking for - like V3 loop sequencing for clinical resistance testing. De novo assembly is for when you want whole genomes or when the sample might have weird variants that don't map well to references. Both strategies end up giving you consensus sequences, just different paths to get there.
+MiCall can work two ways. Remapping is faster and works great when you know what you're looking for - like V3 loop sequencing for clinical testing. De novo assembly is for when you want whole genomes or when the sample might have weird variants that don't map well to references. Both strategies end up giving you consensus sequences, just different paths to get there.
 -->
 
 ---
@@ -599,12 +599,41 @@ Users can see the a summary of individual reads quality scores and coverage plot
 
 ---
 
+## V3 Tropism Testing
+
+**Special clinical workflow** - runs FIRST in MiCall pipeline, before remapping/assembly.
+
+**Goal:** Predict which coreceptor HIV uses to enter cells
+- **R5-tropic** (uses CCR5) → maraviroc eligible
+- **X4-tropic** (uses CXCR4) → maraviroc won't work
+
+**How it works:**
+1. Extract and align V3 loop sequences (~35 amino acids)
+2. Score using geno2pheno PSSM algorithm
+3. Convert score to FPR (False Positive Rate)
+4. Call: FPR ≥ 3.5% → R5, FPR < 3.5% → X4
+5. Sample is X4 if ≥2% of reads are X4
+
+**Output:** `g2p.csv` (per-sequence) + `g2p_summary.csv` (final call)
+
+<!--
+This is MiCall's only clinical application at our lab. Everything else MiCall does is research. 
+
+The V3 loop in HIV's envelope protein determines which coreceptor the virus uses - CCR5 or CXCR4. This matters because maraviroc is a drug that blocks CCR5. If a patient has X4-tropic virus, maraviroc will be completely ineffective.
+
+The geno2pheno algorithm predicts tropism from the V3 amino acid sequence using a position-specific scoring matrix. It's much faster and cheaper than actually growing virus in culture with blocked coreceptors.
+
+MiCall runs this tropism prediction as the very first step, using a special alignment algorithm optimized for the short V3 region. The 2% threshold for calling a sample X4 is conservative - it catches minority variants that could cause treatment failure.
+-->
+
+---
+
 ## From consensus to reports
 
 <!-- TODO: improve this slide. -->
 
 Reminder, we produce two kinds of reports:
-- V3 resistance interpretation
+- V3 tropism interpretation (clinical)
 - intactness analysis
 
 ---
@@ -666,6 +695,9 @@ Other challenges:
 ## Resistance interpretation
 
 <!-- TODO: improve this slide. -->
+
+MiCall has built-in resistance interpretation step.
+However, in our lab we do not use it clinically.
 
 Challenge:
 - given a consensus sequence, determine if the original virus is resistant to given drugs
