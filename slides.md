@@ -490,31 +490,6 @@ MiCall can work two ways. In the remapping mode it is faster and works great whe
 
 ---
 
-## Remapping
-
-**How it works:**
-- Use Bowtie2 to map reads to reference genomes
-- Iterate: build a consensus, remap reads to that, build a better consensus
-- Stop when it converges
-
-**Why this works:**
-- Fast and accurate when the sample is similar to the reference
-- Good for targeted sequencing (like V3 loop)
-
-<!--
-Remapping is the simpler strategy. We have a good HIV reference sequence. We map the reads to that reference, which is fast. Then we iterate - the first consensus might not be perfect, so we use that as a new reference and remap. After a few rounds it converges.
--->
-
----
-
-## Remapping [2]
-
-<NOTE>
-TODO: Show graphically the algorithm.
-</NOTE>
-
----
-
 ## Denovo assembly
 
 <!--
