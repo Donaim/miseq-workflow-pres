@@ -485,7 +485,7 @@ It should show depict that these reads are short and they come from random place
 - Used for research/proviral work
 
 <!--
-MiCall can work two ways. Remapping is faster and works great when you know what you're looking for - like V3 loop sequencing for clinical testing. De novo assembly is for when you want whole genomes or when the sample might have weird variants that don't map well to references. Both strategies end up giving you consensus sequences, just different paths to get there.
+MiCall can work two ways. In the remapping mode it is faster and works great when we know what you're looking for - like V3 loop sequencing for clinical testing. De novo mode is for when we want whole genomes or when the sample might have weird variants that don't map well to references. Both strategies end up giving you consensus sequences, just different paths to get there.
 -->
 
 ---
