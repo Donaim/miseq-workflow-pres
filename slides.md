@@ -588,10 +588,22 @@ The MiseqQC tool then generates reports from that database. It produces both ind
 
 ## QAI upload
 
-<!-- TODO: expand this slide. -->
+**MiCall sends data into QAI**
 
-We upload quality control data to QAI for easy display.
-Users can see the a summary of individual reads quality scores and coverage plots.
+**What gets uploaded:**
+- Consensus sequences (`conseqs.csv`)
+- Coverage metrics (min coverage, min coverage position)
+- Read counts (raw reads, mapped reads)
+- Quality scores per sample
+
+**QAI displays this through:**
+- **Review interface** - users can browse samples by run
+- **Per-sample metrics** - mapped reads, coverage depths, acceptance decisions
+- **Error metrics tables** - tile-by-cycle quality visualizations
+
+<!--
+After MiCall finishes processing a run, the results need to reach the people who will interpret them. Some of the results, especially proviral, are accessed through RAW_DATA. But also MiCall uploads consensus sequences, coverage statistics, and quality metrics into QAI's, where they can be found via run and sample IDs.
+-->
 
 ---
 
