@@ -607,6 +607,22 @@ After MiCall finishes processing a run, the results need to reach the people who
 
 ---
 
+## From consensus to reports
+
+<!-- TODO:
+
+This should be a reminder slide.
+
+It should highlight two nodes at the bottom:
+- V3 tropism interpretation (clinical)
+- intactness analysis
+
+Note sure yet what to say.
+
+-->
+
+---
+
 ## V3 Tropism Testing
 
 **Special clinical workflow** - runs FIRST in MiCall pipeline, before remapping/assembly.
@@ -630,22 +646,6 @@ The V3 loop in HIV's envelope protein determines which coreceptor the virus uses
 The geno2pheno algorithm predicts tropism from the V3 amino acid sequence using a position-specific scoring matrix. It's much faster and cheaper than actually growing virus in culture with blocked coreceptors.
 
 MiCall runs this tropism prediction as the very first step, using a special alignment algorithm optimized for the short V3 region. The 2% threshold for calling a sample X4 is conservative - it catches minority variants that could cause treatment failure.
--->
-
----
-
-## From consensus to reports
-
-<!-- TODO:
-
-This should be a reminder slide.
-
-It should highlight two nodes at the bottom:
-- V3 tropism interpretation (clinical)
-- intactness analysis
-
-Note sure yet what to say.
-
 -->
 
 ---
