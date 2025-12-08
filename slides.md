@@ -502,7 +502,7 @@ MiCall can work two ways. Remapping is faster and works great when you know what
 - Good for targeted sequencing (like V3 loop)
 
 <!--
-Remapping is the simpler strategy. We have a good HIV reference sequence. We align the reads to those references using Bowtie2, which is fast. Then we iterate - the first consensus might not be perfect, so we use that as a new reference and remap. After a few rounds it converges. This is what we use for clinical V3 testing.
+Remapping is the simpler strategy. We have a good HIV reference sequence. We map the reads to that reference, which is fast. Then we iterate - the first consensus might not be perfect, so we use that as a new reference and remap. After a few rounds it converges.
 -->
 
 ---
