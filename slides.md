@@ -272,7 +272,7 @@ Going from sample to DNA sequence is what we call **sequencing**.
 - Clean signal for homogeneous samples
 - Used for clinical HIV genotyping
 
-**Next-generation sequencing (NGS)** → used with **MiCall**  
+**Next-generation sequencing (NGS)** → used with **MiCall**
 - Deep sequencing of viral populations
 - Thousands of short reads (~250bp each)
 - Captures whole genomes and minority variants
