@@ -619,7 +619,7 @@ Users can see the a summary of individual reads quality scores and coverage plot
 **Output:** `g2p.csv` (per-sequence) + `g2p_summary.csv` (final call)
 
 <!--
-This is MiCall's only clinical application at our lab. Everything else MiCall does is research. 
+This is MiCall's only clinical application at our lab. Everything else MiCall does is research.
 
 The V3 loop in HIV's envelope protein determines which coreceptor the virus uses - CCR5 or CXCR4. This matters because maraviroc is a drug that blocks CCR5. If a patient has X4-tropic virus, maraviroc will be completely ineffective.
 
