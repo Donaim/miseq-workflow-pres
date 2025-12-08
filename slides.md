@@ -505,7 +505,11 @@ TODO: estimate run time of naive overlap finding algorithm.
 - Stitch contigs together when they overlap
 
 <!--
-De novo assembly is trickier. You're trying to figure out which reads overlap without knowing the answer ahead of time. The key trick is k-mers - short sequences that let you quickly find overlaps using hash tables instead of doing all pairwise comparisons. MiCall assembles contigs this way and then stitches them together. Stitching ensures we only get a single consensus sequence when possible.
+I will focus on De novo because it is more interesting and more complex.
+We're trying to figure out which reads overlap without knowing the answer ahead of time.
+The key trick is k-mers - short sequences that let us quickly find overlaps using hash tables instead of doing all pairwise comparisons.
+MiCall assembles contigs this way and then stitches them together.
+Stitching ensures we only get a single consensus sequence when possible.
 -->
 
 ---
