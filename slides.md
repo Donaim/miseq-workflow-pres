@@ -213,6 +213,9 @@ More on this: https://chatgpt.com/share/692f7e0d-e8d8-800e-80bc-30cc076cbec6
 
 What partial goals we could still achive without Subgoal 1 and Subgoal 2?
 
+- IPDA intactness testing
+- HLA allele inheritance
+
 <!--
 What partial goals we could still achive without Subgoal 1 and Subgoal 2?
 
