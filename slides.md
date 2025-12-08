@@ -351,8 +351,6 @@ This is where the lab team does their work. I won't dive into the chemistry deta
 
 ## Needle in a haystack
 
-### Just how small are we talking?
-
 In 1mL of blood from someone on ART:
 
 - **5-6 billion** total particles
