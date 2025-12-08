@@ -403,7 +403,7 @@ PCR: copying specific DNA millions of times
 Plus Illumina's engineering to automate it all.
 
 <!--
-Other than just finding the DNA, there are a series of Nobel-level challenges that had to be solved.
+Other than just finding the genetic material, there are a series of Nobel-level challenges that had to be solved.
 
 Even the basic question of "what are we looking for?" requires a very non-obvious concept of retrovirus, reverse transcription, and the provirus.
 
