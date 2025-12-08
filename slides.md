@@ -627,11 +627,11 @@ Note sure yet what to say.
 
 **Special clinical workflow** - runs FIRST in MiCall pipeline, before remapping/assembly.
 
-**Goal:** Predict which coreceptor HIV uses to enter cells
+**Challenge:** Predict which coreceptor HIV uses to enter cells
 - **R5-tropic** (uses CCR5) → maraviroc eligible
 - **X4-tropic** (uses CXCR4) → maraviroc won't work
 
-**How it works:**
+**Solution:**
 1. Extract and align V3 loop sequences (~35 amino acids)
 2. Score using geno2pheno PSSM algorithm (similar to resistance interpretation)
 3. Call: score ≥ 3.5% → R5, score < 3.5% → X4
