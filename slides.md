@@ -605,10 +605,8 @@ Users can see the a summary of individual reads quality scores and coverage plot
 
 **How it works:**
 1. Extract and align V3 loop sequences (~35 amino acids)
-2. Score using geno2pheno PSSM algorithm
-3. Convert score to FPR (False Positive Rate)
-4. Call: FPR ≥ 3.5% → R5, FPR < 3.5% → X4
-5. Sample is X4 if ≥2% of reads are X4
+2. Score using geno2pheno PSSM algorithm (similar to resistance interpretation)
+3. Call: score ≥ 3.5% → R5, score < 3.5% → X4
 
 **Output:** `g2p.csv` (per-sequence) + `g2p_summary.csv` (final call)
 
