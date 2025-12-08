@@ -340,9 +340,6 @@ This happens in the lab with molecular biology and chemistry:
 - Prepare sequencing libraries
 - Run the MiSeq sequencer
 
-**The needle-in-a-haystack problem:**  
-Finding ~10kb of viral DNA in 4Gb of human DNA, from maybe 100 infected cells.
-
 <!--
 This is where the lab team does their work. I won't dive into the chemistry details since that's not my expertise. But I do want to acknowledge challenges that are solved: 
 -->
