@@ -405,10 +405,10 @@ Plus Illumina's engineering to automate it all.
 <!--
 Other than just finding the genetic material, there are a series of Nobel-level challenges that had to be solved.
 
+Even the basic question of "what are we looking for?" requires a very non-obvious concept of retrovirus, reverse transcription, and the provirus.
+
 On this slide I listed some key discoveries.
 We can recognize some of the names here, such as Sanger and Montagnier.
-
-Even the basic question of "what are we looking for?" requires a very non-obvious concept of retrovirus, reverse transcription, and the provirus.
 
 Illumina took all this fundamental science and turned it into a machine we can buy and run our lab.
 -->
