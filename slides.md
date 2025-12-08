@@ -408,7 +408,7 @@ Plus Illumina's engineering to automate it all.
 <!--
 Other than just finding the DNA, there are a series of Nobel-level challenges that had to be solved.
 
-Even the basic question of "what are we looking for?" requires a very non-obvious concept of retrovirus, reverse transcription, and the provirus concept.
+Even the basic question of "what are we looking for?" requires a very non-obvious concept of retrovirus, reverse transcription, and the provirus.
 
 Illumina as well, took all this fundamental science and turned it into a machine we can buy and run our lab.
 -->
