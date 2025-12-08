@@ -153,8 +153,6 @@ The first ovious subgoal is to get a physical sample into our lab. The second su
 Once you accept those two states as the backbone, both the V3 clinical pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
 -->
 
-<div></div>
-
 ---
 
 ## Subgoal 1: get a physical sample
@@ -615,7 +613,7 @@ Users can see the a summary of individual reads quality scores and coverage plot
 **Output:** `g2p.csv` (per-sequence) + `g2p_summary.csv` (final call)
 
 <!--
-This is MiCall's only clinical application at our lab. Everything else MiCall does is research.
+What is tropism testing?
 
 The V3 loop in HIV's envelope protein determines which coreceptor the virus uses - CCR5 or CXCR4. This matters because maraviroc is a drug that blocks CCR5. If a patient has X4-tropic virus, maraviroc will be completely ineffective.
 
@@ -628,11 +626,17 @@ MiCall runs this tropism prediction as the very first step, using a special alig
 
 ## From consensus to reports
 
-<!-- TODO: improve this slide. -->
+<!-- TODO:
 
-Reminder, we produce two kinds of reports:
+This should be a reminder slide.
+
+It should highlight two nodes at the bottom:
 - V3 tropism interpretation (clinical)
 - intactness analysis
+
+Note sure yet what to say.
+
+-->
 
 ---
 
