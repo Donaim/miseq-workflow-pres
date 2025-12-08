@@ -87,15 +87,11 @@ The second is continuous improvement: we know methods, software, and standards c
 
 ## Requisition
 
-### Why start with a requisition?
-
-- It expresses **why** we are doing any work at all for this sample.
-- It ties a **person or project** to a **specific promise**: resistance, consensus, intactness, or some combination.
-- It defines the **obligations** downstream: how carefully we must track, interpret, and report.
+Expresses **why** we are doing any work at all for this sample.
 
 ### What it carries conceptually
 
-- The clinical or research question we are answering.
+- The clinical question we are answering.
 - The type of sample that will be sent.
 - The type of pipeline and report that the MiSeq workflow should produce.
 
