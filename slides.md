@@ -724,10 +724,17 @@ Solution:
 - then use HIVdb to score resistance
 
 ---
+dragPos:
+  hepcresist: 454,21,509,590
+---
 
 ## Resistance interpretation [2]
 
-TODO: show example report.
+<v-drag pos="hepcresist">
+
+<img src='./assets/hepc-resistance.png' alt='Hepatitis C resistance'>
+
+</v-drag>
 
 ---
 layout: cover
