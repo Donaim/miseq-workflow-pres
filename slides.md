@@ -768,6 +768,16 @@ Observe that the result looks like clinical resistance report.
 </v-drag>
 
 ---
+
+## Summary
+
+<!--
+TODO: add more about why and what.
+-->
+
+- Software side is extremely strong and high quality.
+
+---
 layout: cover
 background: https://cover.sli.dev
 zoom: 2.0
