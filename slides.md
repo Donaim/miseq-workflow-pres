@@ -269,15 +269,15 @@ But it seems that we would need to be creative to find them.
 
 A requisition arrives → lab receives a sample → information must flow to bioinformatics pipeline
 
-**Key challenges:**
+**Challenges:**
 
 - **Real-world ↔ Digital coordination**: Physical tubes, in various steps along the pipeline, must match digital records in the system
 - **Historical traceability**: Every sample, every run, every decision must be reconstructable months or years later
 - **Data integrity**: Typos in sample IDs, missing metadata, or mismatched records can derail the entire pipeline
 
-**Our solution: QAI**
+**Solutions:**
 
-Our in-house Laboratory Information Management System that bridges the physical and digital worlds.
+- QAI: our in-house Laboratory Information Management System that bridges the physical and digital worlds.
 
 <!--
 This is the first critical handoff in our workflow - moving from an abstract request to a concrete physical sample that both the lab and our automated systems can track.
