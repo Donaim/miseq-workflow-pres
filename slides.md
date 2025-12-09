@@ -748,3 +748,12 @@ hideInToc: true
 ---
 
 # Thank you
+
+<!--
+TODO: add a small workflow diagram that shows the whole pipeline.
+-->
+
+<!--
+I hope this talk helped you understand the MiSeq workflow better, and why we do things the way we do.
+Thank you for listening.
+-->
