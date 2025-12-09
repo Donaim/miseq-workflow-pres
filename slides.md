@@ -74,7 +74,7 @@ And do this in a way that:
 <!--
 If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
 
-First, for clinical V3 testing, we start from a V3 requisition and we owe the clinician a tropism report.
+First, for V3 testing, we start from a V3 requisition and we owe the clinician a tropism report.
 
 Second, for research work, we start from a research submission and we owe our collaborators intactness analyses that they can trust in their projects.
 
@@ -95,7 +95,7 @@ dragPos:
 
 ### What it carries conceptually
 
-- The clinical question we are answering.
+- The question we are answering.
 - The type of sample that will be sent.
 - Type of report that the MiSeq workflow should produce.
 
@@ -182,7 +182,7 @@ In between those endpoints there are a lot of individual steps: lab work, sequen
 
 The first ovious subgoal is to get a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
 
-Once you accept those two states as the backbone, both the V3 clinical pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
+Once you accept those two states as the backbone, both the V3 pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
 -->
 
 ---
@@ -302,7 +302,7 @@ Going from sample to DNA sequence is what we call **sequencing**.
 - Population-level consensus
 - Maximum read length ~700bp
 - Clean signal for homogeneous samples
-- Used for clinical HIV genotyping
+- Used for HIV genotyping
 
 **Next-generation sequencing (NGS)** → used with **MiCall**
 - Deep sequencing of viral populations
@@ -313,7 +313,7 @@ Going from sample to DNA sequence is what we call **sequencing**.
 <!--
 The term "sequencing" refers to the entire transformation from a physical blood sample into a digital string of nucleotides. But there are many ways to do that transformation.
 
-For decades, our lab used Sanger sequencing, consumed by ReCall. It works beautifully for most of our clinical resistance testing.
+For decades, our lab used Sanger sequencing, consumed by ReCall. It works beautifully for most of our resistance testing.
 
 But Sanger has fundamental limitations. First, read length: we can only sequence up to about 700 base pairs in one experiment.
 
@@ -508,7 +508,7 @@ It should show depict that these reads are short and they come from random place
 **Remapping approach:**
 - Map reads to known reference genomes (like HXB2)
 - Build consensus from the aligned reads
-- Used for clinical V3 work
+- Used for V3 work
 
 **De novo assembly:**
 - Assemble reads into contigs without a reference
@@ -516,7 +516,7 @@ It should show depict that these reads are short and they come from random place
 - Used for research/proviral work
 
 <!--
-MiCall can work two ways. In the remapping mode it is faster and works great when we know what you're looking for - like V3 loop sequencing for clinical testing. De novo mode is for when we want whole genomes or when the sample might have weird variants that don't map well to references. Both strategies end up giving you consensus sequences, just different paths to get there.
+MiCall can work two ways. In the remapping mode it is faster and works great when we know what you're looking for - like V3 loop sequencing. De novo mode is for when we want whole genomes or when the sample might have weird variants that don't map well to references. Both strategies end up giving you consensus sequences, just different paths to get there.
 -->
 
 ---
@@ -639,7 +639,7 @@ After MiCall finishes processing a run, the results need to reach the people who
 This should be a reminder slide.
 
 It should highlight two nodes at the bottom:
-- V3 tropism interpretation (clinical)
+- V3 tropism interpretation
 - intactness analysis
 
 Note sure yet what to say.
@@ -650,7 +650,7 @@ Note sure yet what to say.
 
 ## V3 Tropism Testing
 
-**Special clinical workflow** - runs FIRST in MiCall pipeline, before remapping/assembly.
+**Special workflow** - runs FIRST in MiCall pipeline, before remapping/assembly.
 
 **Challenge:** Predict which coreceptor HIV uses to enter cells
 - **R5-tropic** (uses CCR5) → maraviroc eligible
@@ -731,7 +731,7 @@ Other challenges:
 
 ## Resistance interpretation
 
-<!-- TODO: improve this slide. In particular, note that we use the same HIVdb library that we use clinically. -->
+<!-- TODO: improve this slide. In particular, note that we use the same HIVdb library that ReCall uses. -->
 
 This is sometimes ordered instead of tropism testing.
 The results are not clinically approved.
@@ -751,14 +751,14 @@ dragPos:
 ## Resistance interpretation
 
 <!--
-Observe that the result looks like clinical resistance report.
+Observe that the result looks like resistance reports from ReCall.
 -->
 
 <br>
 
 - Performed for HCV.
 - Not clinically approved.
-- Similar to our HIV resistance reports.
+- Similar to our HIV resistance reports from ReCall.
 - Uses the same HIVdb library.
 
 <v-drag pos="hepcresist">
