@@ -721,7 +721,7 @@ Challenge: determine if an ORF is intact.
 Solution:
 - Look for premature stop codons.
 - Look for frameshifts.
-- Look for deletions beyond a threshold.
+- Look for deletions beyond a certain length.
 
 ---
 
