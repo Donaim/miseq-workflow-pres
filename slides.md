@@ -786,7 +786,9 @@ TODO: add more about why and what.
 
 - Software side is maintainable and high quality.
   - Designed with containerization, reproducibility, and maintainability in mind.
-- Flexible. Shown to handle HIV/V3/SarsCov2/HCV...
+- Flexible (one program to rule them all)
+  - Shown to handle HIV, V3, HCV, SarsCov2
+  - Used for both research and clinical work.
 
 ---
 layout: cover
