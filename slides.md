@@ -84,16 +84,17 @@ The second is continuous improvement: we know methods, software, and standards c
 -->
 
 ---
+dragPos:
+  landscapes: 409,12,560,532
+---
 
 ## Requisition
 
-Expresses **why** we are doing any work at all for this sample.
+<v-drag pos="landscapes">
 
-### What it carries conceptually
+<img src='./assets/req-v3.png' alt='V3 requisition'>
 
-- The clinical question we are answering.
-- The type of sample that will be sent.
-- The type of pipeline and report that the MiSeq workflow should produce.
+</v-drag>
 
 <!--
 The first state in the workflow is the requisition.
