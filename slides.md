@@ -686,16 +686,25 @@ MiCall runs this tropism prediction as the very first step, using a special alig
 
 ## Proviral pipeline
 
-Challenges:
-- Trim primers.
-- <TODO>: add more, studying deps.local/proviral/docs/
-- Determine reproductive health profile of the virus.
-- Categorize/visualize various types of defects.
+**Challenge**: Determine if integrated HIV DNA can produce infectious virus
 
-Solutions:
-- Various QC and preprocessing steps.
-- `CFEIntact` - defects detector.
-- `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/` - a tool where users manually upload outputs of `proviral` to visualize defects distribution.
+- **Quality filtering** - exclude non-HIV sequences, low coverage, ambiguous bases
+- **Primer detection and removal** - strip lab-added primers to analyze only viral genome
+- **Defect classification** - identify hypermutation, deletions, inversions, frameshifts, stop codons
+- **Gene extraction** - splice out individual genes (gag, pol, env, etc.) for detailed analysis
+
+**Solution**: Multi-stage pipeline with strict QC
+
+- `cfeproviral` - wrapper that orchestrates filtering, primer handling, gene splicing
+- `CFEIntact` - core defect detector (BLAST alignment, ORF detection, APOBEC scan, structural checks)
+- `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/` - web tool for visualizing defect distribution
+
+<!--
+The proviral pipeline answers a key question: which integrated proviruses are intact and replication-competent versus defective? The pipeline starts from MiCall output, applies quality filtering to exclude non-HIV sequences and low coverage, detects and strips lab-added primers, then analyzes defects using CFEIntact.
+
+It then extracts individual viral genes like gag, pol, and env a provides their ACTG sequences. 
+The landscape CSV maps defect coordinates across the genome, and users manually upload this to the BBLabs web tool to generate visual plots showing defect patterns and distributions across samples.
+-->
 
 ---
 
