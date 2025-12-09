@@ -732,7 +732,7 @@ dragPos:
 
 <v-drag pos="hepcresist">
 
-<img src='./assets/hepc-resistance.png' alt='Hepatitis C resistance'>
+<img style='border: 1px solid black;' src='./assets/hepc-resistance.png' alt='Hepatitis C resistance'>
 
 </v-drag>
 
