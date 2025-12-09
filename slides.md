@@ -817,7 +817,7 @@ Key strengths of the MiSeq workflow:
 <!--
 The MiSeq workflow is flexible and robust. MiCall handles multiple virus types - HIV, HCV, we even sequences SARS-CoV-2 during the pandemic. It serves both clinical workflows like V3 tropism testing and research workflows like proviral intactness analysis.
 
-From engineering perspective, the system is built for maintainability. MiCall is very pleasant to work with, add new features, and fix bugs. It uses modern software practices like containerization to ensure reliability.
+From engineering perspective, the system is built for maintainability. MiCall is very pleasant to work with, add new features, and fix bugs. It uses all most up to date software libraries as well as modern practices like containerization.
 -->
 
 ---
