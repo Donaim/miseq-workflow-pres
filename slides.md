@@ -259,7 +259,8 @@ There are ways to quantify intactness without ever seeing a DNA sequence. Assays
 
 Then, in the same way know how blood type can sometimes be deduced from the parents’ blood types, if neither parent has a problematic HLA allele, then their children can’t inherit it either.
 
-I am sure there's more. The point is we have to be creative if we want to circumvent the two subgoals.
+I am sure there's more ways to achive some partial goals.
+But it seems that we would need to be creative to find them.
 -->
 
 ---
