@@ -725,14 +725,21 @@ Solution:
 
 ---
 dragPos:
-  hepcresist: 454,21,509,590
+  hepcresist: 414,21,549,590
 ---
 
-## Resistance interpretation [2]
+## Resistance interpretation
 
 <!--
 Observe that the result looks like clinical resistance report.
 -->
+
+<br>
+
+- Performed for HCV.
+- Not clinically approved.
+- Similar to our HIV resistance reports.
+- Uses the same HIVdb library.
 
 <v-drag pos="hepcresist">
 
