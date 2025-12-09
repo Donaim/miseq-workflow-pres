@@ -699,7 +699,7 @@ Other challenges:
 
 ## Resistance interpretation
 
-<!-- TODO: improve this slide. -->
+<!-- TODO: improve this slide. In particular, note that we use the same HIVdb library that we use clinically. -->
 
 MiCall has built-in resistance interpretation step.
 However, in our lab we do not use it clinically.
