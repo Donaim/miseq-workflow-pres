@@ -784,7 +784,9 @@ Observe that the result looks like resistance reports from ReCall.
 TODO: add more about why and what.
 -->
 
-- Software side is extremely strong and high quality.
+- Software side is maintainable and high quality.
+  - Designed with containerization, reproducibility, and maintainability in mind.
+- Flexible. Shown to handle HIV/V3/SarsCov2/HCV...
 
 ---
 layout: cover
