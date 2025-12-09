@@ -23,7 +23,7 @@ hideInToc: true
 <!--
 Hello everyone.
 
-In this talk I want to walk through the MiSeq-based workflow that takes us from a requisition to either a tropism report or an intactness analysis.
+In this talk I want to walk through the MiSeq-based workflow that takes us from a requisition to either a tropism/resistance report or an intactness analysis.
 
 I am not going to give a step-by-step SOP or a MiSeq troubleshooting guide. Instead, I want to focus on why the pipeline is shaped the way it is, and why we chose the particular intermediate states that we did.
 
@@ -57,13 +57,13 @@ By focusing on the key intermediate “states” of the pipeline, rather than ev
 <!--
 TODO:
 - add a diagram. the diagram should have four nodes and two edges:
-  - V3 requisition -> tropism report
+  - V3/HCV requisition -> tropism/resistance report
   - research submission -> intactness results
 -->
 
 Two main transformations:
 
-- Turn a **V3 requisition** into a **tropism report**.
+- Turn a **V3/HCV requisition** into a **tropism or resistance report**.
 - Turn a **research submission** into a **consensus sequence** (optionally intactness analysis).
 
 And do this in a way that:
@@ -74,7 +74,7 @@ And do this in a way that:
 <!--
 If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
 
-First, for V3 testing, we start from a V3 requisition and we owe the clinician a tropism report.
+First, for V3 tropism testing and HCV resistance testing, we start from a requisition and we owe the clinician a report.
 
 Second, for research work, we start from a research submission and we owe our collaborators intactness analyses that they can trust in their projects.
 
@@ -114,9 +114,9 @@ dragPos:
 <!--
 The first state in the workflow is the requisition.
 
-We start here because the requisition is where the “why” of the whole process is written down. Someone is asking us to do something specific for a person or for a project, and the requisition is the formal record of that request.
+We start here because the requisition is where the "why" of the whole process is written down. Someone is asking us to do something specific for a person, and the requisition is the formal record of that request.
 
-Conceptually, the requisition ties three things together. It ties a person or a coded participant ID, it ties the kind of sample that will arrive in the lab, and it ties the type of answer we promise to return, like a resistance interpretation or an intactness analysis.
+Conceptually, the requisition ties three things together. It ties a person or a coded participant ID, it ties the kind of sample that will arrive in the lab, and it ties the type of answer we promise to return, like a tropism report or a resistance interpretation.
 
 The form on the right is our standard V3 requisition form.
 But we accept requisitions that look differently too.
@@ -135,6 +135,9 @@ dragPos:
 
 <!--
 TODO: Say something general about these reports. Ie what they contain, why they are useful.
+
+Both V3 tropism and HCV resistance testing follow the same pathway through the MiSeq workflow.
+They use requisitions, produce similar formatted reports, and are both ordered by clinicians but not clinically approved.
 -->
 
 <v-drag pos="v3">
@@ -168,9 +171,9 @@ We can describe the whole workflow as passing through two shared internal states
 - A **physical sample** that has actually arrived in our lab.
 - A **consensus DNA sequence** that represents the virus in that sample.
 
-Both clinical and research work follow the same backbone:
+Both V3/HCV and research work follow the same backbone:
 
-> V3 / research submission → **physical sample** → **DNA sequence** → tropism / intactness report
+> V3/HCV requisition / research submission → **physical sample** → **DNA sequence** → report / intactness analysis
 
 - The details differ at the edges, but almost everything we care about happens around these two states.
 - So the rest of the talk will treat "sample" and "consensus" as the main anchors of the MiSeq pipeline.
@@ -180,9 +183,9 @@ Up to now I’ve shown you the overall goals: starting from a requisition and en
 
 In between those endpoints there are a lot of individual steps: lab work, sequencing chemistry, file transfers, bioinformatics, quality control, data upload.
 
-The first ovious subgoal is to get a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
+The first obvious subgoal is to get a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
 
-Once you accept those two states as the backbone, both the V3 pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
+Once you accept those two states as the backbone, both the V3/HCV pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
 -->
 
 ---
@@ -638,8 +641,8 @@ After MiCall finishes processing a run, the results need to reach the people who
 
 This should be a reminder slide.
 
-It should highlight two nodes at the bottom:
-- V3 tropism interpretation
+It should highlight two pathways:
+- V3 tropism / HCV resistance interpretation
 - intactness analysis
 
 Note sure yet what to say.
@@ -662,6 +665,8 @@ Note sure yet what to say.
 3. Call: score ≥ 3.5% → R5, score < 3.5% → X4
 
 **Output:** `g2p.csv` (per-sequence) + `g2p_summary.csv` (final call)
+
+**Note:** V3 tropism and HCV resistance testing are on the same pathway - both use requisitions and produce similar formatted reports.
 
 <!--
 What is tropism testing?
@@ -756,7 +761,7 @@ Observe that the result looks like resistance reports from ReCall.
 
 <br>
 
-- Performed for HCV.
+- Performed for HCV resistance testing.
 - Not clinically approved.
 - Similar to our HIV resistance reports from ReCall.
 - Uses the same HIVdb library.
