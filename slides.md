@@ -63,7 +63,7 @@ TODO:
 
 Two main transformations:
 
-- Turn a **V3 requisition** into a **tropism report** (coreceptor usage).
+- Turn a **V3 requisition** into a **tropism report**.
 - Turn a **research requisition** into a **consensus sequence plus intactness analysis**.
 
 And do this in a way that:
