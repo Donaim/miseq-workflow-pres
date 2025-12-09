@@ -686,14 +686,15 @@ MiCall runs this tropism prediction as the very first step, using a special alig
 
 ## Proviral pipeline
 
-<!-- TODO: improve this slide. -->
+Challenges:
+- Trim primers.
+- <TODO>: add more, studying deps.local/proviral/docs/
+- Determine reproductive health profile of the virus.
+- Categorize/visualize various types of defects.
 
-Challenge:
-- given a consensus sequence, determine reproduction intactness of the virus and categorize various types of defects.
-
-Solution:
+Solutions:
+- Various QC and preprocessing steps.
 - `CFEIntact` - defects detector.
-- `proviral` - a pipeline with its own QC and prep steps. calls `CFEIntact` as part of its workflow.
 - `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/` - a tool where users manually upload outputs of `proviral` to visualize defects distribution.
 
 ---
