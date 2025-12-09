@@ -126,6 +126,10 @@ It's the job of data techs to interpret custom requisitions and enter them into 
 -->
 
 ---
+dragPos:
+  hepcresist: 507,110,465,442
+  v3: 16,138,484,407
+---
 
 ## Final reports
 
@@ -133,7 +137,17 @@ It's the job of data techs to interpret custom requisitions and enter them into 
 TODO: Say something general about these reports. Ie what they contain, why they are useful.
 -->
 
-TODO: Show how they look like.
+<v-drag pos="v3">
+
+<img style='border: 1px solid black;' src='./assets/v3-report.png' alt='V3 tropism report'>
+
+</v-drag>
+
+<v-drag pos="hepcresist">
+
+<img style='border: 1px solid black;' src='./assets/hepc-resistance.png' alt='Hepatitis C resistance'>
+
+</v-drag>
 
 ---
 
