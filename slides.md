@@ -118,7 +118,10 @@ We start here because the requisition is where the “why” of the whole proces
 
 Conceptually, the requisition ties three things together. It ties a person or a coded participant ID, it ties the kind of sample that will arrive in the lab, and it ties the type of answer we promise to return, like a resistance interpretation or an intactness analysis.
 
-We accept requisitions that look differently too. For example, LifeLabs has their own format. It's the job of data techs to interpret custom requisitions and enter them into QAI.
+The form on the right is our standard V3 requisition form.
+But we accept requisitions that look differently too.
+For example, LifeLabs has their own format.
+It's the job of data techs to interpret custom requisitions and enter them into QAI.
 
 -->
 
