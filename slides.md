@@ -58,13 +58,13 @@ By focusing on the key intermediate “states” of the pipeline, rather than ev
 TODO:
 - add a diagram. the diagram should have four nodes and two edges:
   - V3 requisition -> tropism report
-  - research requisition -> intactness results
+  - research submission -> intactness results
 -->
 
 Two main transformations:
 
 - Turn a **V3 requisition** into a **tropism report**.
-- Turn a **research requisition** into a **consensus sequence** (optionally intactness analysis).
+- Turn a **research submission** into a **consensus sequence** (optionally intactness analysis).
 
 And do this in a way that:
 
@@ -76,7 +76,7 @@ If we compress all the complexity down to just a couple of sentences, the pipeli
 
 First, for clinical V3 testing, we start from a V3 requisition and we owe the clinician a tropism report.
 
-Second, for research work, we start from a research requisition and we owe our collaborators intactness analyses that they can trust in their projects.
+Second, for research work, we start from a research submission and we owe our collaborators intactness analyses that they can trust in their projects.
 
 Around those two transformations we have two design principles. The first is history: we want to be able to reconstruct what happened to a sample or a run months or years later. That means we care about preserving inputs, intermediate artefacts, and outputs, rather than just the final PDF.
 
@@ -114,7 +114,7 @@ We start here because the requisition is where the “why” of the whole proces
 
 Conceptually, the requisition ties three things together. It ties a person or a coded participant ID, it ties the kind of sample that will arrive in the lab, and it ties the type of answer we promise to return, like a resistance interpretation or an intactness analysis.
 
-The way we handle the sample downstream depends on what is written here. A clinical V3 requisition implies different obligations, timelines, and reporting expectations than a purely research requisition, even if the MiSeq run in the middle looks similar.
+The way we handle the sample downstream depends on what is written here. A clinical V3 requisition implies different obligations, timelines, and reporting expectations than a purely research submission, even if the MiSeq run in the middle looks similar.
 
 So in the state diagram that we will use later, the requisition is the starting node. From that starting point, the very first subgoal is to turn this abstract request into an actual sample tube we can work with, and eventually into a DNA sequence and a report that honours the original question.
 -->
@@ -150,7 +150,7 @@ We can describe the whole workflow as passing through two shared internal states
 
 Both clinical and research work follow the same backbone:
 
-> V3 / research requisition → **physical sample** → **DNA sequence** → tropism / intactness report
+> V3 / research submission → **physical sample** → **DNA sequence** → tropism / intactness report
 
 - The details differ at the edges, but almost everything we care about happens around these two states.
 - So the rest of the talk will treat "sample" and "consensus" as the main anchors of the MiSeq pipeline.
