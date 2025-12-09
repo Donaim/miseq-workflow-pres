@@ -85,12 +85,12 @@ The second is continuous improvement: we know methods, software, and standards c
 
 ---
 dragPos:
-  landscapes: 409,12,560,532
+  v3req: 409,12,560,532
 ---
 
 ## Requisition
 
-<v-drag pos="landscapes">
+<v-drag pos="v3req">
 
 <img src='./assets/req-v3.png' alt='V3 requisition'>
 
