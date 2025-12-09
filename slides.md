@@ -134,8 +134,6 @@ dragPos:
 ## Final reports
 
 <!--
-TODO: Say something general about these reports. Ie what they contain, why they are useful.
-
 Both V3 tropism and HCV resistance testing follow the same pathway through the MiSeq workflow.
 They use requisitions, produce similar formatted reports, and are both ordered by clinicians but not clinically approved.
 -->
@@ -151,6 +149,10 @@ They use requisitions, produce similar formatted reports, and are both ordered b
 <img style='border: 1px solid black;' src='./assets/hepc-resistance.png' alt='Hepatitis C resistance'>
 
 </v-drag>
+
+<!--
+These are examples of the final reports we produce. On the left is a V3 tropism report, on the right is an HCV resistance report. They look similar because they follow the same workflow and use the same reporting infrastructure.
+-->
 
 ---
 
@@ -562,15 +564,22 @@ TODO: Show graphically the algorithms.
 
 ## Pipeline orchestration
 
-<!-- TODO: improve this slide. -->
-
-Challenge:
-- Want to preserve all inputs and outputs for historical and debugging reasons.
+Challenge: preserve all inputs and outputs for historical and debugging reasons.
 
 Solutions:
 - Run all important steps through Kive.
 - Poll Kive to see when results are available.
 - Download results to `RAW_DATA`.
+
+<!--
+Kive is our custom workflow execution system. Think of it as a lab notebook for computational pipelines. When MiCall runs an analysis step, it sends that work to Kive rather than running it locally. Kive stores the inputs, outputs, and exact software versions used.
+
+This solves the reproducibility problem. Months or years later, if someone asks what version of the reference genome we used or whether a sample was processed with the old or new assembly algorithm, we can check Kive's database and know for certain.
+
+With Kive we can also easily reprocess runs with different versions and parameters. It's like having a time machine for our analyses.
+
+The watcher polls Kive periodically to see when jobs complete, then downloads the results back to RAW_DATA where they can be accessed by downstream tools.
+-->
 
 ---
 
@@ -641,16 +650,11 @@ After MiCall finishes processing a run, the results need to reach the people who
 
 ## From consensus to reports
 
-<!-- TODO:
+<!--
+TODO: draw a diagram here.
+It should show two "fork" lines from "consensus" to "tropism/resistance report" and "intactness analysis".
 
-This should be a reminder slide.
-
-It should highlight two pathways:
-- V3 tropism / HCV resistance interpretation
-- intactness analysis
-
-Note sure yet what to say.
-
+Note sure what to say here.
 -->
 
 ---
@@ -710,9 +714,7 @@ The landscape CSV maps defect coordinates across the genome, and users manually 
 
 ## CFEIntact
 
-<!-- TODO: improve this slide. -->
-
-Challenge: find open reading frames.
+Challenge: find open reading frames in HIV proviral sequences.
 
 Solution:
 - Align consensus to reference genome.
@@ -720,47 +722,61 @@ Solution:
 - Look for stop codons (TAA, TAG, TGA).
 - Find the longest ORF between start and stop codons.
 
+<!--
+CFEIntact's first job is identifying where genes are in the proviral sequence. An open reading frame is a stretch of DNA that could code for a protein.
+
+The tool aligns the proviral sequence to a reference genome to figure out where known genes should be, then scans for actual start and stop codons in the sample. The longest ORF for each gene becomes the candidate for further analysis.
+-->
+
 ---
 
 ## CFEIntact [2]
 
-<!-- TODO: improve this slide. -->
-
-Challenge: determine if an ORF is intact.
+Challenge: determine if an ORF is intact or has defects that prevent viral replication.
 
 Solution:
 - Look for premature stop codons.
 - Look for frameshifts.
 - Look for deletions beyond a certain length.
 
+<!--
+CFEIntact then checks whether that ORF could actually produce a functional protein. Premature stop codons truncate proteins early. Frameshifts throw off the reading frame so everything downstream becomes gibberish. Large deletions remove essential protein domains.
+
+Such defects can make the provirus unable to replicate. A single premature stop in gag or pol is enough to render the entire provirus defective. CFEIntact catalogs all these problems and uses them to classify whether the provirus is intact or broken.
+-->
+
 ---
 
 ## CFEIntact [3]
 
-<!-- TODO: improve this slide. -->
-
-Other challenges:
+Other challenges beyond ORF analysis:
 - Detect hypermutation.
 - Determine if packaging signal is intact.
 - Determine if major splice donor site is intact.
 - Detect out-of-order genes.
 - Detect large deletions.
 
+<!--
+CFEIntact does more than just check individual genes.
+When multiple defects exist, the proviral pipeline picks the most serious one based on a severity ranking to represent that provirus.
+-->
+
 ---
 
 ## Resistance interpretation
 
-<!-- TODO: improve this slide. In particular, note that we use the same HIVdb library that ReCall uses. -->
-
 This is sometimes ordered instead of tropism testing.
 The results are not clinically approved.
 
-Challenge:
-- given a consensus sequence, determine if the original virus is resistant to given drugs
+Challenge: given a consensus sequence, determine if the original virus is resistant to given drugs.
 
 Solution:
-- align consensus to reference genome
-- then use HIVdb to score resistance
+- Align consensus to reference genome.
+- Then use HIVdb to score resistance.
+
+<!--
+Resistance interpretation for HCV works similarly to what we do with ReCall for HIV. We take the consensus sequence, align it to identify the relevant genes, then use the HIVdb to score mutations against known resistance patterns.
+-->
 
 ---
 dragPos:
@@ -790,15 +806,19 @@ Observe that the result looks like resistance reports from ReCall.
 
 ## Summary
 
-<!--
-TODO: add more about why and what.
--->
+Key strengths of the MiSeq workflow:
 
 - Software side is maintainable and high quality.
   - Designed with containerization, reproducibility, and maintainability in mind.
-- Flexible (one program to rule them all)
-  - Shown to handle HIV, V3, HCV, SarsCov2
+- Flexible - one program to rule them all.
+  - Shown to handle HIV, V3, HCV, SarsCov2.
   - Used for both research and clinical work.
+
+<!--
+The MiSeq workflow is flexible and robust. MiCall handles multiple virus types - HIV, HCV, we even sequences SARS-CoV-2 during the pandemic. It serves both clinical workflows like V3 tropism testing and research workflows like proviral intactness analysis.
+
+From engineering perspective, the system is built for maintainability. MiCall is very pleasant to work with, add new features, and fix bugs. It uses modern software practices like containerization to ensure reliability.
+-->
 
 ---
 layout: cover
