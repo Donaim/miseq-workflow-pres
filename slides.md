@@ -713,8 +713,8 @@ Other challenges:
 
 <!-- TODO: improve this slide. In particular, note that we use the same HIVdb library that we use clinically. -->
 
-MiCall has built-in resistance interpretation step.
-However, in our lab we do not use it clinically.
+This is sometimes ordered instead of tropism testing.
+The results are not clinically approved.
 
 Challenge:
 - given a consensus sequence, determine if the original virus is resistant to given drugs
