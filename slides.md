@@ -730,6 +730,10 @@ dragPos:
 
 ## Resistance interpretation [2]
 
+<!--
+Observe that the result looks like clinical resistance report.
+-->
+
 <v-drag pos="hepcresist">
 
 <img style='border: 1px solid black;' src='./assets/hepc-resistance.png' alt='Hepatitis C resistance'>
