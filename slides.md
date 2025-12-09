@@ -85,10 +85,21 @@ The second is continuous improvement: we know methods, software, and standards c
 
 ---
 dragPos:
-  v3req: 409,12,560,532
+  v3req: 350,8,626,594
+  points: 13,105,344,404
 ---
 
 ## Requisition
+
+<v-drag pos="points">
+
+### What it carries conceptually
+
+- The clinical question we are answering.
+- The type of sample that will be sent.
+- Type of report that the MiSeq workflow should produce.
+
+</v-drag>
 
 <v-drag pos="v3req">
 
