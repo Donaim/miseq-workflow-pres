@@ -99,6 +99,10 @@ dragPos:
 - The type of sample that will be sent.
 - Type of report that the MiSeq workflow should produce.
 
+<br>
+
+- Doesn't always look like that ->
+
 </v-drag>
 
 <v-drag pos="v3req">
@@ -114,9 +118,8 @@ We start here because the requisition is where the “why” of the whole proces
 
 Conceptually, the requisition ties three things together. It ties a person or a coded participant ID, it ties the kind of sample that will arrive in the lab, and it ties the type of answer we promise to return, like a resistance interpretation or an intactness analysis.
 
-The way we handle the sample downstream depends on what is written here. A clinical V3 requisition implies different obligations, timelines, and reporting expectations than a purely research submission, even if the MiSeq run in the middle looks similar.
+We accept requisitions that look differently too. For example, LifeLabs has their own format. It's the job of data techs to interpret custom requisitions and enter them into QAI.
 
-So in the state diagram that we will use later, the requisition is the starting node. From that starting point, the very first subgoal is to turn this abstract request into an actual sample tube we can work with, and eventually into a DNA sequence and a report that honours the original question.
 -->
 
 ---
