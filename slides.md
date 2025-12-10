@@ -612,7 +612,7 @@ MiCall uses these quality scores to filter out unreliable reads before assembly.
   - Cluster density, %PF (passing filter), Q30 percentages
   - Levey-Jennings charts tracking metrics over time
   - Westgard rules for detecting systematic problems
-- Uploads reports to http://192.168.69.223/MiSeq_QC/[run-date].[instrument]/
+- Uploads reports to http://192.168.69.223/MiSeq_QC/
 
 <!--
 Quality control has two layers in our workflow. The MiseqQCReport daemon is a Perl script that runs automatically after each sequencing run completes. It parses the raw InterOp files that Illumina's software produces - these contain detailed optical metrics and Phred score distributions - and uploads them into our Oracle database. This creates a historical record of every run's performance.
