@@ -377,15 +377,15 @@ Going from sample to DNA sequence is what we call **sequencing**.
 <!--
 The term "sequencing" refers to the entire transformation from a physical blood sample into a digital string of nucleotides. But there are many ways to do that transformation.
 
-For decades, our lab used Sanger sequencing, consumed by ReCall. It works beautifully for most of our resistance testing.
+For decades, our lab used Sanger sequencing, consumed by ReCall.
 
-But Sanger has fundamental limitations. First, read length: we can only sequence up to about 700 base pairs in one experiment.
+Sanger has fundamental limitations. First, the read length: we can only sequence up to about 700 base pairs in one experiment.
 
 Second, Sanger struggles with heterogeneous populations. If you have a mixture of variants, especially with insertions or deletions, the chromatograph signals interfere with each other and become unreadable. This is particularly problematic in highly variable regions like the V3 loop.
 
-Next-generation sequencing is what MiSeq uses. It can sequence whole genomes and detect minority variants that Sanger would miss.
+MiSeq does Next-generation sequencing.
 
-But the tradeoff is complexity.
+This technology is quite different. Instead of producing one long read, it produces thousands of short reads, each about 250 base pairs long. These reads can come from anywhere in the viral genome.
 -->
 
 ---
