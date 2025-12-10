@@ -559,7 +559,7 @@ TODO: Show graphically the algorithms.
 
 ## Pipeline orchestration
 
-Challenge: preserve all inputs and outputs for historical and development reasons.
+Challenge: preserve all inputs and outputs for historical and development purposes.
 
 Solutions:
 - Run all important steps through Kive.
