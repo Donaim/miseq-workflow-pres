@@ -61,19 +61,30 @@ dragPos:
 On this slide I have a map of the whole workflow.
 Currently everything is blurred out but we can see some white blobs and lines connecting them.
 They represent progress through the pipeline.
-I will reveal these blobs as we go.
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+---
 
-## The goal
+<v-drag pos="main">
+<img src="./assets/blur-3.jpeg">
+</v-drag>
 
-<!--
-TODO:
-- add a diagram. the diagram should have four nodes and two edges:
-  - V3/HCV requisition -> tropism/resistance report
-  - research submission -> intactness results
--->
+---
+dragPos:
+  main: 120,0,758,568
+  text: 112,232,524,319
+---
+
+<v-drag pos="main">
+<img src="./assets/blur-3.jpeg">
+</v-drag>
+
+<v-drag pos="text">
+
+<div style='background: white; padding: 5px'>
 
 Two main paths:
 
@@ -84,6 +95,10 @@ And do this in a way that:
 
 - Keeps the **history** of each sample and run reconstructable.
 - Makes it easy of use and maintain.
+
+</div>
+
+</v-drag>
 
 <!--
 If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
