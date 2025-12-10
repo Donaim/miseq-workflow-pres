@@ -212,15 +212,27 @@ dragPos:
 <img src="./assets/blur-4.jpeg">
 </v-drag>
 
+<!--
+The first obvious subgoal on the path from requests to report, is getting a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
+-->
+
+---
+dragPos:
+  main: 120,0,758,568
+  text: 159,431,484,44
+---
+
+<v-drag pos="main">
+<img src="./assets/blur-4.jpeg">
+</v-drag>
+
 <v-drag pos="text">
-<div style='background: white; padding: 5px'>
+<div style='background: white; padding-radius: 5px; padding: 5px; border: 1px solid black; border-radius: 15px'>
 Both V3/HCV and research work follow the same backbone
 </div>
 </v-drag>
 
 <!--
-The first obvious subgoal on the path from requests to report, is getting a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
-
 Once you accept those two states as the backbone, both the V3/HCV pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
 -->
 
