@@ -46,8 +46,6 @@ The starting question for this talk is very simple: why think about the MiSeq wo
 Every resistance report or intactness analysis that we produce has travelled through a long chain of invisible steps. If we only ever see one piece of that chain, it is hard to judge how robust the final answer really is.
 
 Each stage of the pipeline encodes assumptions and constraints. For example, what kind of sample we accept, what region of the genome we target, what we do when coverage is low, all of that quietly shapes the interpretation.
-
-By focusing on the key intermediate “states” of the pipeline, rather than every technical detail, we can reason about the behaviour of the whole system. That helps us trust the output when everything works, spot when something feels off, and have more grounded discussions about changing or extending the workflow.
 -->
 
 ---
@@ -58,6 +56,13 @@ dragPos:
 <v-drag pos="main">
 <img src="./assets/blur-2.jpeg">
 </v-drag>
+
+<!--
+On this slide I have a map of the whole workflow.
+Currently everything is blurred out but we can see some white blobs and lines connecting them.
+They represent progress through the pipeline.
+I will reveal these blobs as we go.
+-->
 
 ---
 
@@ -70,10 +75,10 @@ TODO:
   - research submission -> intactness results
 -->
 
-Two main transformations:
+Two main paths:
 
-- Turn a **V3/HCV requisition** into a **tropism or resistance report**.
-- Turn a **research submission** into a **consensus sequence** (optionally intactness analysis).
+- From a **V3/HCV requisition** into a **tropism or resistance report**.
+- From a **research submission** into a **consensus sequence** (optionally intactness analysis).
 
 And do this in a way that:
 
