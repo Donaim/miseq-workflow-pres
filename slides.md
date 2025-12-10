@@ -72,6 +72,14 @@ dragPos:
 <img src="./assets/blur-3.jpeg">
 </v-drag>
 
+<!--
+If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
+
+First, for V3 tropism testing and HCV resistance testing, we start from a requisition and we owe the clinician a report.
+
+Second, for research work, we start from a research submission and we owe our collaborators intactness analyses that they can trust in their projects.
+-->
+
 ---
 dragPos:
   main: 120,0,758,568
@@ -101,12 +109,6 @@ And do this in a way that:
 </v-drag>
 
 <!--
-If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
-
-First, for V3 tropism testing and HCV resistance testing, we start from a requisition and we owe the clinician a report.
-
-Second, for research work, we start from a research submission and we owe our collaborators intactness analyses that they can trust in their projects.
-
 Around those two transformations we have two design principles. The first is history: we want to be able to reconstruct what happened to a sample or a run months or years later. That means we care about preserving inputs, intermediate artefacts, and outputs, rather than just the final PDF.
 
 The second is continuous improvement.
