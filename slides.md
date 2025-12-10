@@ -482,8 +482,6 @@ How to read DNA sequences
 **1993 Chemistry** – Mullis
 PCR: copying specific DNA millions of times
 
-Plus Illumina's engineering to automate it all.
-
 <!--
 Other than just finding the genetic material, there are a series of Nobel-level problems that had to be solved.
 
@@ -491,8 +489,6 @@ Even the basic question of "what are we looking for?" requires a very non-obviou
 
 On this slide I listed some key discoveries.
 We can recognize some of the names here, such as Sanger and Montagnier.
-
-Illumina took all this fundamental science and turned it into a machine we can buy and run our lab.
 -->
 
 ---
