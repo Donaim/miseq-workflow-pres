@@ -422,11 +422,7 @@ Choosing NGS creates a new intermediate goal: thousands of short reads, also kno
 <!--
 Once we commit to next-generation sequencing, we immediately create a new milestone: obtaining the thousands of short reads that the MiSeq produces.
 
-We have a clean separation:
-- MiSeq produces FASTQ
-- MiCall consumes FASTQ
-
-It allows us to work on MiCall independently of the sequencing chemistry. It's also what allows MiCall to work with data from other sequencing platforms or from collaborators, as long as they provide standard FASTQ files.
+To be complete, there are other inputs that come along with the FASTQ files - run metadata, sample sheets, and quality metrics. But the FASTQ files are most conceptually significant.
 -->
 
 ---
