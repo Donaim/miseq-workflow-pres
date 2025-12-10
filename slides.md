@@ -56,7 +56,7 @@ dragPos:
 ---
 
 <v-drag pos="main">
-<img src="./assets/map-full.png">
+<img src="./assets/blur-2.jpeg">
 </v-drag>
 
 ---
