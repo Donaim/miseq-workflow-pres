@@ -404,18 +404,9 @@ dragPos:
 
 Choosing NGS creates a new intermediate goal: thousands of short reads, also known as **FASTQ file**.
 
-**What is this state?**
-
 - Raw output from the MiSeq sequencer
 - Each read: ~250 nucleotides + quality scores
 - Thousands of reads per sample, normally at random positions across the genome
-
-**Why does this matter?**
-
-- This is the **boundary between chemistry and computation**
-- Everything upstream is hardware, optics, and biochemistry (MiSeq's job)
-- Everything downstream is software, alignment, and statistics (MiCall's job)
-- These FASTQ files are the raw data we preserve for reproducibility
 
 </v-drag>
 
