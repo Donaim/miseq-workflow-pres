@@ -83,7 +83,7 @@ Second, for research work, we start from a research submission and we owe our co
 ---
 dragPos:
   main: 120,0,758,568
-  text: 112,232,524,319
+  text: 53,252,603,326
 ---
 
 <v-drag pos="main">
@@ -92,7 +92,7 @@ dragPos:
 
 <v-drag pos="text">
 
-<div style='background: white; padding: 5px'>
+<div style='background: white; padding-top: 5px; padding-left: 50px; padding-bottom: 50px; border-radius: 35px;'>
 
 Two main paths:
 
@@ -219,7 +219,7 @@ The first obvious subgoal on the path from requests to report, is getting a phys
 ---
 dragPos:
   main: 120,0,758,568
-  text: 159,431,484,44
+  text: 169,420,489,44
 ---
 
 <v-drag pos="main">
