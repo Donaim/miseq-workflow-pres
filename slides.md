@@ -205,42 +205,21 @@ To get these reports we first receive a user request.
 ---
 dragPos:
   main: 120,0,758,568
+  text: 134,493,474,44
 ---
-
-## The first split
 
 <v-drag pos="main">
 <img src="./assets/blur-4.jpeg">
 </v-drag>
 
-<!--
-TODO:
-Draw a diagram.
-It's based on the previous diagram.
-Instead of two parallel lines from requisitions to goals we have two joins and one vertical line.
-The requisitions are joined by a node called "physical sample".
-Then "physical sample" connects to "DNA sequence".
-This "DNA sequence" is a node that similarly joins the two goals.
--->
-
-We can describe the whole workflow as passing through two shared internal states:
-
-- A **physical sample** that has actually arrived in our lab.
-- A **consensus DNA sequence** that represents the virus in that sample.
-
-Both V3/HCV and research work follow the same backbone:
-
-> V3/HCV requisition / research submission → **physical sample** → **DNA sequence** → report / intactness analysis
-
-- The details differ at the edges, but almost everything we care about happens around these two states.
-- So the rest of the talk will treat "sample" and "consensus" as the main anchors of the MiSeq pipeline.
+<v-drag pos="text">
+<div style='background: white; padding: 5px'>
+Both V3/HCV and research work follow the same backbone
+</div>
+</v-drag>
 
 <!--
-Up to now I’ve shown you the overall goals: starting from a requisition and ending with either a resistance report or an intactness analysis.
-
-In between those endpoints there are a lot of individual steps: lab work, sequencing chemistry, file transfers, bioinformatics, quality control, data upload.
-
-The first obvious subgoal is to get a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
+The first obvious subgoal on the path from requests to report, is getting a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
 
 Once you accept those two states as the backbone, both the V3/HCV pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
 -->
