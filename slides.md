@@ -240,7 +240,7 @@ Once you accept those two states as the backbone, both the V3/HCV pipeline and t
 
 ## Subgoal 1: get a physical sample
 
-What this state means
+<br>
 
 - An actual **tube in our lab**, labelled and received under a known requisition.
 - Enough **material of the right type** (plasma, whole blood, PBMCs, etc.) to run the planned assays.
@@ -266,7 +266,7 @@ And identity is crucial. A beautifully sequenced sample from the wrong person is
 
 ## Subgoal 2: produce consensus
 
-What this state means
+<br>
 
 - We have an complete, digital representation of the virus from that sample.
 - An actual string of ACTG letters.
@@ -303,9 +303,9 @@ What partial goals we could still achive without Subgoal 1 and Subgoal 2?
 <!--
 What partial goals we could still achive without Subgoal 1 and Subgoal 2?
 
-There are ways to quantify intactness without ever seeing a DNA sequence. Assays like IPDA use droplet digital PCR with a couple of probes to count how many proviruses look intact at those sites, and they never produce an ACTG string.
+There are ways to quantify intactness without ever seeing a DNA sequence. Assays like IPDA use PCR with a couple of probes to count how many proviruses look intact at specific sites, and they never produce an ACTG string.
 
-Then, in the same way know how blood type can sometimes be deduced from the parents’ blood types, if neither parent has a problematic HLA allele, then their children can’t inherit it either.
+Then, in the same way how blood type can sometimes be deduced from the parents’ blood types... if neither parent has a problematic HLA allele, then their children can’t inherit it either.
 
 I am sure there's more ways to achive some partial goals.
 But it seems that we would need to be creative to find them.
