@@ -385,7 +385,7 @@ Second, Sanger struggles with heterogeneous populations. If you have a mixture o
 
 MiSeq does Next-generation sequencing.
 
-This technology is quite different. Instead of producing one long read, it produces thousands of short reads, each about 250 base pairs long. These reads can come from anywhere in the viral genome.
+This technology is quite different. For one, instead of producing one long read, it produces thousands of short reads, each about 300 base pairs long.
 -->
 
 ---
