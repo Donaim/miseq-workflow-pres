@@ -396,19 +396,13 @@ dragPos:
 
 ## Subgoal 3: NGS output
 
-<!--
-TODO: Draw a diagram here.
-Should be a "zoomed in" picture: bounded by "sample -> DNA sequence" limit states.
-Three nodes: "sample", "DNA sequence", and "thousands of reads" inbetween them.
--->
-
 <v-drag pos="main">
 <img src='./assets/blur-fastq1.jpeg'>
 </v-drag>
 
 <v-drag pos="text">
 
-Choosing NGS creates a new intermediate goal: **thousands of short reads**, also known as FASTQ file.
+Choosing NGS creates a new intermediate goal: thousands of short reads, also known as **FASTQ file**.
 
 **What is this state?**
 
