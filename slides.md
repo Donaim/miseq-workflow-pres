@@ -306,9 +306,6 @@ As a side note I would like to point out that there are exceptions.
 For example, we can quantify intactness without ever seeing a DNA sequence. Assays like IPDA use PCR with a couple of probes to count how many proviruses look intact at specific sites, and they never produce an ACTG string.
 
 Then, in the same way how blood type can sometimes be deduced from the parents’ blood types... if neither parent has a problematic HLA allele, then their children can’t inherit it either.
-
-I am sure there's more ways to achive some partial goals.
-But it seems that we would need to be creative to find them.
 -->
 
 ---
