@@ -359,7 +359,7 @@ The procedure details - how lab staff use QAI's interface, what fields they fill
 
 ---
 
-## Many (2) ways to do sequencing
+## Many ways to do sequencing
 
 Going from sample to DNA sequence is what we call **sequencing**.
 
@@ -559,7 +559,7 @@ The MiSeq doesn't tell us when its done. So we check ourselves. A script checks 
 
 ---
 
-## Many (2) ways to build consensus
+## Many ways to build consensus
 
 <!--
 TODO:
