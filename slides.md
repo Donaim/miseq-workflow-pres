@@ -51,6 +51,15 @@ By focusing on the key intermediate “states” of the pipeline, rather than ev
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+---
+
+<v-drag pos="main">
+<img src="./assets/map-full.png">
+</v-drag>
+
+---
 
 ## The goal
 
@@ -80,7 +89,10 @@ Second, for research work, we start from a research submission and we owe our co
 
 Around those two transformations we have two design principles. The first is history: we want to be able to reconstruct what happened to a sample or a run months or years later. That means we care about preserving inputs, intermediate artefacts, and outputs, rather than just the final PDF.
 
-The second is continuous improvement: we know methods, software, and standards change. We do not want a pipeline that collapses every time we touch it. So we aim for a structure where we can add QC, replace tools, or change thresholds, without losing track of what we did before.
+The second is continuous improvement.
+We know that methods, software, and standards change.
+We do not want a pipeline that collapses every time we touch it.
+So we aim for a structure where we can add QC, replace tools, or change thresholds, without losing track of what we did before.
 -->
 
 ---
