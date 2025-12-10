@@ -389,6 +389,10 @@ This technology is quite different. Instead of producing one long read, it produ
 -->
 
 ---
+dragPos:
+  main: 734,-111,924,669
+  text: 31,86,698,462
+---
 
 ## Subgoal 3: NGS output
 
