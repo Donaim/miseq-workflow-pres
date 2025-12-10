@@ -312,6 +312,9 @@ But it seems that we would need to be creative to find them.
 -->
 
 ---
+dragPos:
+  main: 749,244,924,669
+---
 
 ## From requisition to physical sample
 
@@ -326,6 +329,10 @@ A requisition arrives → lab receives a sample → information must flow to bio
 **Solutions:**
 
 - QAI: our in-house Laboratory Information Management System that bridges the physical and digital worlds.
+
+<v-drag pos="main">
+<img src='./assets/blur-req-samp.jpeg'>
+</v-drag>
 
 <!--
 This is the first critical handoff in our workflow - moving from an abstract request to a concrete physical sample that both the lab and our automated systems can track.
