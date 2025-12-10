@@ -185,12 +185,33 @@ They use requisitions, produce similar formatted reports, and are both ordered b
 </v-drag>
 
 <!--
-These are examples of the final reports we produce. On the left is a V3 tropism report, on the right is an HCV resistance report. They look similar because they follow the same workflow and use the same reporting infrastructure.
+These are examples of the final reports we produce. On the left is a V3 tropism report, on the right is an HCV resistance report. 
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+---
+
+<v-drag pos="main">
+<img src="./assets/blur-3.jpeg">
+</v-drag>
+
+<!--
+Zooming out again.
+To get these reports we first receive a user request.
+-->
+
+---
+dragPos:
+  main: 120,0,758,568
+---
 
 ## The first split
+
+<v-drag pos="main">
+<img src="./assets/blur-4.jpeg">
+</v-drag>
 
 <!--
 TODO:
