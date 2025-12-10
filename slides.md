@@ -4,7 +4,7 @@ theme: seriph
 background: https://raw.githubusercontent.com/Donaim/proviral-pres1/refs/heads/master/assets/forest.webp
 info: |
   ## MiSeq Workflow
-  Solutions and challenges in the modern pipeline
+  Challenges and solutions in the modern pipeline
 class: text-center
 drawings:
   persist: true
@@ -15,7 +15,7 @@ hideInToc: true
 
 <br>
 <h1 style='color:white;opacity:90%;text-shadow:0px 0px 24px white'><b>MiSeq Workflow</b></h1>
-<h3 style='color:white;opacity:80%;text-shadow:1px 1px 0px black,-1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black'>Solutions and challenges in the modern pipeline</h3>
+<h3 style='color:white;opacity:80%;text-shadow:1px 1px 0px black,-1px 1px 0px black,1px -1px 0px black,-1px -1px 0px black'>Challenges and solutions in the modern pipeline</h3>
 <div class="absolute bottom-5 left-3" style='opacity:85%;text-shadow:1px 1px 0px black,-1px -1px 0px black'>
   <b>11 Dec 2025 · Lab Update</b>
 </div>
