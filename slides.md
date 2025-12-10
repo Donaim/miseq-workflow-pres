@@ -453,12 +453,7 @@ Illumina took all this fundamental science and turned it into a machine we can b
 
 Now we have FASTQ files full of thousands of short reads. Next job: turn those into consensus sequences.
 
-**MiCall handles this automatically:**
-- File transport and discovery
-- Quality filtering
-- Alignment (two different strategies)
-- Consensus building
-- QC reporting
+**MiCall handles this automatically**
 
 <!--
 From here on it's all software. The MiSeq gave us FASTQ files - now MiCall takes over. MiCall is a big pipeline with lots of steps, but the key thing is it runs automatically. A run finishes, files appear, MiCall processes them and reports finished.
