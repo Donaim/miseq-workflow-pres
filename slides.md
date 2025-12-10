@@ -448,7 +448,7 @@ In 1mL of blood from someone on ART:
 <!--
 Finding tiny amounts of viral DNA is one challenge that is particularly clear to me. 
 
-The numbers show why it so impressive. Infected cells are one in 75,000. The viral genome is thousands of times smaller than the human genome. That's why PCR is essential - it takes those rare viral sequences and amplifies them millions of times over, making them abundant enough to sequence.
+The numbers show why it so impressive. Infected cells are one in 75,000. The viral genome is thousands of times smaller than the human genome.
 -->
 
 ---
