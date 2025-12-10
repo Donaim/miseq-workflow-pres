@@ -314,11 +314,14 @@ But it seems that we would need to be creative to find them.
 ---
 dragPos:
   main: 749,244,924,669
+  text: 56,133,691,420
 ---
 
 ## From requisition to physical sample
 
 A requisition arrives → lab receives a sample → information must flow to bioinformatics pipeline
+
+<v-drag pos="text">
 
 **Challenges:**
 
@@ -328,7 +331,9 @@ A requisition arrives → lab receives a sample → information must flow to bio
 
 **Solutions:**
 
-- QAI: our in-house Laboratory Information Management System that bridges the physical and digital worlds.
+- QAI: our in-house Laboratory Information Management System.
+
+</v-drag>
 
 <v-drag pos="main">
 <img src='./assets/blur-req-samp.jpeg'>
