@@ -301,9 +301,9 @@ What partial goals we could still achive without Subgoal 1 and Subgoal 2?
 - ...
 
 <!--
-What partial goals we could still achive without Subgoal 1 and Subgoal 2?
+As a side note I would like to point out that there are exceptions.
 
-There are ways to quantify intactness without ever seeing a DNA sequence. Assays like IPDA use PCR with a couple of probes to count how many proviruses look intact at specific sites, and they never produce an ACTG string.
+For example, we can quantify intactness without ever seeing a DNA sequence. Assays like IPDA use PCR with a couple of probes to count how many proviruses look intact at specific sites, and they never produce an ACTG string.
 
 Then, in the same way how blood type can sometimes be deduced from the parents’ blood types... if neither parent has a problematic HLA allele, then their children can’t inherit it either.
 
