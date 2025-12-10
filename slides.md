@@ -398,6 +398,12 @@ Should be a "zoomed in" picture: bounded by "sample -> DNA sequence" limit state
 Three nodes: "sample", "DNA sequence", and "thousands of reads" inbetween them.
 -->
 
+<v-drag pos="main">
+<img src='./assets/blur-fastq1.jpeg'>
+</v-drag>
+
+<v-drag pos="text">
+
 Choosing NGS creates a new intermediate goal: **thousands of short reads**, also known as FASTQ file.
 
 **What is this state?**
@@ -412,6 +418,8 @@ Choosing NGS creates a new intermediate goal: **thousands of short reads**, also
 - Everything upstream is hardware, optics, and biochemistry (MiSeq's job)
 - Everything downstream is software, alignment, and statistics (MiCall's job)
 - These FASTQ files are the raw data we preserve for reproducibility
+
+</v-drag>
 
 <!--
 Once we commit to next-generation sequencing, we immediately create a new milestone: obtaining the thousands of short reads that the MiSeq produces.
