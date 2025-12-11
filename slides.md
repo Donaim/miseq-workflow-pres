@@ -767,11 +767,15 @@ but the key takeaway is that MiCall builds consensus in three main steps:
 ---
 dragPos:
   main: 120,0,758,568
-  text: 53,252,603,326
+  text: 194,335,603,326
 ---
 
+<v-drag pos="main">
+<img src="./assets/counts.jpeg">
+</v-drag>
+
 <v-drag pos="text">
-<div style='background: white; padding-top: 5px; padding-left: 50px; padding-bottom: 50px; border-radius: 35px;'>
+<div style='background: white; padding-top: 5px; padding-left: 50px; padding-bottom: 20px; border-radius: 35px;'>
 
 **Besides consensus sequences, MiCall also produces:**
 - Coverage metrics and plots (depth at each position)
