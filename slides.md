@@ -738,6 +738,9 @@ then downloads the results back to RAW_DATA where they can be accessed by downst
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+---
 
 <!--
 TODO:
@@ -748,7 +751,7 @@ uncover more of the diagram.
 -->
 
 <v-drag pos="main">
-<img src="./assets/consens2.jpeg">
+<img src="./assets/consensus2.jpeg">
 </v-drag>
 
 <!--
