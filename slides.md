@@ -797,7 +797,8 @@ MiCall produces more than just consensus sequences. It also generates:
 
 ---
 dragPos:
-  qaierrors: 560,26,383,195,-6
+  qaierrors: 541,13,383,195,-6
+  cov1: 686,140,283,217,5
 ---
 
 <v-drag pos="qaierrors">
