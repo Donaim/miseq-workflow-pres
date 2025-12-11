@@ -567,7 +567,7 @@ Illumina provides a daemon that can copy to network shares - we pointed it at ou
 
 Challenge: how do we know when data is ready?
 
-MiSeq itself doesn't notify us in a scripted way (no any kind of API).
+MiSeq itself doesn't notify us in an automated way.
 
 Solution:
 - We have an periodic task that runs in ScriptBunny (every 15mins).
