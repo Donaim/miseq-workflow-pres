@@ -786,7 +786,11 @@ dragPos:
 </v-drag>
 
 <!--
-MiCall produces more than just consensus sequences. It also generates coverage metrics that show how deeply each position in the genome was sequenced, concordance metrics that measure how well the reads agree with the reference genome, and stitching logs that document how contigs were combined into a final sequence.
+MiCall produces more than just consensus sequences. It also generates:
+- coverage metrics
+- concordance metrics
+- stitching logs
+- as well as other diagnostic plots and tables.
 -->
 
 ---
