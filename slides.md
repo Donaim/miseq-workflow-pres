@@ -1058,7 +1058,7 @@ Key strengths of the MiSeq workflow:
 - Software side is maintainable and high quality.
   - Designed with containerization, reproducibility, and maintainability in mind.
 - Flexible - one program to rule them all.
-  - Shown to handle HIV, V3, HCV, SarsCov2.
+  - Shown to handle HIV, HCV, SarsCov2.
   - Used for both research and clinical work.
 
 <!--
