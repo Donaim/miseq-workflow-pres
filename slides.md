@@ -677,7 +677,7 @@ Eventually these contigs will grow to cover the whole sequencing target.
 
 But we're trying to figure out which reads overlap without knowing the answer ahead of time.
 A naive approach would compare every read to every other read.
-This quickly becomes infeasible as the number of reads grows.
+This becomes completely infeasible for large number of reads.
 -->
 
 ---
