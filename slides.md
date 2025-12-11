@@ -527,6 +527,17 @@ From here on it's all software. The MiSeq gave us FASTQ files - now MiCall takes
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+  text: 42,-14,965,491
+---
+
+<v-drag pos="main">
+<img src='./assets/fastqs.jpeg'>
+</v-drag>
+
+<v-drag pos="text">
+<div style='background: white; padding-top: 50px; padding-left: 15px; padding-bottom: 5px; padding-right: 50px; border-radius: 35px;'>
 
 ## Transport
 
@@ -538,6 +549,9 @@ We need automatic, reliable file transfer from MiSeq to somewhere MiCall can see
 - There is a daemon script provided by Illumina.
 - We configured it to copy finished runs to our network `RAW_DATA` drive.
 - Happens automatically when sequencing finishes.
+
+</div>
+</v-drag>
 
 <!--
 The basic problem is that we cannot just run MiCall on the MiSeq machine.
