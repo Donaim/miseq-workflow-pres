@@ -582,7 +582,7 @@ The MiSeq doesn't tell us when its done. So we check ourselves. A script checks 
 
 ---
 
-## Quality control
+## Quality control (1)
 
 **Phred scores** - the sequencer's confidence metric
 - Named after Phil Ewing's Read Editor (PHRED)
@@ -591,14 +591,15 @@ The MiSeq doesn't tell us when its done. So we check ourselves. A script checks 
 
 **MiCall filtering strategy**
 - Rejects reads with too many low-quality bases
+- Removes primers
+- Strips remaining adapters
 - Filters out reads that don't align well to references
-- Tracks per-base coverage depth across the genome
-- Presents coverage plots, concordance plots, and other helpful metrics
 
 <!--
 Quality control starts at the sequencer. The MiSeq assigns a Phred score to every base it calls. Each score is a measure of confidence in that base. A Phred score of 30 means the sequencer is 99.9% confident that base is correct. These scores travel with the sequence data in the FASTQ files and guide all downstream filtering.
 
-MiCall uses these quality scores to filter out unreliable reads before assembly. It also generates coverage and concordance plots showing how well the assembled contigs are supported by the raw reads. If a region has low coverage or poor concordance between reads, that signals a problem - maybe a hypervariable region, maybe contamination, maybe just poor sequencing chemistry. These plots help us distinguish real biological signal from technical noise.
+MiCall uses these quality scores to filter out unreliable reads before assembly.
+There are other preprocessing steps, but overall MiCall starts by trying to improve input before building consensus.
 -->
 
 ---
