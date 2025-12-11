@@ -718,7 +718,9 @@ dragPos:
 ---
 
 <v-drag pos="kive">
+<div style='border: 2px solid black; padding: 15px; border-radius: 35px;'>
 <img src="./assets/kive.png">
+</div>
 </v-drag>
 
 ## Pipeline orchestration
