@@ -268,7 +268,7 @@ It is its own goal
 The first subgoal is to get a physical sample into our lab.
 
 The type of sample determines what biology we can and cannot see.
-Plasma, whole blood, or PBMCs will all give us different windows into the virus and the host.
+Plasma and dry blood spots will all give us different windows into the virus and the host.
 
 Identity of the sample is crucial, too.
 A beautifully sequenced sample from the wrong person is worse than no sequence at all.
