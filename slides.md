@@ -581,10 +581,15 @@ The MiSeq doesn't tell us when its done. So we check ourselves. A script checks 
 -->
 
 ---
+dragPos:
+  main: 598,-6,772,520
+---
 
 ## Filtering reads
 
-Challenge: raw reads from MiSeq contain errors and auxiliary, intervening artifacts.
+**Challenge**: raw reads from MiSeq contain
+- errors
+- and auxiliary, intervening artifacts.
 
 **MiCall filtering strategy**
 - Rejects reads with too many low-quality bases
@@ -596,6 +601,10 @@ Challenge: raw reads from MiSeq contain errors and auxiliary, intervening artifa
 - Each base gets a quality score: Q = -10 × log₁₀(error probability)
 - MiSeq outputs these in FASTQ files alongside each nucleotide
 - Named after Phil Ewing's Read Editor (PHRED)
+
+<v-drag pos="main">
+<img src="./assets/filt.jpeg">
+</v-drag>
 
 <!--
 Software quality control starts at the sequencer. The MiSeq assigns a Phred score to every base it calls. Each score is a measure of confidence in that base. A Phred score of 30 means the sequencer is 99.9% confident that base is correct. These scores travel with the sequence data in the FASTQ files and guide all downstream filtering.
