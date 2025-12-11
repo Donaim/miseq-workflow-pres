@@ -272,8 +272,6 @@ Plasma and dry blood spots will all give us different windows into the virus and
 
 Identity of the sample is crucial, too.
 A beautifully sequenced sample from the wrong person is worse than no sequence at all.
-
-So at this point in the workflow we care a lot about matching the tube in the rack to the digital record in our systems.
 -->
 
 ---
@@ -351,21 +349,22 @@ A requisition arrives → lab receives a sample → information must flow to bio
 </v-drag>
 
 <!--
-This is the first critical handoff in our workflow - moving from an abstract request to a concrete physical sample that both the lab and our automated systems can track.
+Transition from requisition to physical sample is part of the pipeline.
 
-The challenge here is coordination. Someone in the lab is handling a physical tube with a label. Meanwhile, our bioinformatics pipeline needs to know exactly which sample that tube represents, what project it belongs to, and what kind of analysis we promised to deliver.
+One challenge here is coordination. Someone in the lab is handling a physical tube with a label. At the same time, our bioinformatics pipeline needs to know
+- exactly which sample that tube represents,
+- what project it belongs to,
+- and what kind of analysis we promised to deliver.
 
-QAI is our custom-built LIMS - Laboratory Information Management System. Here, it solves three core problems:
+QAI is our custom-built Laboratory Information Management System. Here, it solves three core problems:
 
 First, it provides the coordination layer between the physical lab and our automated informatics systems.
 
-Second, it handles historical preservation. QAI stores everything in an Oracle database. This means years later, if someone asks "what happened with this sample?", we can reconstruct many details.
+Second, it handles historical preservation. QAI stores everything in an Oracle database.
 
-Third, it provides input validation. Before a sample ever reaches the sequencer, QAI checks that sample IDs are formatted correctly, that the requisition exists, that the sample type matches what was requested. This catches problems early, before they waste expensive sequencing runs.
+Third, it provides input validation. Before a sample ever reaches the sequencer, QAI checks that sample IDs are formatted correctly, that the requisition exists, that the sample type matches what was requested.
 
-The concrete artifact that QAI produces is the sample sheet - a CSV file that defines which samples are in a MiSeq run and how they should be processed. Both MiSeq software and MiCall's automated watcher will later read those sample sheets.
-
-The procedure details - how lab staff use QAI's interface, what fields they fill in - those are documented in our SOPs. What matters here is understanding QAI's architectural role: it's the authoritative source of truth that connects requisitions to samples to sequencing runs.
+A concrete artifact that QAI produces is the sample sheet. It is a CSV file that defines which samples are in a MiSeq run and how they should be processed.
 -->
 
 ---
