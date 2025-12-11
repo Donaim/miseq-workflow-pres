@@ -452,6 +452,10 @@ In 1mL of blood from someone on ART:
 - Viral genome is **<10 Kbp** hiding in **4 Gbp** of human DNA
 - **~1 copy** of HIV RNA
 
+<v-drag pos="main">
+<img src='./assets/virus.png'>
+</v-drag>
+
 <!--
 Finding tiny amounts of viral DNA is one challenge that is particularly clear to me. 
 
