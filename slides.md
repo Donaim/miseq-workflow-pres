@@ -388,17 +388,17 @@ Going from sample to DNA sequence is what we call **sequencing**.
 - Handles high-variability regions (indels, hypervariable loops)
 
 <!--
-The term "sequencing" refers to the entire transformation from a physical blood sample into digital strings of nucleotides. But there are many ways to do that transformation.
+The term "sequencing" refers to the entire transformation from a physical blood sample into digital strings of nucleotides. But there are many ways to perform that transformation.
 
-For decades, our lab used Sanger sequencing, consumed by ReCall.
+For decades, our lab used Sanger sequencing, paired with ReCall.
 
 Sanger has fundamental limitations. First, the read length: we can only sequence up to about 700 base pairs in one experiment.
 
 Second, Sanger struggles with heterogeneous populations. If you have a mixture of variants, especially with insertions or deletions, the chromatograph signals interfere with each other and become unreadable. This is particularly problematic in highly variable regions like the V3 loop.
 
-MiSeq does Next-generation sequencing.
+MiSeq does Next-generation sequencing instead of Sanger sequencing.
 
-This technology is quite different. For one, instead of producing one long read, it produces thousands of short reads, each about 300 base pairs long.
+This technique is quite different.
 -->
 
 ---
@@ -426,7 +426,14 @@ Choosing NGS creates a new intermediate goal: thousands of short reads, also kno
 <!--
 Once we commit to next-generation sequencing, we immediately create a new milestone: obtaining the thousands of short reads that the MiSeq produces in the form of FASTQ files.
 
-To be complete, there are other inputs that come along with the FASTQ files - run metadata, sample sheets, and quality metrics. But the FASTQ files are most conceptually significant.
+NGS is quite different from Sanger here - instead of one long read per sample, we get thousands of short reads.
+
+To be complete, there are other inputs that come along with the FASTQ files:
+- like run metadata,
+- sample sheets,
+- and quality metrics.
+
+But the FASTQ files are most conceptually significant.
 -->
 
 ---
