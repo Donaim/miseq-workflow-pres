@@ -1132,7 +1132,7 @@ It uses all most up to date software libraries as well as modern practices like 
 ---
 dragPos:
   main: 120,0,758,568
-  text: 118,144,1057,184
+  text: 77,148,1057,184
 hideInToc: true
 ---
 
@@ -1141,7 +1141,7 @@ hideInToc: true
 </v-drag>
 
 <v-drag pos="text">
-<div style='color: yellow; font-size: 140px; font-weight: bold; text-shadow: 2px 2px 4px #000000;'>
+<div style='color: yellow; font-size: 160px; font-weight: bold; text-shadow: 2px 2px 4px #000000;'>
 Thank you!
 </div>
 </v-drag>
