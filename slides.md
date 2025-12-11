@@ -921,7 +921,7 @@ Solution:
 - Then use HIVdb to score resistance.
 
 <!--
-Resistance interpretation for HCV works similarly to what we do with ReCall for HIV. We take the consensus sequence, align it to identify the relevant genes, then use the HIVdb to score mutations against known resistance patterns.
+Resistance interpretation for HCV works similarly to what we do for HIV in the Sanger pipeline. We take the consensus sequence, align it to identify the relevant genes, then use the HIVdb to score mutations against known resistance patterns.
 -->
 
 ---
