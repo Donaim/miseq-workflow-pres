@@ -600,7 +600,7 @@ dragPos:
 **Phred scores** - the sequencer's confidence metric
 - Each base gets a quality score: Q = -10 × log₁₀(error probability)
 - MiSeq outputs these in FASTQ files alongside each nucleotide
-- Named after Phil Ewing's Read Editor (PHRED)
+- Named after **P**hil **R**ead **Ed**itor (PHRED)
 
 <v-drag pos="main">
 <img src="./assets/filt.jpeg">
@@ -634,7 +634,15 @@ It should show depict that these reads are short and they come from random place
 - Used for research/proviral work
 
 <!--
-MiCall can work two ways. In the remapping mode it is faster and works great when we know what you're looking for - like V3 loop sequencing. De novo mode is for when we want whole genomes or when the sample might have weird variants that don't map well to references. Both strategies end up giving you consensus sequences, just different paths to get there.
+Now that we've got cleaned reads, we need to turn them into consensus sequences.
+
+MiCall can do this two ways.
+
+In the remapping mode it is faster and works great when we know what you're looking for.
+This mode is used for clinical testing.
+
+De novo mode is more complex, but it can give more high quality results.
+Especially for variants that don't map well to references.
 -->
 
 ---
@@ -683,7 +691,7 @@ Solutions:
 <!--
 Kive is our custom workflow execution system. Think of it as a lab notebook for computational pipelines. When MiCall runs an analysis step, it sends that work to Kive rather than running it locally. Kive stores the inputs, outputs, and exact software versions used.
 
-This solves the reproducibility problem. Months or years later, if someone asks what version of the reference genome we used or whether a sample was processed with the old or new assembly algorithm, we can check Kive's database and know for certain.
+This solves the reproducibility problem.
 
 With Kive we can also easily reprocess runs with different versions and parameters. It's like having a time machine for our analyses.
 
