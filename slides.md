@@ -804,6 +804,10 @@ dragPos:
 <img src="./assets/qaierrors.png">
 </v-drag>
 
+<v-drag pos="cov1">
+<img src="./assets/cov1.png">
+</v-drag>
+
 ## QAI upload
 
 **MiCall sends data into QAI**
