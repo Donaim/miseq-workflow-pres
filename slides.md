@@ -1116,17 +1116,21 @@ It uses all most up to date software libraries as well as modern practices like 
 -->
 
 ---
-layout: cover
-background: https://cover.sli.dev
-zoom: 2.0
+dragPos:
+  main: 120,0,758,568
+  text: 118,144,1057,184
 hideInToc: true
 ---
 
-# Thank you
+<v-drag pos="main">
+<img src="./assets/full.jpeg">
+</v-drag>
 
-<!--
-TODO: add a small workflow diagram that shows the whole pipeline.
--->
+<v-drag pos="text">
+<div style='color: yellow; font-size: 140px; font-weight: bold; text-shadow: 2px 2px 4px #000000;'>
+Thank you!
+</div>
+</v-drag>
 
 <!--
 I hope this talk helped you understand the MiSeq workflow better, and why we do things the way we do.
