@@ -815,7 +815,9 @@ MiCall produces more than just consensus sequences. It also generates:
 - **Error metrics tables** - tile-by-cycle quality visualizations
 
 <!--
-After MiCall finishes processing a run, the results need to reach the people who will interpret them. Some of the results, especially proviral, are accessed through RAW_DATA. But also MiCall uploads consensus sequences, coverage statistics, and quality metrics into QAI's, where they can be found via run and sample IDs.
+After MiCall finishes processing a run, the results need to reach the people who will interpret them.
+Some of the results, especially proviral, are accessed through RAW_DATA.
+But also MiCall uploads consensus sequences, coverage statistics, and quality metrics into QAI's, where they can be found by run ID.
 -->
 
 ---
@@ -839,7 +841,7 @@ After MiCall finishes processing a run, the results need to reach the people who
 At the same time as MiCall is processing sequences, we also run quality control on the sequencing runs themselves.
 Our script called MiseqQC runs automatically after each sequencing run completes. It parses the raw files that MiSeq produces and uploads data into our Oracle database. This creates a historical record of every run's performance.
 
-The MiseqQC tool then generates reports from that database. It produces both individual run reports and aggregate charts that track metrics like cluster density and Q30 scores across dozens of runs. The reports are automatically published to a web server where lab staff can review them before releasing results.
+The MiseqQC tool then generates reports from that database. It produces both individual run reports and aggregate charts that track metrics like cluster density and Q30 scores across multiple runs. The reports are automatically published to a web server where lab staff can review them before releasing results.
 -->
 
 
