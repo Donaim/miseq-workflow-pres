@@ -941,7 +941,7 @@ Script Bunny generates the final PDF reports that go back to clinicians.
 - **Quality filtering** - exclude non-HIV sequences, low coverage, ambiguous bases
 - **Primer detection and removal** - strip lab-added primers to analyze only viral genome
 - **Defect classification** - identify hypermutation, deletions, inversions, frameshifts, stop codons
-- **Gene extraction** - splice out individual genes (gag, pol, env, etc.) for detailed analysis
+- **Gene extraction** - splice out individual genes (gag, pol, env, etc.)
 
 **Solution**: Multi-stage pipeline with strict QC
 
@@ -950,7 +950,12 @@ Script Bunny generates the final PDF reports that go back to clinicians.
 - `BBLabs/alldata/bblab_site/tools/proviral_landscape_plot/` - web tool for visualizing defect distribution
 
 <!--
-The proviral pipeline answers a key question: which integrated proviruses are intact and replication-competent versus defective? The pipeline starts from MiCall output, applies quality filtering to exclude non-HIV sequences and low coverage, detects and strips lab-added primers, then analyzes defects using CFEIntact.
+On the research side we have several mode analysis steps.
+They are mostly contained within the proviral pipeline.
+
+The proviral pipeline answers a key question: which integrated proviruses are replication-competent and which are defective?
+
+Similarly to MiCall, the proviral pipeline starts by filtering out low-quality inputs.
 
 It then extracts individual viral genes like gag, pol, and env a provides their ACTG sequences. 
 The landscape CSV maps defect coordinates across the genome, and users manually upload this to the BBLabs web tool to generate visual plots showing defect patterns and distributions across samples.
