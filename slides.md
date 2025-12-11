@@ -765,6 +765,27 @@ but the key takeaway is that MiCall builds consensus in three main steps:
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+  text: 53,252,603,326
+---
+
+<v-drag pos="text">
+<div style='background: white; padding-top: 5px; padding-left: 50px; padding-bottom: 50px; border-radius: 35px;'>
+
+**Besides consensus sequences, MiCall also produces:**
+- Coverage metrics and plots (depth at each position)
+- Concordance metrics and plots (agreement with reference)
+- Stitching logs and plots (how contigs were combined)
+
+</div>
+</v-drag>
+
+<!--
+MiCall produces more than just consensus sequences. It also generates coverage metrics that show how deeply each position in the genome was sequenced, concordance metrics that measure how well the reads agree with the reference genome, and stitching logs that document how contigs were combined into a final sequence.
+-->
+
+---
 
 ## QAI upload
 
