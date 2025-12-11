@@ -870,13 +870,6 @@ dragPos:
   main: 120,0,758,568
 ---
 
-<!--
-TODO: draw a diagram here.
-It should show two "fork" lines from "consensus" to "tropism/resistance report" and "intactness analysis".
-
-Note sure what to say here.
--->
-
 <v-drag pos="main">
 <img src="./assets/rep.jpeg">
 </v-drag>
@@ -922,6 +915,21 @@ Solution:
 
 <!--
 Resistance interpretation for HCV works similarly to what we do for HIV in the Sanger pipeline. We take the consensus sequence, align it to identify the relevant genes, then use the HIVdb to score mutations against known resistance patterns.
+-->
+
+---
+dragPos:
+  main: 120,0,758,568
+---
+
+<v-drag pos="main">
+<img src="./assets/rep2.jpeg">
+</v-drag>
+
+<!--
+Both resistance interpretation and V3 tropism predictions are later picked up by Script Bunny.
+
+Script Bunny generates the final PDF reports that go back to clinicians.
 -->
 
 ---
