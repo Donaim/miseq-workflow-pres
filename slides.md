@@ -978,6 +978,21 @@ The quality bar is high here - any ambiguous bases or low coverage regions can h
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+---
+
+<v-drag pos="main">
+<img src="./assets/gmap.jpeg">
+</v-drag>
+
+<!--
+The pipeline then extracts various regions of the genome by aligning the proviral sequence to HXB2.
+
+The result is a deliverable on its own because it's often useful to see the raw sequence of, say, tat.
+-->
+
+---
 
 ## CFEIntact
 
@@ -990,14 +1005,20 @@ Solution:
 - Find the longest ORF between start and stop codons.
 
 <!--
-CFEIntact's first job is identifying where genes are in the proviral sequence. An open reading frame is a stretch of DNA that could code for a protein.
+Eventually, the pipeline invokes CFEIntact, and it has its own set of challenges.
 
-The tool aligns the proviral sequence to a reference genome to figure out where known genes should be, then scans for actual start and stop codons in the sample. The longest ORF for each gene becomes the candidate for further analysis.
+CFEIntact is a program that looks actually finds defects in proviral sequences.
+
+Its first challenge is identifying where critical regions are in the proviral sequence. 
+
+In case of a gene, it first aligns the proviral sequence to a reference genome, then scans for actual start and stop codons in the vicinity of the expected gene location.
+
+The longest ORF for that gene becomes the candidate for further analysis.
 -->
 
 ---
 
-## CFEIntact [2]
+## CFEIntact (2)
 
 Challenge: determine if an ORF is intact or has defects that prevent viral replication.
 
@@ -1007,14 +1028,14 @@ Solution:
 - Look for deletions beyond a certain length.
 
 <!--
-CFEIntact then checks whether that ORF could actually produce a functional protein. Premature stop codons truncate proteins early. Frameshifts throw off the reading frame so everything downstream becomes gibberish. Large deletions remove essential protein domains.
+CFEIntact then checks whether that ORF can actually produce a functional protein. Premature stop codons truncate proteins early. Frameshifts throw off the reading frame so everything downstream becomes gibberish. Large deletions remove essential protein domains.
 
 Such defects can make the provirus unable to replicate. A single premature stop in gag or pol is enough to render the entire provirus defective. CFEIntact catalogs all these problems and uses them to classify whether the provirus is intact or broken.
 -->
 
 ---
 
-## CFEIntact [3]
+## CFEIntact (3)
 
 Other challenges beyond ORF analysis:
 - Detect hypermutation.
