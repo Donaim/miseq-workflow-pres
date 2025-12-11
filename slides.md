@@ -262,7 +262,7 @@ It is its own goal
 
 - Without a sample, the rest of the pipeline is purely hypothetical.
 - This is where the real world and our digital systems first have to agree on **who**, **what**, and **when**.
-- Mistakes here — wrong person, wrong tube, wrong date — are worse than having no sample at all.
+- Mistakes here — wrong person, wrong tube, wrong date — are very costly downstream.
 
 <!--
 The first subgoal is to get a physical sample into our lab.
