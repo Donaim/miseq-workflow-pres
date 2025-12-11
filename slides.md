@@ -797,6 +797,10 @@ MiCall produces more than just consensus sequences. It also generates:
 
 ---
 
+<v-drag pos="qaierrors">
+<img src="./assets/qaierrors.png">
+</v-drag>
+
 ## QAI upload
 
 **MiCall sends data into QAI**
