@@ -1050,30 +1050,6 @@ When multiple defects exist, the proviral pipeline picks the most serious one ba
 -->
 
 ---
-dragPos:
-  hepcresist: 414,21,549,590
----
-
-## Resistance interpretation
-
-<!--
-Observe that the result looks like resistance reports from ReCall.
--->
-
-<br>
-
-- Performed for HCV resistance testing.
-- Not clinically approved.
-- Similar to our HIV resistance reports from ReCall.
-- Uses the same HIVdb library.
-
-<v-drag pos="hepcresist">
-
-<img style='border: 1px solid black;' src='./assets/hepc-resistance.png' alt='Hepatitis C resistance'>
-
-</v-drag>
-
----
 
 ## Final thoughts
 
