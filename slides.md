@@ -654,7 +654,8 @@ TODO: estimate run time of naive overlap finding algorithm.
 -->
 
 **The challenge:**
-- Finding which reads overlap is computationally hard, naive approach would take forever
+- Find overlapping reads to build contigs
+- This is computationally hard, naive approach would take forever
 
 **The solution:**
 - Use hashing and k-mers for fast overlap detection
@@ -663,10 +664,16 @@ TODO: estimate run time of naive overlap finding algorithm.
 
 <!--
 I will focus on De novo because it is more interesting and more complex.
+
 We're trying to figure out which reads overlap without knowing the answer ahead of time.
-The key trick is k-mers - short sequences that let us quickly find overlaps using hash tables instead of doing all pairwise comparisons.
+A naive approach would compare every read to every other read, but this quickly becomes infeasible as the number of reads grows.
+
+The key trick is to build a library of patterns called k-mers.
+Then look for reads that share the same patterns. Those will be the ones that overlap.
 MiCall assembles contigs this way and then stitches them together.
-Stitching ensures we only get a single consensus sequence when possible.
+
+Unfortunately, the k-mer approach can result in too many independent sequences instead of a single consensus.
+Stitching ensures we only get one when it's possible.
 -->
 
 ---
