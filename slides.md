@@ -682,7 +682,7 @@ This becomes completely infeasible for large number of reads.
 
 ---
 dragPos:
-  main: 352,66,658,470
+  main: 367,67,658,470
   text: 25,91,338,325
 ---
 
@@ -701,8 +701,11 @@ TODO: estimate run time of naive overlap finding algorithm.
 
 </v-drag>
 
+
 <v-drag pos="main">
+<div style='border: 2px solid black; padding: 15px; border-radius: 35px;'>
 <img src="./assets/genome-assembly.jpeg">
+</div>
 </v-drag>
 
 <!--
