@@ -1068,7 +1068,7 @@ Such defects can make the provirus unable to replicate. A single premature stop 
 
 ---
 dragPos:
-  defects2: 398,224,647,344,-5
+  defects2: 398,224,647,344,-2
 ---
 
 <v-drag pos="defects2">
