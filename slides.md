@@ -23,9 +23,10 @@ hideInToc: true
 <!--
 Hello everyone.
 
-In this talk I want to walk through the MiSeq-based workflow that takes us from a requisition to either a tropism/resistance report or an intactness analysis.
+In this talk I want to walk through the MiSeq-based workflow.
 
-I am not going to give a step-by-step SOP or a MiSeq troubleshooting guide. Instead, I want to focus on why the pipeline is shaped the way it is, and why we chose the particular intermediate states that we did.
+I will be an overview.
+I want to focus on why the pipeline is shaped the way it is, and why we chose the particular intermediate solutions that we did.
 
 Think of this as a map of the territory. After this talk, my goal is that when you hear "MiSeq run" or "consensus" or "intactness", you have a clear sense of where that sits in the bigger picture and why we bother doing it in the first place.
 -->
@@ -38,14 +39,18 @@ Provide understanding of **how** the MiSeq pipeline works and **why** it is buil
 
 - Every report we sign off on passes through many invisible steps.
 - Each step encodes assumptions and constraints that affect what the result means.
-- Understanding the key “states” of the pipeline helps us trust the output, debug problems, and argue for or against changes.
+- Understanding the key states of the pipeline helps us trust the output, debug problems, and argue for or against changes.
 
 <!--
-The starting question for this talk is very simple: why think about the MiSeq workflow at all?
-
 Every resistance report or intactness analysis that we produce has travelled through a long chain of invisible steps. If we only ever see one piece of that chain, it is hard to judge how robust the final answer really is.
 
-Each stage of the pipeline encodes assumptions and constraints. For example, what kind of sample we accept, what region of the genome we target, what we do when coverage is low, all of that quietly shapes the interpretation.
+Each stage of the pipeline encodes assumptions and constraints.
+For example
+- what kind of sample we accept
+- what region of the genome we target
+- what we do when coverage is low...
+
+all of that quietly shapes the interpretation.
 -->
 
 ---
@@ -61,6 +66,8 @@ dragPos:
 On this slide I have a map of the whole workflow.
 Currently everything is blurred out but we can see some white blobs and lines connecting them.
 They represent progress through the pipeline.
+
+This presentation will gradually unblur the picture, revealing the key states and transitions.
 -->
 
 ---
@@ -114,7 +121,12 @@ Around those two transformations we have two design principles. The first is his
 The second is continuous improvement.
 We know that methods, software, and standards change.
 We do not want a pipeline that collapses every time we touch it.
-So we aim for a structure where we can add QC, replace tools, or change thresholds, without losing track of what we did before.
+So we aim for a structure where we can
+- add QC,
+- replace tools,
+- or change thresholds,
+
+without losing track of what we did before.
 -->
 
 ---
