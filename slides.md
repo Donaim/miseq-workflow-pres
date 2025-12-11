@@ -75,7 +75,7 @@ dragPos:
 <!--
 If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
 
-First, for V3 tropism testing and HCV resistance testing, we start from a requisition and we owe the clinician a report.
+First, for V3 tropism testing and resistance testing, we start from a requisition and we owe the clinician a report.
 
 Second, for research work, we start from a research submission and we owe our collaborators intactness analyses that they can trust in their projects.
 -->
@@ -168,7 +168,7 @@ dragPos:
 ## Final reports
 
 <!--
-Both V3 tropism and HCV resistance testing follow the same pathway through the MiSeq workflow.
+Both V3 tropism and resistance testing follow the same pathway through the MiSeq workflow.
 They use requisitions, produce similar formatted reports, and are both ordered by clinicians but not clinically approved.
 -->
 
@@ -185,7 +185,7 @@ They use requisitions, produce similar formatted reports, and are both ordered b
 </v-drag>
 
 <!--
-These are examples of the final reports we produce. On the left is a V3 tropism report, on the right is an HCV resistance report. 
+These are examples of the final reports we produce. On the left is a V3 tropism report, on the right is a resistance report. 
 -->
 
 ---
@@ -228,12 +228,12 @@ dragPos:
 
 <v-drag pos="text">
 <div style='background: white; padding-radius: 5px; padding: 5px; border: 1px solid black; border-radius: 15px'>
-Both V3/HCV and research work follow the same backbone
+Both V3/resistance and research work follow the same backbone
 </div>
 </v-drag>
 
 <!--
-Once you accept those two states as the backbone, both the V3/HCV pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
+Once you accept those two states as the backbone, both the V3/resistance pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
 -->
 
 ---
@@ -866,14 +866,23 @@ They then upload them to QAI, and on the web server, where lab staff can review 
 -->
 
 ---
-
-## From consensus to reports
+dragPos:
+  main: 120,0,758,568
+---
 
 <!--
 TODO: draw a diagram here.
 It should show two "fork" lines from "consensus" to "tropism/resistance report" and "intactness analysis".
 
 Note sure what to say here.
+-->
+
+<v-drag pos="main">
+<img src="./assets/rep.jpeg">
+</v-drag>
+
+<!--
+Now that we have consensus sequences, we can move on to the final steps: producing reports for V3 tropism testing and resistance testing.
 -->
 
 ---
