@@ -672,8 +672,12 @@ TODO: estimate run time of naive overlap finding algorithm.
 <!--
 I will focus on De novo because it is more interesting and more complex.
 
-We're trying to figure out which reads overlap without knowing the answer ahead of time.
-A naive approach would compare every read to every other read, but this quickly becomes infeasible as the number of reads grows.
+The idea is simple: we want to combine overlapping reads into longer sequences called contigs.
+Eventually these contigs will grow to cover the whole sequencing target.
+
+But we're trying to figure out which reads overlap without knowing the answer ahead of time.
+A naive approach would compare every read to every other read.
+This quickly becomes infeasible as the number of reads grows.
 -->
 
 ---
