@@ -577,7 +577,7 @@ Solution:
 - They look for `needsprocessing` as a signal to start processing.
 
 <!--
-The MiSeq doesn't tell us when its done. So we check ourselves. A script checks the RAW_DATA drive every 15 minutes looking for new run folders. When it sees files that look complete, it drops a flag file. Then MiCall's watcher and miseqqc pick that up and start processing.
+The MiSeq doesn't tell us when its done. So we check ourselves. A script checks the RAW_DATA drive every 15 minutes looking for new run folders. When it sees files that look complete, it drops a special flag file called `needsprocessing`. Then MiCall's watcher and MiseqQC pick that up and start processing.
 -->
 
 ---
