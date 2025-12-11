@@ -685,8 +685,8 @@ Stitching ensures we only get one when it's possible.
 
 ---
 dragPos:
-  main: 120,0,758,568
-  text: 53,252,603,326
+  main: 352,66,658,470
+  text: 25,91,338,325
 ---
 
 ## Denovo assembly
@@ -695,14 +695,19 @@ dragPos:
 TODO: estimate run time of naive overlap finding algorithm.
 -->
 
-**The challenge:**
-- Find overlapping reads to build contigs
-- This is computationally hard, naive approach would take forever
+<v-drag pos="text">
 
 **The solution:**
 - Use hashing and k-mers for fast overlap detection
 - Assemble reads into contigs
 - Stitch contigs together when they overlap
+
+</v-drag>
+
+<v-drag pos="main">
+<img src="./assets/genome-assembly.jpeg">
+</v-drag>
+
 
 <!--
 I will focus on De novo because it is more interesting and more complex.
