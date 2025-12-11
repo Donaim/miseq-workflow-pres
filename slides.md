@@ -182,11 +182,6 @@ dragPos:
 
 ## Final reports
 
-<!--
-Both V3 tropism and resistance testing follow the same pathway through the MiSeq workflow.
-They use requisitions, produce similar formatted reports, and are both ordered by clinicians but not clinically approved.
--->
-
 <v-drag pos="v3">
 
 <img style='border: 1px solid black;' src='./assets/v3-report.png' alt='V3 tropism report'>
