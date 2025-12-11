@@ -914,7 +914,7 @@ Our threshold for calling a sample X4 is conservative - it catches minority vari
 
 ## Resistance interpretation
 
-Challenge: given a consensus sequence, determine if the original virus is resistant to given drugs.
+Challenge: given a consensus sequence, predict drug resistance mutations.
 
 Solution:
 - Align consensus to reference genome.
