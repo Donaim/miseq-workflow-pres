@@ -1075,7 +1075,7 @@ Observe that the result looks like resistance reports from ReCall.
 
 ---
 
-## Summary
+## Final thoughts
 
 Key strengths of the MiSeq workflow:
 
@@ -1086,9 +1086,14 @@ Key strengths of the MiSeq workflow:
   - Used for both research and clinical work.
 
 <!--
-The MiSeq workflow is flexible and robust. MiCall handles multiple virus types - HIV, HCV, we even sequences SARS-CoV-2 during the pandemic. It serves both clinical workflows like V3 tropism testing and research workflows like proviral intactness analysis.
+For my final slide, I want to highlight two key strengths of the MiSeq workflow.
 
-From engineering perspective, the system is built for maintainability. MiCall is very pleasant to work with, add new features, and fix bugs. It uses all most up to date software libraries as well as modern practices like containerization.
+The software part is flexible and robust. MiCall handles multiple virus types - HIV, HCV, and even SARS-CoV-2.
+The same system serves both clinical workflows like V3 tropism testing and research workflows like proviral intactness analysis.
+
+From engineering perspective, MiCall is built for maintainability.
+It is very pleasant to work with, add new features, and fix bugs.
+It uses all most up to date software libraries as well as modern practices like containerization.
 -->
 
 ---
