@@ -231,7 +231,7 @@ The first obvious subgoal on the path from requests to report, is getting a phys
 ---
 dragPos:
   main: 120,0,758,568
-  text: 147,404,523,44
+  text: 435,280,523,44
 ---
 
 <v-drag pos="main">
