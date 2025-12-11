@@ -846,6 +846,12 @@ But also MiCall uploads consensus sequences, coverage statistics, and quality me
 
 ---
 
+<v-drag pos="qcrep">
+<div style='border: 2px solid black; padding: 15px; border-radius: 35px;'>
+<img src="./assets/kive.png">
+</div>
+</v-drag>
+
 ## MiseqQC processing
 
 **MiseqQCReport daemon** - automated quality monitoring
