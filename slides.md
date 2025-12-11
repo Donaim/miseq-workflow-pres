@@ -715,7 +715,7 @@ Stitching ensures we only get one when it's possible.
 ---
 
 <v-drag pos="kive">
-<img src="./assets/kivex.png">
+<img src="./assets/kive.png">
 </v-drag>
 
 ## Pipeline orchestration
