@@ -293,7 +293,7 @@ The second subgoal is to produce a consensus DNA sequence.
 
 This consensus becomes the standard interface to the rest of the pipeline. It is what we align to reference, what we feed into HIVdb for resistance interpretation, and what we send into the intactness pipeline for defect classification.
 
-The reason we treat "consensus sequence" as its own goal is that it separates two worlds. Upstream we worry about chemistry, instruments, and file transfers. Downstream we worry about biological interpretation. The consensus sequence is the bridge between the two, and because it is such a powerful bridge we invest a lot of effort in getting it right and in keeping the raw data available behind it.
+The reason we treat "consensus sequence" as its own goal is that it separates two worlds. Upstream we worry about chemistry, instruments, and file transfers. Downstream we worry about biological interpretation.
 -->
 
 ---
