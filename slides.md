@@ -1071,7 +1071,7 @@ dragPos:
   qcrep: 56,-187,913,453
 ---
 
-<v-drag pos="qcrep">
+<v-drag pos="defects2">
 <div style='border: 2px solid black; padding: 0px;'>
 <img src="./assets/defects2.png">
 </div>
