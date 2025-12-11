@@ -231,7 +231,7 @@ The first obvious subgoal on the path from requests to report, is getting a phys
 ---
 dragPos:
   main: 120,0,758,568
-  text: 435,280,523,44
+  text: 400,256,522,44
 ---
 
 <v-drag pos="main">
@@ -1132,7 +1132,7 @@ It uses all most up to date software libraries as well as modern practices like 
 ---
 dragPos:
   main: 120,0,758,568
-  text: 77,148,1057,184
+  text1823798: 77,148,1057,184
 hideInToc: true
 ---
 
@@ -1140,7 +1140,7 @@ hideInToc: true
 <img src="./assets/full.jpeg">
 </v-drag>
 
-<v-drag pos="text">
+<v-drag pos="text1823798">
 <div style='color: yellow; font-size: 160px; font-weight: bold; text-shadow: 2px 2px 4px #000000;'>
 Thank you!
 </div>
