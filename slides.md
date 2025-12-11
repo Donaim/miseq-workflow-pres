@@ -1072,7 +1072,7 @@ dragPos:
 ---
 
 <v-drag pos="defects2">
-<div style='border: 2px solid black; padding: 0px;'>
+<div style='border: 2px solid blue; padding: 0px;'>
 <img src="./assets/defects2.png">
 </div>
 </v-drag>
