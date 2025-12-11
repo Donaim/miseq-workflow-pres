@@ -1113,35 +1113,6 @@ Users of bblabs have to combine several CSV files to generate these plots.
 -->
 
 ---
-
-## Final thoughts
-
-Key strengths of the MiSeq workflow:
-
-- Software side is maintainable and high quality.
-  - Designed with containerization, reproducibility, and maintainability in mind.
-- Flexible - one program to rule them all.
-  - Shown to handle HIV, HCV, SarsCov2.
-  - Used for both research and clinical work.
-
-<!--
-For my final slide, I want to highlight two key strengths of the MiSeq workflow.
-
-The software part is flexible and robust. MiCall handles multiple virus types - HIV, HCV, and even SARS-CoV-2.
-The same system serves both
-- clinical workflows, like V3 tropism testing,
-- and research workflows, like proviral intactness analysis.
-
-From engineering perspective, MiCall is built for maintainability.
-It is
-- very pleasant to work with,
-- add new features,
-- and fix bugs.
-
-It uses all most up to date software libraries as well as modern practices like containerization.
--->
-
----
 dragPos:
   main: 120,0,758,568
   text1823798: 77,148,1057,184
