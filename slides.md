@@ -102,7 +102,7 @@ Two main paths:
 And do this in a way that:
 
 - Keeps the **history** of each sample and run reconstructable.
-- Makes it easy of use and maintain.
+- Easy of execute and change.
 
 </div>
 
