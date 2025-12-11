@@ -845,9 +845,12 @@ But also MiCall uploads consensus sequences, coverage statistics, and quality me
 -->
 
 ---
+dragPos:
+  qcrep: 546,244,341,351,-2
+---
 
 <v-drag pos="qcrep">
-<div style='border: 2px solid black; padding: 15px; border-radius: 35px;'>
+<div style='border: 2px solid black; padding: 0px;'>
 <img src="./assets/qcrep.png">
 </div>
 </v-drag>
