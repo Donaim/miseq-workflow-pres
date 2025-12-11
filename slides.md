@@ -82,9 +82,9 @@ dragPos:
 <!--
 If we compress all the complexity down to just a couple of sentences, the pipeline is trying to do two main things.
 
-First, for V3 tropism testing and resistance testing, we start from a requisition and we owe the clinician a report.
+First, it provides V3 tropism testing and resistance testing. In this case, we start from a requisition and we owe the clinician a report.
 
-Second, for research work, we start from a research submission and we owe our collaborators intactness analyses that they can trust in their projects.
+Second, for research work, we start from a research submission and we owe our collaborators consensus sequences and intactness analyses.
 -->
 
 ---
