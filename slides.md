@@ -844,6 +844,26 @@ Our script called MiseqQC runs automatically after each sequencing run completes
 The MiseqQC tool then generates reports from that database. It produces both individual run reports and aggregate charts that track metrics like cluster density and Q30 scores across multiple runs. The reports are automatically published to a web server where lab staff can review them before releasing results.
 -->
 
+---
+dragPos:
+  main: 120,0,758,568
+---
+
+<!--
+TODO:
+
+summarize quality control up to this point.
+-->
+
+<v-drag pos="main">
+<img src="./assets/qc.jpeg">
+</v-drag>
+
+<!--
+In summary, both MiCall and MiseqQC produce several sets of quality control metrics along the way.
+
+They then upload them to QAI, and on the web server, where lab staff can review them before releasing results.
+-->
 
 ---
 
