@@ -523,7 +523,7 @@ Now we have FASTQ files full of thousands of short reads. Next job: turn those i
 </v-drag>
 
 <!--
-From here on it's all software. The MiSeq gave us FASTQ files - now MiCall takes over. MiCall is a big pipeline with lots of steps, but the key thing is it runs automatically. A run finishes, files appear, MiCall processes them and reports finished.
+From here on it's all software. The MiSeq gave us FASTQ files - now MiCall takes over. MiCall is a big pipeline with lots of steps, but the key thing is it runs automatically.
 -->
 
 ---
