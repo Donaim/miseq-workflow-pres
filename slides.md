@@ -713,6 +713,9 @@ Stitching ensures we only get one when it's possible.
 -->
 
 ---
+dragPos:
+  kive: 522,172,400,336,6
+---
 
 <v-drag pos="kive">
 <img src="./assets/kive.png">
