@@ -714,6 +714,10 @@ Stitching ensures we only get one when it's possible.
 
 ---
 
+<v-drag pos="kive">
+<img src="./assets/kivex.png">
+</v-drag>
+
 ## Pipeline orchestration
 
 Challenge: preserve all inputs and outputs for historical and development purposes.
