@@ -1067,6 +1067,9 @@ Such defects can make the provirus unable to replicate. A single premature stop 
 -->
 
 ---
+dragPos:
+  qcrep: 56,-187,913,453
+---
 
 <v-drag pos="qcrep">
 <div style='border: 2px solid black; padding: 0px;'>
