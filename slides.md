@@ -1050,6 +1050,38 @@ When multiple defects exist, the proviral pipeline picks the most serious one ba
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+  text: 67,170,603,326
+---
+
+<v-drag pos="main">
+<img src="./assets/lands.jpeg">
+</v-drag>
+
+<v-drag pos="text">
+
+<div style='background: white; padding-top: 5px; padding-left: 50px; padding-bottom: 10px; border-radius: 35px;'>
+
+**Challenge:** Visualize defect patterns across multiple proviral sequences.
+
+**Solution**:
+- Manual combination of CSV files from proviral pipeline.
+- Upload to BBLabs web tool for plotting.
+</div>
+
+</v-drag>
+
+<!--
+Sometimes researchers want to see defect patterns across multiple proviruses.
+
+For this purpose, we have a tool on BBLabls website that generates visual plots showing defect patterns and distributions across samples.
+
+This is not a part of the automated pipeline.
+Users of bblabs have to combine several CSV files to generate these plots.
+-->
+
+---
 
 ## Final thoughts
 
