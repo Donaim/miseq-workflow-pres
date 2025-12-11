@@ -1068,6 +1068,12 @@ Such defects can make the provirus unable to replicate. A single premature stop 
 
 ---
 
+<v-drag pos="qcrep">
+<div style='border: 2px solid black; padding: 0px;'>
+<img src="./assets/defects2.png">
+</div>
+</v-drag>
+
 ## CFEIntact (3)
 
 Other challenges beyond ORF analysis:
