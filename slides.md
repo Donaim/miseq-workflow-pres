@@ -582,6 +582,50 @@ The MiSeq doesn't tell us when its done. So we check ourselves. A script checks 
 
 ---
 
+## Quality control
+
+**Phred scores** - the sequencer's confidence metric
+- Named after Phil Ewing's Read Editor (PHRED)
+- Each base gets a quality score: Q = -10 × log₁₀(error probability)
+- MiSeq outputs these in FASTQ files alongside each nucleotide
+
+**MiCall filtering strategy**
+- Rejects reads with too many low-quality bases
+- Filters out reads that don't align well to references
+- Tracks per-base coverage depth across the genome
+- Presents coverage plots, concordance plots, and other helpful metrics
+
+<!--
+Quality control starts at the sequencer. The MiSeq assigns a Phred score to every base it calls. Each score is a measure of confidence in that base. A Phred score of 30 means the sequencer is 99.9% confident that base is correct. These scores travel with the sequence data in the FASTQ files and guide all downstream filtering.
+
+MiCall uses these quality scores to filter out unreliable reads before assembly. It also generates coverage and concordance plots showing how well the assembled contigs are supported by the raw reads. If a region has low coverage or poor concordance between reads, that signals a problem - maybe a hypervariable region, maybe contamination, maybe just poor sequencing chemistry. These plots help us distinguish real biological signal from technical noise.
+-->
+
+---
+
+## MiseqQC processing
+
+**MiseqQCReport daemon** - automated quality monitoring
+- Perl script runs periodically checking for new MiSeq runs
+- Parses Illumina's InterOp binary files (optical metrics, phred distributions)
+- Uploads QC data to Oracle database tables: `MISEQQC_RUNPARAMETERS`, `MISEQQC_INTEROPSUMMARY`
+
+**MiseqQC report generation**
+- Python tool that queries the database
+- Generates per-run HTML/PDF reports with:
+  - Cluster density, %PF (passing filter), Q30 percentages
+  - Levey-Jennings charts tracking metrics over time
+  - Westgard rules for detecting systematic problems
+- Uploads reports to http://192.168.69.223/MiSeq_QC/
+
+<!--
+Quality control has two layers in our workflow. The MiseqQCReport daemon is a Perl script that runs automatically after each sequencing run completes. It parses the raw InterOp files that Illumina's software produces - these contain detailed optical metrics and Phred score distributions - and uploads them into our Oracle database. This creates a historical record of every run's performance.
+
+The MiseqQC tool then generates reports from that database. It produces both individual run reports and aggregate Westgard charts that track metrics like cluster density and Q30 scores across dozens of runs. These charts help us spot trends - maybe a reagent lot is degrading, maybe the instrument needs maintenance. The reports are automatically published to a web server where lab staff can review them before releasing results.
+-->
+
+---
+
 ## Many ways to build consensus
 
 <!--
@@ -655,50 +699,6 @@ This solves the reproducibility problem. Months or years later, if someone asks 
 With Kive we can also easily reprocess runs with different versions and parameters. It's like having a time machine for our analyses.
 
 The watcher polls Kive periodically to see when jobs complete, then downloads the results back to RAW_DATA where they can be accessed by downstream tools.
--->
-
----
-
-## Quality control
-
-**Phred scores** - the sequencer's confidence metric
-- Named after Phil Ewing's Read Editor (PHRED)
-- Each base gets a quality score: Q = -10 × log₁₀(error probability)
-- MiSeq outputs these in FASTQ files alongside each nucleotide
-
-**MiCall filtering strategy**
-- Rejects reads with too many low-quality bases
-- Filters out reads that don't align well to references
-- Tracks per-base coverage depth across the genome
-- Presents coverage plots, concordance plots, and other helpful metrics
-
-<!--
-Quality control starts at the sequencer. The MiSeq assigns a Phred score to every base it calls. Each score is a measure of confidence in that base. A Phred score of 30 means the sequencer is 99.9% confident that base is correct. These scores travel with the sequence data in the FASTQ files and guide all downstream filtering.
-
-MiCall uses these quality scores to filter out unreliable reads before assembly. It also generates coverage and concordance plots showing how well the assembled contigs are supported by the raw reads. If a region has low coverage or poor concordance between reads, that signals a problem - maybe a hypervariable region, maybe contamination, maybe just poor sequencing chemistry. These plots help us distinguish real biological signal from technical noise.
--->
-
----
-
-## MiseqQC processing
-
-**MiseqQCReport daemon** - automated quality monitoring
-- Perl script runs periodically checking for new MiSeq runs
-- Parses Illumina's InterOp binary files (optical metrics, phred distributions)
-- Uploads QC data to Oracle database tables: `MISEQQC_RUNPARAMETERS`, `MISEQQC_INTEROPSUMMARY`
-
-**MiseqQC report generation**
-- Python tool that queries the database
-- Generates per-run HTML/PDF reports with:
-  - Cluster density, %PF (passing filter), Q30 percentages
-  - Levey-Jennings charts tracking metrics over time
-  - Westgard rules for detecting systematic problems
-- Uploads reports to http://192.168.69.223/MiSeq_QC/
-
-<!--
-Quality control has two layers in our workflow. The MiseqQCReport daemon is a Perl script that runs automatically after each sequencing run completes. It parses the raw InterOp files that Illumina's software produces - these contain detailed optical metrics and Phred score distributions - and uploads them into our Oracle database. This creates a historical record of every run's performance.
-
-The MiseqQC tool then generates reports from that database. It produces both individual run reports and aggregate Westgard charts that track metrics like cluster density and Q30 scores across dozens of runs. These charts help us spot trends - maybe a reagent lot is degrading, maybe the instrument needs maintenance. The reports are automatically published to a web server where lab staff can review them before releasing results.
 -->
 
 ---
