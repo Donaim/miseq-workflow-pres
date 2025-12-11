@@ -674,13 +674,6 @@ I will focus on De novo because it is more interesting and more complex.
 
 We're trying to figure out which reads overlap without knowing the answer ahead of time.
 A naive approach would compare every read to every other read, but this quickly becomes infeasible as the number of reads grows.
-
-The key trick is to build a library of patterns called k-mers.
-Then look for reads that share the same patterns. Those will be the ones that overlap.
-MiCall assembles contigs this way and then stitches them together.
-
-Unfortunately, the k-mer approach can result in too many independent sequences instead of a single consensus.
-Stitching ensures we only get one when it's possible.
 -->
 
 ---
@@ -708,13 +701,7 @@ TODO: estimate run time of naive overlap finding algorithm.
 <img src="./assets/genome-assembly.jpeg">
 </v-drag>
 
-
 <!--
-I will focus on De novo because it is more interesting and more complex.
-
-We're trying to figure out which reads overlap without knowing the answer ahead of time.
-A naive approach would compare every read to every other read, but this quickly becomes infeasible as the number of reads grows.
-
 The key trick is to build a library of patterns called k-mers.
 Then look for reads that share the same patterns. Those will be the ones that overlap.
 MiCall assembles contigs this way and then stitches them together.
@@ -722,14 +709,6 @@ MiCall assembles contigs this way and then stitches them together.
 Unfortunately, the k-mer approach can result in too many independent sequences instead of a single consensus.
 Stitching ensures we only get one when it's possible.
 -->
-
----
-
-## Denovo assembly [2]
-
-<NOTE>
-TODO: Show graphically the algorithms.
-</NOTE>
 
 ---
 
@@ -743,13 +722,43 @@ Solutions:
 - Download results to `RAW_DATA`.
 
 <!--
-Kive is our custom workflow execution system. Think of it as a lab notebook for computational pipelines. When MiCall runs an analysis step, it sends that work to Kive rather than running it locally. Kive stores the inputs, outputs, and exact software versions used.
+All of MiCall's steps are orchestrated through Kive.
+
+Think of Kive as a lab notebook for computational pipelines.
+When MiCall analyses something, it sends that work to Kive rather than running it locally.
+Kive stores the inputs, outputs, and exact software versions used.
 
 This solves the reproducibility problem.
 
-With Kive we can also easily reprocess runs with different versions and parameters. It's like having a time machine for our analyses.
+With Kive we can also easily reprocess runs with different versions and parameters.
+It's like having a time machine for our analyses.
 
-The watcher polls Kive periodically to see when jobs complete, then downloads the results back to RAW_DATA where they can be accessed by downstream tools.
+The watcher polls Kive periodically to see when jobs complete,
+then downloads the results back to RAW_DATA where they can be accessed by downstream tools.
+-->
+
+---
+
+<!--
+TODO:
+
+summarize consensus bulding.
+
+uncover more of the diagram.
+-->
+
+<v-drag pos="main">
+<img src="./assets/consens2.jpeg">
+</v-drag>
+
+<!--
+At this point we have covered the main steps MiCall takes to turn FASTQ files into consensus sequences.
+
+The details of remapping and de novo assembly are complex,
+but the key takeaway is that MiCall builds consensus in three main steps:
+- first filtering,
+- then assembly,
+- then stitching.
 -->
 
 ---
