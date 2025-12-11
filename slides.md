@@ -506,12 +506,21 @@ We can recognize some of the names here, such as Sanger and Montagnier.
 -->
 
 ---
+dragPos:
+  main: 120,0,758,568
+---
 
+<!--
 ## From FASTQ to consensus
 
 Now we have FASTQ files full of thousands of short reads. Next job: turn those into consensus sequences.
 
 **MiCall handles this automatically**
+-->
+
+<v-drag pos="main">
+<img src='./assets/consens1.jpeg'>
+</v-drag>
 
 <!--
 From here on it's all software. The MiSeq gave us FASTQ files - now MiCall takes over. MiCall is a big pipeline with lots of steps, but the key thing is it runs automatically. A run finishes, files appear, MiCall processes them and reports finished.
