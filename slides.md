@@ -223,7 +223,7 @@ dragPos:
 </v-drag>
 
 <!--
-Then the obvious subgoal on the path from requests to report, is getting a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
+Then the first obvious subgoal on the path from requests to report, is getting a physical sample into our lab. The second subgoal is to turn that sample into a consensus DNA sequence.
 -->
 
 ---
