@@ -417,6 +417,9 @@ To be complete, there are other inputs that come along with the FASTQ files - ru
 -->
 
 ---
+dragPos:
+  main: 734,-111,924,669
+---
 
 ## From sample to FASTQ
 
@@ -428,6 +431,10 @@ This happens in the lab with molecular biology and chemistry:
 - Use PCR to amplify viral regions
 - Prepare sequencing libraries
 - Run the MiSeq sequencer
+
+<v-drag pos="main">
+<img src='./assets/blur-fastq1.jpeg'>
+</v-drag>
 
 <!--
 This is where the lab team does their work. I won't dive into the chemistry details since that's not my expertise. But I do want to acknowledge challenges that are solved: 
