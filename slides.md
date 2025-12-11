@@ -880,8 +880,6 @@ Note sure what to say here.
 
 ## V3 Tropism Testing
 
-**Special workflow** - runs FIRST in MiCall pipeline, before remapping/assembly.
-
 **Challenge:** Predict which coreceptor HIV uses to enter cells
 - **R5-tropic** (uses CCR5) → maraviroc eligible
 - **X4-tropic** (uses CXCR4) → maraviroc won't work
@@ -900,7 +898,7 @@ What is tropism testing?
 
 The V3 loop in HIV's envelope protein determines which coreceptor the virus uses - CCR5 or CXCR4. This matters because maraviroc is a drug that blocks CCR5. If a patient has X4-tropic virus, maraviroc will be completely ineffective.
 
-The geno2pheno algorithm predicts tropism from the V3 amino acid sequence using a position-specific scoring matrix. It's much faster and cheaper than actually growing virus in culture with blocked coreceptors.
+The geno2pheno algorithm predicts tropism from the V3 amino acid sequence using a position-specific scoring matrix.
 
 MiCall runs this tropism prediction as the very first step, using a special alignment algorithm optimized for the short V3 region. The 2% threshold for calling a sample X4 is conservative - it catches minority variants that could cause treatment failure.
 -->
