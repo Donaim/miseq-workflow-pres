@@ -231,7 +231,7 @@ The first obvious subgoal on the path from requests to report, is getting a phys
 ---
 dragPos:
   main: 120,0,758,568
-  text: 169,420,489,44
+  text: 147,404,523,44
 ---
 
 <v-drag pos="main">
@@ -245,7 +245,9 @@ Both V3/resistance and research work follow the same backbone
 </v-drag>
 
 <!--
-Once you accept those two states as the backbone, both the V3/resistance pipeline and the research pipeline look like variations on the same theme. Different requisitions, different reports, but the same two internal states in the middle.
+Once you accept those two states as the backbone, both the V3/resistance pipeline and the research pipeline look like variations on the same theme.
+
+Different requests, different reports, but the same two internal states in the middle.
 -->
 
 ---
