@@ -900,7 +900,7 @@ The V3 loop in HIV's envelope protein determines which coreceptor the virus uses
 
 The geno2pheno algorithm predicts tropism from the V3 amino acid sequence using a position-specific scoring matrix.
 
-The 2% threshold for calling a sample X4 is conservative - it catches minority variants that could cause treatment failure.
+Our threshold for calling a sample X4 is conservative - it catches minority variants that could cause treatment failure.
 -->
 
 ---
