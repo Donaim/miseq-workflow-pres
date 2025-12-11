@@ -589,7 +589,7 @@ dragPos:
 
 **Challenge**: raw reads from MiSeq contain
 - errors
-- and auxiliary, intervening artifacts.
+- auxiliary, intervening artifacts.
 
 **MiCall filtering strategy**
 - Rejects reads with too many low-quality bases
@@ -611,29 +611,6 @@ Software quality control starts at the sequencer. The MiSeq assigns a Phred scor
 
 MiCall uses these quality scores to filter out unreliable reads before assembly.
 There are other preprocessing steps, but overall MiCall starts by trying to improve input before building consensus.
--->
-
----
-
-## MiseqQC processing
-
-**MiseqQCReport daemon** - automated quality monitoring
-- Perl script runs periodically checking for new MiSeq runs
-- Parses Illumina's InterOp binary files (optical metrics, phred distributions)
-- Uploads QC data to Oracle database tables: `MISEQQC_RUNPARAMETERS`, `MISEQQC_INTEROPSUMMARY`
-
-**MiseqQC report generation**
-- Python tool that queries the database
-- Generates per-run HTML/PDF reports with:
-  - Cluster density, %PF (passing filter), Q30 percentages
-  - Levey-Jennings charts tracking metrics over time
-  - Westgard rules for detecting systematic problems
-- Uploads reports to http://192.168.69.223/MiSeq_QC/
-
-<!--
-Quality control has two layers in our workflow. The MiseqQCReport daemon is a Perl script that runs automatically after each sequencing run completes. It parses the raw InterOp files that Illumina's software produces - these contain detailed optical metrics and Phred score distributions - and uploads them into our Oracle database. This creates a historical record of every run's performance.
-
-The MiseqQC tool then generates reports from that database. It produces both individual run reports and aggregate Westgard charts that track metrics like cluster density and Q30 scores across dozens of runs. These charts help us spot trends - maybe a reagent lot is degrading, maybe the instrument needs maintenance. The reports are automatically published to a web server where lab staff can review them before releasing results.
 -->
 
 ---
@@ -733,6 +710,31 @@ The watcher polls Kive periodically to see when jobs complete, then downloads th
 <!--
 After MiCall finishes processing a run, the results need to reach the people who will interpret them. Some of the results, especially proviral, are accessed through RAW_DATA. But also MiCall uploads consensus sequences, coverage statistics, and quality metrics into QAI's, where they can be found via run and sample IDs.
 -->
+
+---
+
+## MiseqQC processing
+
+**MiseqQCReport daemon** - automated quality monitoring
+- Perl script runs periodically checking for new MiSeq runs
+- Parses Illumina's InterOp binary files (optical metrics, phred distributions)
+- Uploads QC data to Oracle database tables: `MISEQQC_RUNPARAMETERS`, `MISEQQC_INTEROPSUMMARY`
+
+**MiseqQC report generation**
+- Python tool that queries the database
+- Generates per-run HTML/PDF reports with:
+  - Cluster density, %PF (passing filter), Q30 percentages
+  - Levey-Jennings charts tracking metrics over time
+  - Westgard rules for detecting systematic problems
+- Uploads reports to http://192.168.69.223/MiSeq_QC/
+
+<!--
+At the same time as MiCall is processing sequences, we also run quality control on the sequencing runs themselves.
+Our script called MiseqQC runs automatically after each sequencing run completes. It parses the raw files that MiSeq produces and uploads data into our Oracle database. This creates a historical record of every run's performance.
+
+The MiseqQC tool then generates reports from that database. It produces both individual run reports and aggregate charts that track metrics like cluster density and Q30 scores across dozens of runs. The reports are automatically published to a web server where lab staff can review them before releasing results.
+-->
+
 
 ---
 
