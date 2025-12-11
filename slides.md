@@ -1130,6 +1130,6 @@ Thank you!
 </v-drag>
 
 <!--
-I hope this talk helped you understand the MiSeq workflow better, and why we do things the way we do.
+I hope this talk helped you understand the MiSeq workflow better.
 Thank you for listening.
 -->
