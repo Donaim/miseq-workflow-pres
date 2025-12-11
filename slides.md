@@ -955,10 +955,26 @@ They are mostly contained within the proviral pipeline.
 
 The proviral pipeline answers a key question: which integrated proviruses are replication-competent and which are defective?
 
-Similarly to MiCall, the proviral pipeline starts by filtering out low-quality inputs.
+As a pipeline, it does this in multiple stages.
+
 
 It then extracts individual viral genes like gag, pol, and env a provides their ACTG sequences. 
 The landscape CSV maps defect coordinates across the genome, and users manually upload this to the BBLabs web tool to generate visual plots showing defect patterns and distributions across samples.
+-->
+
+---
+dragPos:
+  main: 120,0,758,568
+---
+
+<v-drag pos="main">
+<img src="./assets/filt2.jpeg">
+</v-drag>
+
+<!--
+Similarly to MiCall, the proviral pipeline starts by filtering out low-quality inputs.
+
+The quality bar is high here - any ambiguous bases or low coverage regions can hide defects, so such sequences are excluded.
 -->
 
 ---
