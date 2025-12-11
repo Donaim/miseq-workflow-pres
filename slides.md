@@ -891,8 +891,6 @@ Note sure what to say here.
 
 **Output:** `g2p.csv` + `g2p_summary.csv`
 
-**Note:** V3 tropism and HCV resistance testing are on the same pathway - both use requisitions and produce similar formatted reports.
-
 <!--
 What is tropism testing?
 
@@ -901,6 +899,20 @@ The V3 loop in HIV's envelope protein determines which coreceptor the virus uses
 The geno2pheno algorithm predicts tropism from the V3 amino acid sequence using a position-specific scoring matrix.
 
 Our threshold for calling a sample X4 is conservative - it catches minority variants that could cause treatment failure.
+-->
+
+---
+
+## Resistance interpretation
+
+Challenge: given a consensus sequence, determine if the original virus is resistant to given drugs.
+
+Solution:
+- Align consensus to reference genome.
+- Then use HIVdb to score resistance.
+
+<!--
+Resistance interpretation for HCV works similarly to what we do with ReCall for HIV. We take the consensus sequence, align it to identify the relevant genes, then use the HIVdb to score mutations against known resistance patterns.
 -->
 
 ---
@@ -976,23 +988,6 @@ Other challenges beyond ORF analysis:
 <!--
 CFEIntact does more than just check individual genes.
 When multiple defects exist, the proviral pipeline picks the most serious one based on a severity ranking to represent that provirus.
--->
-
----
-
-## Resistance interpretation
-
-This is sometimes ordered instead of tropism testing.
-The results are not clinically approved.
-
-Challenge: given a consensus sequence, determine if the original virus is resistant to given drugs.
-
-Solution:
-- Align consensus to reference genome.
-- Then use HIVdb to score resistance.
-
-<!--
-Resistance interpretation for HCV works similarly to what we do with ReCall for HIV. We take the consensus sequence, align it to identify the relevant genes, then use the HIVdb to score mutations against known resistance patterns.
 -->
 
 ---
