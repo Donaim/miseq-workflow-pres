@@ -265,13 +265,11 @@ It is its own goal
 - Mistakes here — wrong person, wrong tube, wrong date — are worse than having no sample at all.
 
 <!--
-The first subgoal sounds almost too obvious: we need to get a physical sample.
+So we got a physical sample.
 
-But conceptually this is a big moment in the workflow. Up until now we only had a requisition, which is essentially a promise on paper: someone is asking us to do something for a particular person or project.
+This state actually carries assumptions. The type of sample determines what biology we can and cannot see. Plasma, whole blood, or PBMCs will all give us different windows into the virus and the host.
 
-This state carries hidden assumptions. The type of sample determines what biology we can and cannot see. Plasma, whole blood, or PBMCs will all give us different windows into the virus and the host.
-
-And identity is crucial. A beautifully sequenced sample from the wrong person is worse than no sequence at all. So at this point in the workflow we care a lot about matching the tube in the rack to the digital record in our systems.
+Identity of the sample is crucial. A beautifully sequenced sample from the wrong person is worse than no sequence at all. So at this point in the workflow we care a lot about matching the tube in the rack to the digital record in our systems.
 -->
 
 ---
