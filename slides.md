@@ -245,7 +245,7 @@ Both V3/resistance and research work follow the same backbone
 <!--
 Once you accept those two states as the backbone, both the V3/resistance pipeline and the research pipeline look like variations on the same theme.
 
-Different requests, different reports, but the same two internal states in the middle.
+Different requests, different reports, but the same two states in the middle.
 -->
 
 ---
@@ -265,11 +265,15 @@ It is its own goal
 - Mistakes here — wrong person, wrong tube, wrong date — are worse than having no sample at all.
 
 <!--
-So we got a physical sample.
+The first subgoal is to get a physical sample into our lab.
 
-This state actually carries assumptions. The type of sample determines what biology we can and cannot see. Plasma, whole blood, or PBMCs will all give us different windows into the virus and the host.
+The type of sample determines what biology we can and cannot see.
+Plasma, whole blood, or PBMCs will all give us different windows into the virus and the host.
 
-Identity of the sample is crucial. A beautifully sequenced sample from the wrong person is worse than no sequence at all. So at this point in the workflow we care a lot about matching the tube in the rack to the digital record in our systems.
+Identity of the sample is crucial, too.
+A beautifully sequenced sample from the wrong person is worse than no sequence at all.
+
+So at this point in the workflow we care a lot about matching the tube in the rack to the digital record in our systems.
 -->
 
 ---
