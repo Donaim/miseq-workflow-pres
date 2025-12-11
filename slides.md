@@ -660,7 +660,7 @@ TODO: estimate run time of naive overlap finding algorithm.
 <v-drag pos="text">
 
 **The challenge:**
-- Find overlapping reads to build contigs
+- Find overlapping reads to build longer sequences
 - This is computationally hard, naive approach would take forever
 
 </v-drag>
