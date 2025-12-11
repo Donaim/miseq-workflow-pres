@@ -889,7 +889,7 @@ Note sure what to say here.
 2. Score using geno2pheno PSSM algorithm (similar to resistance interpretation)
 3. Call: score ≥ 3.5% → R5, score < 3.5% → X4
 
-**Output:** `g2p.csv` (per-sequence) + `g2p_summary.csv` (final call)
+**Output:** `g2p.csv` + `g2p_summary.csv`
 
 **Note:** V3 tropism and HCV resistance testing are on the same pathway - both use requisitions and produce similar formatted reports.
 
