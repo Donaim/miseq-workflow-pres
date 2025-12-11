@@ -375,7 +375,7 @@ Going from sample to DNA sequence is what we call **sequencing**.
 - Handles high-variability regions (indels, hypervariable loops)
 
 <!--
-The term "sequencing" refers to the entire transformation from a physical blood sample into a digital string of nucleotides. But there are many ways to do that transformation.
+The term "sequencing" refers to the entire transformation from a physical blood sample into digital strings of nucleotides. But there are many ways to do that transformation.
 
 For decades, our lab used Sanger sequencing, consumed by ReCall.
 
@@ -645,6 +645,48 @@ De novo mode is more complex, but it can give more high quality results.
 Especially for variants that don't map well to references.
 -->
 
+---
+dragPos:
+  main: 352,66,658,470
+  text: 25,91,338,325
+---
+
+## Denovo assembly
+
+<!--
+TODO: estimate run time of naive overlap finding algorithm.
+-->
+
+<v-drag pos="text">
+
+**The challenge:**
+- Find overlapping reads to build contigs
+- This is computationally hard, naive approach would take forever
+
+</v-drag>
+
+<v-drag pos="main">
+<img src="./assets/genome-assembly.jpeg">
+</v-drag>
+
+<!--
+I will focus on De novo because it is more interesting and more complex.
+
+We're trying to figure out which reads overlap without knowing the answer ahead of time.
+A naive approach would compare every read to every other read, but this quickly becomes infeasible as the number of reads grows.
+
+The key trick is to build a library of patterns called k-mers.
+Then look for reads that share the same patterns. Those will be the ones that overlap.
+MiCall assembles contigs this way and then stitches them together.
+
+Unfortunately, the k-mer approach can result in too many independent sequences instead of a single consensus.
+Stitching ensures we only get one when it's possible.
+-->
+
+---
+dragPos:
+  main: 120,0,758,568
+  text: 53,252,603,326
 ---
 
 ## Denovo assembly
