@@ -158,11 +158,14 @@ dragPos:
 </v-drag>
 
 <!--
-The first state in the workflow is the requisition.
+This slide shows the starting point for V3 tropism and resistance testing: the requisition.
 
-We start here because the requisition is where the "why" of the whole process is written down. Someone is asking us to do something specific for a person, and the requisition is the formal record of that request.
+Someone is asking us to do a test for a person, and the requisition is the formal record of that request.
 
-Conceptually, the requisition ties three things together. It ties a person or a coded participant ID, it ties the kind of sample that will arrive in the lab, and it ties the type of answer we promise to return, like a tropism report or a resistance interpretation.
+Conceptually, the requisition ties three things together.
+- It ties a person,
+- the kind of sample that will arrive in the lab,
+- and it ties the type of answer we promise to return, like a tropism report or a resistance interpretation.
 
 The form on the right is our standard V3 requisition form.
 But we accept requisitions that look differently too.
